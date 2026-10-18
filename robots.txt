@@ -3,3 +3,4 @@ Allow: /
 Disallow: /painel_acompanhamento.html
 
 Sitemap: https://acervo-referencia.github.io/sitemap.xml
+Sitemap: https://acervo-referencia.github.io/sitemap_index.xml
