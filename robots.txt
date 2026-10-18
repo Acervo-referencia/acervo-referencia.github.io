@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /painel_acompanhamento.html
+
+Sitemap: https://acervo-referencia.github.io/sitemap.xml
