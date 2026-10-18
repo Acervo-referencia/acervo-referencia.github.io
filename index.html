@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acervo & Referencia | Guias de Leitura e Curadoria de Referência</title>
+    <meta name="description" content="Portal editorial independente dedicado à curadoria de obras perenes, pensadores clássicos e ferramentas de produtividade.">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --surface-color: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --border: #334155;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-family);
+            line-height: 1.6;
+        }
+        .container { max-width: 960px; margin: 0 auto; padding: 30px 20px; }
+        header {
+            text-align: center;
+            padding: 50px 0 40px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 40px;
+        }
+        .brand-title { font-size: 2.4rem; font-weight: 800; color: #fff; margin-bottom: 10px; }
+        .brand-subtitle { color: var(--text-secondary); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+        .portal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .portal-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .portal-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(56, 189, 248, 0.4);
+        }
+        .card-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            line-height: 1.35;
+            margin-bottom: 14px;
+        }
+        .card-title a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .card-title a:hover { color: var(--accent); }
+        .card-items {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 14px;
+        }
+        .card-date { font-size: 0.8rem; color: #64748b; }
+        .card-btn {
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        footer {
+            margin-top: 80px;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            padding: 30px 0;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="brand-title">🏛️ Acervo & Referencia</h1>
+            <p class="brand-subtitle">Curadoria independente de obras clássicas, ferramentas de produtividade e pensadores de referência perene.</p>
+        </header>
+
+        <main class="portal-grid">
+            
+        <article class="portal-card">
+            <span class="card-tag">Divulgação Científica & Astronomia</span>
+            <h2 class="card-title"><a href="carl-sagan-leituras-essenciais-ciencia-cosmologia.html">Carl Sagan: As Leituras Essenciais de Ciência, Cosmologia e Pensamento Crítico</a></h2>
+            <p class="card-items"><strong>Itens analisados:</strong> O Mundo Assombrado pelos Demônios - Carl Sagan, Cosmos - Carl Sagan, Pálido Ponto Azul - Carl Sagan...</p>
+            <div class="card-footer">
+                <span class="card-date">Publicado em 2026-10-17</span>
+                <a href="carl-sagan-leituras-essenciais-ciencia-cosmologia.html" class="card-btn">Ler Guia Completo →</a>
+            </div>
+        </article>
+        
+        <article class="portal-card">
+            <span class="card-tag">Economia Comportamental & Psicologia</span>
+            <h2 class="card-title"><a href="daniel-kahneman-tomada-de-decisao-economia-comportamental.html">Daniel Kahneman (Prêmio Nobel): Os Livros e Métodos sobre Tomada de Decisão e Economia Comportamental</a></h2>
+            <p class="card-items"><strong>Itens analisados:</strong> Rápido e Devagar: Duas Formas de Pensar - Daniel Kahneman, Ruído: Uma Falha no Julgamento Humano - Daniel Kahneman, Previsivelmente Irracional - Dan Ariely...</p>
+            <div class="card-footer">
+                <span class="card-date">Publicado em 2026-10-17</span>
+                <a href="daniel-kahneman-tomada-de-decisao-economia-comportamental.html" class="card-btn">Ler Guia Completo →</a>
+            </div>
+        </article>
+        
+        </main>
+
+        <footer>
+            <p>© 2026 Acervo & Referencia • Publicação Independente de Divulgação Cultural e Científica.</p>
+            <p style="margin-top: 8px; font-size: 0.8rem; opacity: 0.8;">Operação sob política Zero-PII e Diretrizes do Guia Publicitário CONAR 2026.</p>
+        </footer>
+    </div>
+</body>
+</html>

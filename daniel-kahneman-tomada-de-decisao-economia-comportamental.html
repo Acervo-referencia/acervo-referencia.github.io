@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Kahneman (Prêmio Nobel): Os Livros e Métodos sobre Tomada de Decisão e Economia Comportamental | Acervo & Referencia</title>
+    <meta name="description" content="Guia editorial completo e curadoria de obras e instrumentos relacionados a Daniel Kahneman.">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --surface-color: #1e293b;
+            --surface-hover: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --border: #334155;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-family);
+            line-height: 1.7;
+            padding-bottom: 60px;
+        }
+        .conar-banner {
+            background: linear-gradient(90deg, #1e293b, #0f172a);
+            border-bottom: 1px solid rgba(250, 204, 21, 0.3);
+            color: #facc15;
+            padding: 10px 20px;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header.portal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0 40px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 40px;
+        }
+        .brand {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        .nav-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        .nav-link:hover { text-decoration: underline; }
+        .article-hero {
+            margin-bottom: 40px;
+        }
+        .meta-pill {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 14px;
+        }
+        h1.article-title {
+            font-size: 2.4rem;
+            line-height: 1.25;
+            margin-bottom: 16px;
+            color: #ffffff;
+            font-weight: 800;
+        }
+        .article-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        .editorial-lead {
+            background: var(--surface-color);
+            border-left: 4px solid var(--accent);
+            padding: 24px;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 50px;
+            font-size: 1.05rem;
+            color: #e2e8f0;
+        }
+        .item-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px -2px rgba(0,0,0,0.3);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+        .item-card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+        }
+        .item-badge {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+        }
+        .item-title {
+            font-size: 1.6rem;
+            color: #ffffff;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+        .item-summary {
+            color: #cbd5e1;
+            margin-bottom: 22px;
+            font-size: 1rem;
+        }
+        .highlights-box {
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin-bottom: 20px;
+        }
+        .box-title {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #e2e8f0;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .highlights-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .highlights-box li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+        .highlights-box li::before {
+            content: "•";
+            position: absolute;
+            left: 4px;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        .practical-box {
+            background: rgba(56, 189, 248, 0.08);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            color: #e0f2fe;
+        }
+        .editorial-quote {
+            border-left: 3px solid #64748b;
+            color: #94a3b8;
+            font-style: italic;
+            padding-left: 16px;
+            margin-bottom: 26px;
+            font-size: 0.96rem;
+        }
+        .cta-container {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .cta-label {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 12px;
+        }
+        .cta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
+        .btn-icon { font-size: 1.4rem; }
+        .btn-text { display: flex; flex-direction: column; text-align: left; }
+        .btn-subtitle { font-size: 0.72rem; opacity: 0.85; text-transform: uppercase; letter-spacing: 0.03em; }
+        .btn-title { font-size: 0.95rem; font-weight: 700; }
+        .btn-amazon { background: linear-gradient(135deg, #FF9900, #F08804); color: #111827; }
+        .btn-ml { background: linear-gradient(135deg, #FFE600, #F7D600); color: #2D3277; }
+        .btn-shopee { background: linear-gradient(135deg, #EE4D2D, #D03B1E); color: #FFFFFF; }
+
+        footer.portal-footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+        }
+        .lgpd-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--border);
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-top: 16px;
+            max-width: 650px;
+        }
+        @media (max-width: 640px) {
+            h1.article-title { font-size: 1.8rem; }
+            .item-card { padding: 20px; }
+            .cta-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <aside class="conar-banner">
+        📢 <strong>Transparencia Publicitaria (#publicidade): Este guia editorial independente contem links de afiliados. Compras realizadas atraves deles podem gerar comissao sem custo adicional para voce.</strong>
+    </aside>
+
+    <div class="container">
+        <header class="portal-header">
+            <a href="index.html" class="brand">🏛️ Acervo & Referencia</a>
+            <nav>
+                <a href="index.html" class="nav-link">← Ver Todos os Guias</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="article-hero">
+                <span class="meta-pill">Economia Comportamental & Psicologia</span>
+                <h1 class="article-title">Daniel Kahneman (Prêmio Nobel): Os Livros e Métodos sobre Tomada de Decisão e Economia Comportamental</h1>
+                <p class="article-date">Publicado em 18 de October de 2026 • Curadoria Editorial Independente</p>
+            </div>
+
+            <section class="editorial-lead">
+                <p>Nesta seleção analítica, a equipe editorial do <strong>Acervo & Referencia</strong> reúne as leituras e ferramentas indispensáveis ligadas ao método e às ideias de <strong>Daniel Kahneman</strong>. Cada recomendação foi selecionada com critérios de relevância perene, clareza didática e impacto no desenvolvimento pessoal e profissional.</p>
+            </section>
+
+            <section class="items-list">
+                
+        <article class="item-card" id="item-1">
+            <div class="item-badge">#01 Recomenda&ccedil;&atilde;o Editorial</div>
+            <h2 class="item-title">Rápido e Devagar: Duas Formas de Pensar - Daniel Kahneman</h2>
+            <div class="item-summary">A obra **Rápido e Devagar: Duas Formas de Pensar - Daniel Kahneman** representa um marco na difusão do conhecimento de Daniel Kahneman. Com uma narrativa fundamentada em rigor factual e rigor acadêmico, o texto desmistifica conceitos complexos e oferece ao leitor uma lente analítica indispensável para interpretar os desafios contemporâneos.</div>
+
+            <div class="highlights-box">
+                <span class="box-title">Pontos de Destaque Anal&iacute;tico:</span>
+                <ul><li>Embasamento factual consolidado e reconhecido internacionalmente</li><li>Desenvolvimento claro de argumentos com aplicabilidade imediata</li><li>Clássico moderno de referência bibliográfica indispensável</li></ul>
+            </div>
+
+            <div class="practical-box">
+                <strong>Impacto Pr&aacute;tico:</strong> Capacita o leitor a tomar decisões mais lúcidas, identificar vieses cognitivos e enriquecer substancialmente seu repertório cultural e profissional.
+            </div>
+
+            <blockquote class="editorial-quote">
+                &ldquo;Compreender a profundidade do pensamento de Daniel Kahneman é dar um passo definitivo em direção à lucidez intelectual.&rdquo;
+            </blockquote>
+
+            <div class="cta-container">
+                <span class="cta-label">Disponibilidade e Curadoria de Pre&ccedil;os:</span>
+                <div class="cta-grid">
+                    <a href="https://www.amazon.com.br/s?k=R%C3%A1pido+e+Devagar%3A+Duas+Formas+de+Pensar+-+Daniel+Kahneman&tag=PREENCHER_SUA_TAG-20" target="_blank" rel="nofollow noopener sponsored" class="btn btn-amazon">
+                        <span class="btn-icon">🛒</span>
+                        <div class="btn-text">
+                            <span class="btn-subtitle">Comprar com seguran&ccedil;a</span>
+                            <span class="btn-title">Amazon Brasil</span>
+                        </div>
+                    </a>
+                    <a href="https://lista.mercadolivre.com.br/rapido-e-devagar-duas-formas-de-pensar-daniel-kahneman#D[A:R%C3%A1pido+e+Devagar%3A+Duas+Formas+de+Pensar+-+Daniel+Kahneman,afiliado:de20250103162855]" target="_blank" rel="nofollow noopener sponsored" class="btn btn-ml">
+                        <span class="btn-icon">💛</span>
+                        <div class="btn-text">
+                            <span class="btn-subtitle">Ofertas e entrega r&aacute;pida</span>
+                            <span class="btn-title">Mercado Livre</span>
+                        </div>
+                    </a>
+                    <a href="https://shopee.com.br/search?keyword=R%C3%A1pido+e+Devagar%3A+Duas+Formas+de+Pensar+-+Daniel+Kahneman&utm_source=an_PREENCHER_SEU_ID_SHOPEE" target="_blank" rel="nofollow noopener sponsored" class="btn btn-shopee">
+                        <span class="btn-icon">🛍️</span>
+                        <div class="btn-text">
+                            <span class="btn-subtitle">Cupons e frete</span>
+                            <span class="btn-title">Shopee Brasil</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </article>
+        
+        <article class="item-card" id="item-2">
+            <div class="item-badge">#02 Recomenda&ccedil;&atilde;o Editorial</div>
+            <h2 class="item-title">Ruído: Uma Falha no Julgamento Humano - Daniel Kahneman</h2>
+            <div class="item-summary">A obra **Ruído: Uma Falha no Julgamento Humano - Daniel Kahneman** representa um marco na difusão do conhecimento de Daniel Kahneman. Com uma narrativa fundamentada em rigor factual e rigor acadêmico, o texto desmistifica conceitos complexos e oferece ao leitor uma lente analítica indispensável para interpretar os desafios contemporâneos.</div>
+
+            <div class="highlights-box">
+                <span class="box-title">Pontos de Destaque Anal&iacute;tico:</span>
+                <ul><li>Embasamento factual consolidado e reconhecido internacionalmente</li><li>Desenvolvimento claro de argumentos com aplicabilidade imediata</li><li>Clássico moderno de referência bibliográfica indispensável</li></ul>
+            </div>
+
+            <div class="practical-box">
+                <strong>Impacto Pr&aacute;tico:</strong> Capacita o leitor a tomar decisões mais lúcidas, identificar vieses cognitivos e enriquecer substancialmente seu repertório cultural e profissional.
+            </div>
+
+            <blockquote class="editorial-quote">
+                &ldquo;Compreender a profundidade do pensamento de Daniel Kahneman é dar um passo definitivo em direção à lucidez intelectual.&rdquo;
+            </blockquote>
+
+            <div class="cta-container">
+                <span class="cta-label">Disponibilidade e Curadoria de Pre&ccedil;os:</span>
+                <div class="cta-grid">
+                    <a href="https://www.amazon.com.br/s?k=Ru%C3%ADdo%3A+Uma+Falha+no+Julgamento+Humano+-+Daniel+Kahneman&tag=PREENCHER_SUA_TAG-20" target="_blank" rel="nofollow noopener sponsored" class="btn btn-amazon">
+                        <span class="btn-icon">🛒</span>
+                        <div class="btn-text">
+                            <span class="btn-subtitle">Comprar com seguran&ccedil;a</span>
+                            <span class="btn-title">Amazon Brasil</span>
+                        </div>
+                    </a>
+                    <a href="https://lista.mercadolivre.com.br/ruido-uma-falha-no-julgamento-humano-daniel-kahneman#D[A:Ru%C3%ADdo%3A+Uma+Falha+no+Julgamento+Humano+-+Daniel+Kahneman,afiliado:de20250103162855]" target="_blank" rel="nofollow noopener sponsored" class="btn btn-ml">
+                        <span class="btn-icon">💛</span>
+                        <div class="btn-text">
+                            <span class="btn-subtitle">Ofertas e entrega r&aacute;pida</span>
+                            <span class="btn-title">Mercado Livre</span>
+                        </div>
+                    </a>
+                    <a href="https://shopee.com.br/search?keyword=Ru%C3%ADdo%3A+Uma+Falha+no+Julgamento+Humano+-+Daniel+Kahneman&utm_source=an_PREENCHER_SEU_ID_SHOPEE" target="_blank" rel="nofollow noopener sponsored" class="btn btn-shopee">
+                        <span class="btn-icon">🛍️</span>
+                        <div class="btn-text">
+                            <span class="btn-subtitle">Cupons e frete</span>
+                            <span class="btn-title">Shopee Brasil</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </article>
+        
+        <article class="item-card" id="item-3">
+            <div class="item-badge">#03 Recomenda&ccedil;&atilde;o Editorial</div>
+            <h2 class="item-title">Previsivelmente Irracional - Dan Ariely</h2>
+            <div class="item-summary">A obra **Previsivelmente Irracional - Dan Ariely** representa um marco na difusão do conhecimento de Daniel Kahneman. Com uma narrativa fundamentada em rigor factual e rigor acadêmico, o texto desmistifica conceitos complexos e oferece ao leitor uma lente analítica indispensável para interpretar os desafios contemporâneos.</div>
+
+            <div class="highlights-box">
+                <span class="box-title">Pontos de Destaque Anal&iacute;tico:</span>
+                <ul><li>Embasamento factual consolidado e reconhecido internacionalmente</li><li>Desenvolvimento claro de argumentos com aplicabilidade imediata</li><li>Clássico moderno de referência bibliográfica indispensável</li></ul>
+            </div>
+
+            <div class="practical-box">
+                <strong>Impacto Pr&aacute;tico:</strong> Capacita o leitor a tomar decisões mais lúcidas, identificar vieses cognitivos e enriquecer substancialmente seu repertório cultural e profissional.
+            </div>
+
+            <blockquote class="editorial-quote">
+                &ldquo;Compreender a profundidade do pensamento de Daniel Kahneman é dar um passo definitivo em direção à lucidez intelectual.&rdquo;
+            </blockquote>
+
+            <div class="cta-container">
+                <span class="cta-label">Disponibilidade e Curadoria de Pre&ccedil;os:</span>
+                <div class="cta-grid">
+                    <a href="https://www.amazon.com.br/s?k=Previsivelmente+Irracional+-+Dan+Ariely&tag=PREENCHER_SUA_TAG-20" target="_blank" rel="nofollow noopener sponsored" class="btn btn-amazon">
+                        <span class="btn-icon">🛒</span>
+                        <div class="btn-text">
+                            <span class="btn-subtitle">Comprar com seguran&ccedil;a</span>
+                            <span class="btn-title">Amazon Brasil</span>
+                        </div>
+                    </a>
+                    <a href="https://lista.mercadolivre.com.br/previsivelmente-irracional-dan-ariely#D[A:Previsivelmente+Irracional+-+Dan+Ariely,afiliado:de20250103162855]" target="_blank" rel="nofollow noopener sponsored" class="btn btn-ml">
+                        <span class="btn-icon">💛</span>
+                        <div class="btn-text">
+                            <span class="btn-subtitle">Ofertas e entrega r&aacute;pida</span>
+                            <span class="btn-title">Mercado Livre</span>
+                        </div>
+                    </a>
+                    <a href="https://shopee.com.br/search?keyword=Previsivelmente+Irracional+-+Dan+Ariely&utm_source=an_PREENCHER_SEU_ID_SHOPEE" target="_blank" rel="nofollow noopener sponsored" class="btn btn-shopee">
+                        <span class="btn-icon">🛍️</span>
+                        <div class="btn-text">
+                            <span class="btn-subtitle">Cupons e frete</span>
+                            <span class="btn-title">Shopee Brasil</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </article>
+        
+        <article class="item-card" id="item-4">
+            <div class="item-badge">#04 Recomenda&ccedil;&atilde;o Editorial</div>
+            <h2 class="item-title">Kindle Paperwhite Amazon</h2>
+            <div class="item-summary">Para vivenciar plenamente as ideias propostas nas obras de Daniel Kahneman, dispor da ferramenta adequada faz toda a diferença prática. O item **Kindle Paperwhite Amazon** foi selecionado nesta curadoria por oferecer a ergonomia, confiabilidade e foco necessários para momentos de estudo e aplicação cotidiana.</div>
+
+            <div class="highlights-box">
+                <span class="box-title">Pontos de Destaque Anal&iacute;tico:</span>
+                <ul><li>Projetado para eliminar distrações e sustentar longos períodos de concentração</li><li>Construção ergonômica voltada à durabilidade e conforto diário</li><li>Perfeita sinergia com rotinas de leitura profunda e anotação ativa</li></ul>
+            </div>
+
+            <div class="practical-box">
+                <strong>Impacto Pr&aacute;tico:</strong> Permite implementar no mundo real os métodos e disciplinas abordados nesta edição do Acervo & Referência, unindo conhecimento teórico e suporte material.
+            </div>
+
+            <blockquote class="editorial-quote">
+                &ldquo;A excelência de uma disciplina intelectual depende também do ambiente e dos instrumentos que escolhemos cultivar.&rdquo;
+            </blockquote>
+
+            <div class="cta-container">
+                <span class="cta-label">Disponibilidade e Curadoria de Pre&ccedil;os:</span>
+                <div class="cta-grid">
+                    <a href="https://www.amazon.com.br/s?k=Kindle+Paperwhite+Amazon&tag=PREENCHER_SUA_TAG-20" target="_blank" rel="nofollow noopener sponsored" class="btn btn-amazon">
+                        <span class="btn-icon">🛒</span>
+                        <div class="btn-text">
+                            <span class="btn-subtitle">Comprar com seguran&ccedil;a</span>
+                            <span class="btn-title">Amazon Brasil</span>
+                        </div>
+                    </a>
+                    <a href="https://lista.mercadolivre.com.br/kindle-paperwhite-amazon#D[A:Kindle+Paperwhite+Amazon,afiliado:de20250103162855]" target="_blank" rel="nofollow noopener sponsored" class="btn btn-ml">
+                        <span class="btn-icon">💛</span>
+                        <div class="btn-text">
+                            <span class="btn-subtitle">Ofertas e entrega r&aacute;pida</span>
+                            <span class="btn-title">Mercado Livre</span>
+                        </div>
+                    </a>
+                    <a href="https://shopee.com.br/search?keyword=Kindle+Paperwhite+Amazon&utm_source=an_PREENCHER_SEU_ID_SHOPEE" target="_blank" rel="nofollow noopener sponsored" class="btn btn-shopee">
+                        <span class="btn-icon">🛍️</span>
+                        <div class="btn-text">
+                            <span class="btn-subtitle">Cupons e frete</span>
+                            <span class="btn-title">Shopee Brasil</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </article>
+        
+            </section>
+        </main>
+
+        <footer class="portal-footer">
+            <p>© 2026 Acervo & Referencia • Todos os direitos editoriais reservados.</p>
+            <div class="lgpd-badge">
+                🛡️ <strong>Privacidade Zero-PII:</strong> Este site respeita sua privacidade. Não coletamos dados de identificação pessoal, não utilizamos cookies de rastreamento comportamental e todas as compras são realizadas diretamente nos portais parceiros oficiais.
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
