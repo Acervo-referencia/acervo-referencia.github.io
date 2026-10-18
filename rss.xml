@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Acervo &amp; Referencia</title>
+    <link>https://acervo-referencia.github.io</link>
+    <description>Curadoria independente de obras clássicas, ferramentas de produtividade e pensadores de referência perene.</description>
+    <language>pt-BR</language>
+    <lastBuildDate>Sun, 18 Oct 2026 18:35:39 +0000</lastBuildDate>
+    <atom:link href="https://acervo-referencia.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Carl Sagan: As Leituras Essenciais de Ciência, Cosmologia e Pensamento Crítico</title>
+      <link>https://acervo-referencia.github.io/carl-sagan-leituras-essenciais-ciencia-cosmologia.html</link>
+      <guid isPermaLink="true">https://acervo-referencia.github.io/carl-sagan-leituras-essenciais-ciencia-cosmologia.html</guid>
+      <pubDate>Sat, 17 Oct 2026 22:37:11 +0000</pubDate>
+      <description><![CDATA[Curadoria editorial independente sobre Carl Sagan: As Leituras Essenciais de Ciência, Cosmologia e Pensamento Crítico. Obras e ferramentas essenciais analisadas: O Mundo Assombrado pelos Demônios - Carl Sagan, Cosmos - Carl Sagan, Pálido Ponto Azul - Carl Sagan, Telescópio Refrator Iniciante Astronomia. Acesse o guia completo com análises conceituais aprofundadas e curadoria de preços verificados na Amazon, Mercado Livre e Shopee. #publicidade • Este guia contém recomendações editoriais com links de afiliados oficiais.]]></description>
+      <enclosure url="https://acervo-referencia.github.io/midia/carl-sagan-leituras-essenciais-ciencia-cosmologia_pinterest.png" type="image/png" length="129777" />
+      <media:content url="https://acervo-referencia.github.io/midia/carl-sagan-leituras-essenciais-ciencia-cosmologia_pinterest.png" type="image/png" medium="image" />
+    </item>
+    <item>
+      <title>Daniel Kahneman (Prêmio Nobel): Os Livros e Métodos sobre Tomada de Decisão e Economia Comportamental</title>
+      <link>https://acervo-referencia.github.io/daniel-kahneman-tomada-de-decisao-economia-comportamental.html</link>
+      <guid isPermaLink="true">https://acervo-referencia.github.io/daniel-kahneman-tomada-de-decisao-economia-comportamental.html</guid>
+      <pubDate>Sat, 17 Oct 2026 22:36:52 +0000</pubDate>
+      <description><![CDATA[Curadoria editorial independente sobre Daniel Kahneman (Prêmio Nobel): Os Livros e Métodos sobre Tomada de Decisão e Economia Comportamental. Obras e ferramentas essenciais analisadas: Rápido e Devagar: Duas Formas de Pensar - Daniel Kahneman, Ruído: Uma Falha no Julgamento Humano - Daniel Kahneman, Previsivelmente Irracional - Dan Ariely, Kindle Paperwhite Amazon. Acesse o guia completo com análises conceituais aprofundadas e curadoria de preços verificados na Amazon, Mercado Livre e Shopee. #publicidade • Este guia contém recomendações editoriais com links de afiliados oficiais.]]></description>
+      <enclosure url="https://acervo-referencia.github.io/midia/daniel-kahneman-tomada-de-decisao-economia-comportamental_pinterest.png" type="image/png" length="133996" />
+      <media:content url="https://acervo-referencia.github.io/midia/daniel-kahneman-tomada-de-decisao-economia-comportamental_pinterest.png" type="image/png" medium="image" />
+    </item>
+  </channel>
+</rss>
