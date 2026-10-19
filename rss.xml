@@ -5,7 +5,8 @@
     <link>https://acervo-referencia.github.io</link>
     <description>Curadoria independente de obras clássicas, ferramentas de produtividade e pensadores de referência perene.</description>
     <language>pt-BR</language>
-    <lastBuildDate>Mon, 19 Oct 2026 03:02:45 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 03:41:22 +0000</lastBuildDate>
+    <atom:link href="https://pubsubhubbub.appspot.com/" rel="hub" />
     <atom:link href="https://acervo-referencia.github.io/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cal Newport: Livros e Ferramentas para Trabalho Focado (Deep Work) e Produtividade Sem Distração</title>
