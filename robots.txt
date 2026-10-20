@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /painel_acompanhamento.html
+Disallow: /fila/
+Disallow: /logs/
 
 Sitemap: https://acervo-referencia.github.io/sitemap.xml

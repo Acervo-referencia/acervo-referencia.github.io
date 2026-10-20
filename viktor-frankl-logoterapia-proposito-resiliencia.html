@@ -1,952 +1,1061 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="p:domain_verify" content="ce70d1edfd74d2c46236a2c33a49eaeb">
-    <meta name="google-site-verification" content="GB_dWgpjlrdUpHIKw5Dl4EX5ZbRJbIKjiQODizXagvw">
-    <link rel="alternate" type="application/rss+xml" title="Feed RSS 2.0 - Acervo & Referencia" href="https://acervo-referencia.github.io/rss.xml">
-    <title>Viktor Frankl e a Logoterapia: Obras Fundamentais sobre Propósito, Resiliência e Psicologia | Acervo & Referencia</title>
-    <meta name="description" content="Notas de leitura e ensaio editorial sobre as obras de Viktor Frankl.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-base: #09090b;
-            --bg-elevated: rgba(24, 24, 28, 0.65);
-            --bg-card: #121216;
-            --border-subtle: rgba(255, 255, 255, 0.07);
-            --border-glass: rgba(255, 255, 255, 0.12);
-            --text-primary: #f4f4f6;
-            --text-secondary: #a1a1aa;
-            --text-muted: #71717a;
-            --accent-warm: #e2b86b;
-            --font-heading: 'Instrument Serif', 'Playfair Display', Georgia, serif;
-            --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            background-color: var(--bg-base);
-            color: var(--text-primary);
-            font-family: var(--font-body);
-            line-height: 1.65;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-            padding-bottom: 90px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Viktor Frankl e a Logoterapia: Obras Fundamentais sobre Propósito, Resiliência e Psicologia — Descobertas & Livros Virais</title>
+  <meta name="description" content="" />
+  <link rel="canonical" href="https://acervo-referencia.github.io/viktor-frankl-logoterapia-proposito-resiliencia.html" />
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
 
-        /* Ambient Glow Cinematográfico */
-        .ambient-glow {
-            position: fixed;
-            top: -80px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 360px;
-            height: 360px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(226, 184, 107, 0.08) 0%, transparent 70%);
-            filter: blur(80px);
-            pointer-events: none;
-            z-index: 0;
-        }
+:root {
+  --bg-deep: #0b071e;
+  --glass-surface: rgba(255, 255, 255, 0.09);
+  --glass-surface-hover: rgba(255, 255, 255, 0.14);
+  --glass-border: rgba(255, 255, 255, 0.22);
+  --glass-highlight: rgba(255, 255, 255, 0.45);
+  --text-main: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.78);
+}
 
-        /* Floating Liquid Glass Pill Navbar */
-        .floating-pill-nav {
-            position: fixed;
-            top: 14px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-            width: calc(100% - 32px);
-            max-width: 520px;
-            border-radius: 999px;
-            padding: 10px 18px;
-            background: rgba(18, 18, 22, 0.72);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.09);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.45);
-            overflow: hidden;
-        }
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-            color: var(--text-primary);
-        }
-        .nav-brand-symbol {
-            color: var(--accent-warm);
-            font-size: 0.95rem;
-        }
-        .nav-brand-text {
-            font-family: var(--font-heading);
-            font-size: 1.15rem;
-            font-weight: 500;
-            letter-spacing: 0.02em;
-        }
-        .nav-link-pill {
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-size: 0.8rem;
-            font-weight: 500;
-            background: rgba(255,255,255,0.05);
-            padding: 5px 12px;
-            border-radius: 999px;
-            border: 1px solid rgba(255,255,255,0.06);
-            transition: color 0.2s, background 0.2s;
-        }
-        .nav-link-pill:hover, .nav-link-pill:active {
-            color: var(--text-primary);
-            background: rgba(255,255,255,0.1);
-        }
-        .pill-progress-bar {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 2px;
-            width: 0%;
-            background: var(--accent-warm);
-            transition: width 0.1s ease;
-        }
+body.light-crystal {
+  --bg-deep: #eef2ff;
+  --glass-surface: rgba(255, 255, 255, 0.68);
+  --glass-surface-hover: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.85);
+  --glass-highlight: rgba(255, 255, 255, 0.95);
+  --text-main: #0f172a;
+  --text-muted: #334155;
+}
 
-        /* Main Container */
-        .content-container {
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 85px 20px 40px;
-            position: relative;
-            z-index: 1;
-        }
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
 
-        /* Article Header */
-        .article-intro-header {
-            margin-bottom: 30px;
-        }
-        .article-topic-tag {
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--accent-warm);
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            display: inline-block;
-            margin-bottom: 12px;
-        }
-        h1.article-headline {
-            font-family: var(--font-heading);
-            font-size: 2.5rem;
-            line-height: 1.18;
-            font-weight: 500;
-            color: #ffffff;
-            margin-bottom: 14px;
-            letter-spacing: -0.01em;
-        }
-        .article-read-meta {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-        }
-        .article-lead-text {
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-            line-height: 1.68;
-            border-left: 2px solid var(--accent-warm);
-            padding-left: 16px;
-            margin-bottom: 35px;
-        }
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
 
-        /* Carrossel Horizontal Swipe no Topo */
-        .carousel-section {
-            margin-bottom: 45px;
-        }
-        .carousel-label {
-            font-size: 0.78rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        .swipe-carousel {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            gap: 12px;
-            padding: 4px 2px 14px;
-            scrollbar-width: none;
-            -webkit-overflow-scrolling: touch;
-        }
-        .swipe-carousel::-webkit-scrollbar { display: none; }
-        .carousel-card-item {
-            flex: 0 0 130px;
-            scroll-snap-align: start;
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 14px;
-            padding: 10px;
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: transform 0.2s, border-color 0.2s;
-        }
-        .carousel-card-item:hover, .carousel-card-item:active {
-            border-color: var(--border-glass);
-            transform: translateY(-2px);
-        }
-        .carousel-card-num {
-            font-size: 0.68rem;
-            font-weight: 700;
-            color: var(--accent-warm);
-            align-self: flex-start;
-            margin-bottom: 6px;
-        }
-        .carousel-card-thumb-wrap {
-            height: 110px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 8px;
-        }
-        .carousel-card-thumb {
-            max-height: 100%;
-            max-width: 100%;
-            border-radius: 4px;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.6);
-            object-fit: contain;
-        }
-        .carousel-card-name {
-            font-size: 0.72rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            text-align: center;
-            line-height: 1.25;
-            height: 28px;
-            overflow: hidden;
-        }
+h1, h2, h3, .font-display {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.025em;
+}
 
-        /* Book Editorial Card */
-        .book-editorial-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 22px;
-            padding: 28px 20px;
-            margin-bottom: 45px;
-            position: relative;
-        }
-        .book-top-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 22px;
-        }
-        .book-order-badge {
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            letter-spacing: 0.05em;
-        }
-        .book-editorial-tag {
-            font-size: 0.72rem;
-            font-weight: 600;
-            color: var(--accent-warm);
-            background: rgba(226, 184, 107, 0.08);
-            border: 1px solid rgba(226, 184, 107, 0.18);
-            padding: 4px 10px;
-            border-radius: 999px;
-        }
+/* Animated Aurora Mesh Orbs Behind Glass */
+.aurora-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
 
-        /* 3D Scroll Stage */
-        .book-cover-stage {
-            display: flex;
-            justify-content: center;
-            margin: 10px 0 26px;
-            perspective: 900px;
-        }
-        .book-cover-3d {
-            position: relative;
-            transform-style: preserve-3d;
-            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
-            transform: perspective(900px) rotateY(-4deg) rotateX(2deg) scale(0.98);
-        }
-        .book-cover-3d.in-viewport {
-            transform: perspective(900px) rotateY(-8deg) rotateX(3deg) scale(1.03);
-        }
-        .book-cover-img {
-            height: 270px;
-            width: auto;
-            max-width: 100%;
-            border-radius: 6px;
-            box-shadow: -10px 18px 36px rgba(0,0,0,0.85), 0 0 0 1px rgba(255,255,255,0.08);
-            object-fit: contain;
-            display: block;
-        }
-        .book-spine-shine {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 8px;
-            height: 100%;
-            background: linear-gradient(90deg, rgba(255,255,255,0.18), transparent);
-            border-radius: 6px 0 0 6px;
-            pointer-events: none;
-        }
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(85px);
+  opacity: 0.72;
+  animation: floatOrb 14s infinite alternate ease-in-out;
+}
 
-        .book-text-header {
-            margin-bottom: 22px;
-        }
-        .book-title {
-            font-family: var(--font-heading);
-            font-size: 1.85rem;
-            line-height: 1.22;
-            color: #ffffff;
-            font-weight: 500;
-            margin-bottom: 12px;
-        }
-        .book-hook-quote {
-            font-size: 1rem;
-            color: #e4e4e7;
-            line-height: 1.6;
-            font-style: italic;
-            border-left: 2px solid rgba(226, 184, 107, 0.4);
-            padding-left: 12px;
-            margin-bottom: 20px;
-        }
+body.light-crystal .orb {
+  opacity: 0.55;
+  filter: blur(95px);
+}
 
-        /* Segmented Control (iOS Style) */
-        .segmented-control {
-            background: rgba(0, 0, 0, 0.45);
-            border: 1px solid var(--border-subtle);
-            border-radius: 12px;
-            padding: 4px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 4px;
-            margin-bottom: 20px;
-        }
-        .seg-btn {
-            background: transparent;
-            border: none;
-            color: var(--text-secondary);
-            font-family: var(--font-body);
-            font-size: 0.8rem;
-            font-weight: 600;
-            padding: 8px 4px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-            text-align: center;
-        }
-        .seg-btn.active {
-            background: rgba(255, 255, 255, 0.1);
-            color: #ffffff;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-        }
+.orb-1 {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, #ec4899 0%, #8b5cf6 70%);
+  top: -8%;
+  left: -10%;
+}
 
-        .tab-panels-wrapper {
-            margin-bottom: 24px;
-            min-height: 120px;
-        }
-        .tab-panel {
-            display: none;
-            opacity: 0;
-            transform: translateY(4px);
-            transition: opacity 0.25s ease, transform 0.25s ease;
-        }
-        .tab-panel.active {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
-        }
+.orb-2 {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, #06b6d4 0%, #3b82f6 70%);
+  top: 28%;
+  right: -12%;
+  animation-delay: -4s;
+}
 
-        .editorial-prose p {
-            font-size: 0.95rem;
-            color: #d4d4d8;
-            line-height: 1.7;
-            margin-bottom: 12px;
-        }
+.orb-3 {
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, #f59e0b 0%, #ef4444 70%);
+  bottom: -5%;
+  left: 15%;
+  animation-delay: -8s;
+}
 
-        /* Na Prática */
-        .practice-container {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-        .practice-item {
-            background: rgba(255, 255, 255, 0.02);
-            border-left: 2px solid var(--border-glass);
-            padding: 10px 14px;
-            border-radius: 0 8px 8px 0;
-        }
-        .practice-label-before {
-            font-size: 0.72rem;
-            color: #f87171;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            display: block;
-            margin-bottom: 4px;
-        }
-        .practice-label-after {
-            font-size: 0.72rem;
-            color: #34d399;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            display: block;
-            margin-bottom: 4px;
-        }
-        .practice-item p {
-            font-size: 0.9rem;
-            color: #d4d4d8;
-            line-height: 1.55;
-        }
+.orb-4 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #10b981 0%, #06b6d4 70%);
+  top: 65%;
+  left: -8%;
+  animation-delay: -2s;
+}
 
-        /* Por que vale? */
-        .why-container {
-            background: rgba(226, 184, 107, 0.03);
-            border: 1px solid rgba(226, 184, 107, 0.12);
-            padding: 16px;
-            border-radius: 12px;
-        }
-        .why-core-text {
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: #f4f4f6;
-            line-height: 1.6;
-            margin-bottom: 12px;
-        }
-        .why-quote {
-            font-family: var(--font-heading);
-            font-style: italic;
-            font-size: 1.05rem;
-            color: var(--accent-warm);
-            line-height: 1.45;
-        }
+@keyframes floatOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(28px, -34px) scale(1.12); }
+  100% { transform: translate(-22px, 26px) scale(0.94); }
+}
 
-        /* Store Links Anti-Vendedor */
-        .store-links-wrap {
-            border-top: 1px solid var(--border-subtle);
-            padding-top: 18px;
-        }
-        .store-intro {
-            font-size: 0.72rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            display: block;
-            margin-bottom: 10px;
-        }
-        .store-pills-row {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-        .store-pill {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid var(--border-subtle);
-            color: var(--text-primary);
-            text-decoration: none;
-            font-size: 0.8rem;
-            font-weight: 500;
-            padding: 8px 14px;
-            border-radius: 999px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: background 0.2s, border-color 0.2s, color 0.2s;
-        }
-        .store-pill:hover, .store-pill:active {
-            background: rgba(255, 255, 255, 0.09);
-            border-color: rgba(255, 255, 255, 0.18);
-            color: #ffffff;
-        }
-        .store-arrow {
-            color: var(--accent-warm);
-            font-size: 0.85rem;
-        }
+/* True 3D Frosted Glassmorphism Cards */
+.glass-card {
+  background: var(--glass-surface);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1.5px solid var(--glass-border);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.28),
+    inset 0 1.5px 2px var(--glass-highlight),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, background 0.3s ease;
+}
 
-        /* Sticky Bottom Pill on Mobile */
-        .sticky-mobile-pill {
-            position: fixed;
-            bottom: 16px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 990;
-            background: rgba(24, 24, 28, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--border-glass);
-            border-radius: 999px;
-            padding: 8px 18px;
-            color: var(--text-secondary);
-            font-size: 0.78rem;
-            font-weight: 600;
-            text-decoration: none;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
-            transition: color 0.2s, background 0.2s;
-        }
-        .sticky-mobile-pill:hover, .sticky-mobile-pill:active {
-            color: var(--text-primary);
-            background: rgba(30, 30, 36, 0.95);
-        }
+body.light-crystal .glass-card {
+  box-shadow:
+    0 18px 40px rgba(99, 102, 241, 0.14),
+    inset 0 2px 3px rgba(255, 255, 255, 0.95);
+}
 
-        /* Footer */
-        .footer-minimal {
-            border-top: 1px solid var(--border-subtle);
-            padding: 30px 20px;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.8rem;
-            line-height: 1.6;
-        }
-        .footer-conar-text {
-            max-width: 580px;
-            margin: 0 auto 12px;
-        }
-        .footer-links-row {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-        }
-        .footer-links-row a {
-            color: var(--text-secondary);
-            text-decoration: none;
-        }
-        .footer-links-row a:hover { color: var(--accent-warm); }
+.glass-card:hover {
+  transform: translateY(-4px);
+}
 
-        @media (min-width: 600px) {
-            h1.article-headline { font-size: 3rem; }
-            .book-editorial-card { padding: 34px 28px; }
-            .book-cover-img { height: 310px; }
-        }
-    </style>
+.glass-pill {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: inset 0 1px 1px var(--glass-highlight);
+}
+
+body.light-crystal .glass-pill {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+/* 3D Floating Book Cover with Specular Spine */
+.book-3d-wrap {
+  perspective: 1000px;
+}
+
+.book-3d {
+  position: relative;
+  border-radius: 16px;
+  transform-style: preserve-3d;
+  transform: rotateY(-10deg) rotateX(4deg);
+  box-shadow:
+    -12px 16px 28px rgba(0, 0, 0, 0.45),
+    inset 3px 0 6px rgba(255, 255, 255, 0.45);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+}
+
+.book-3d:hover, .book-3d.active-tilt {
+  transform: rotateY(0deg) rotateX(0deg) scale(1.06);
+  box-shadow:
+    0 22px 40px rgba(139, 92, 246, 0.45),
+    inset 2px 0 8px rgba(255, 255, 255, 0.65);
+}
+
+/* Branded High-Converting Store Buttons with Light Sweep */
+.store-btn {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 16px;
+  transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.22s ease, filter 0.22s ease;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+}
+
+.store-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-25deg);
+  transition: left 0.55s ease;
+}
+
+.store-btn:hover::before, .store-btn:active::before {
+  left: 130%;
+}
+
+.store-btn:active {
+  transform: scale(0.96);
+}
+
+.btn-amazon {
+  background: linear-gradient(135deg, #FF9900 0%, #FF5E00 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 10px 24px -6px rgba(255, 153, 0, 0.65), inset 0 1.5px 1px rgba(255, 255, 255, 0.5);
+}
+
+.btn-meli {
+  background: linear-gradient(135deg, #FFE600 0%, #F59E0B 100%);
+  color: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 10px 24px -6px rgba(250, 204, 21, 0.6), inset 0 1.5px 1px rgba(255, 255, 255, 0.75);
+}
+
+.btn-shopee {
+  background: linear-gradient(135deg, #FF5722 0%, #EE2A7B 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 10px 24px -6px rgba(238, 77, 45, 0.65), inset 0 1.5px 1px rgba(255, 255, 255, 0.5);
+}
+
+.store-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.06);
+}
+
+/* Hide Scrollbars on Swipe Carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Pulse Badge */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.55); }
+  50% { box-shadow: 0 0 0 8px rgba(236, 72, 153, 0); }
+}
+.pulse-badge {
+  animation: pulseGlow 2.2s infinite;
+}
+
+/* Gamified power bars */
+.power-bar-fill-mind {
+  background: linear-gradient(90deg, #ec4899, #8b5cf6);
+}
+.power-bar-fill-flow {
+  background: linear-gradient(90deg, #06b6d4, #3b82f6);
+}
+
+/* Active Segmented Tab Style */
+.tab-btn.active-tab {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.35) 0%, rgba(139, 92, 246, 0.35) 100%);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(236, 72, 153, 0.3);
+}
+body.light-crystal .tab-btn.active-tab {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.25) 0%, rgba(236, 72, 153, 0.25) 100%);
+  border-color: rgba(99, 102, 241, 0.6);
+  color: #0f172a;
+}
+
+/* Highlight Animation for Surprise Me */
+@keyframes highlightSurprise {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.8); }
+  50% { transform: scale(1.03); box-shadow: 0 0 50px 15px rgba(6, 182, 212, 0.7); border-color: #06b6d4; }
+  100% { transform: scale(1); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28); }
+}
+.surprise-highlight {
+  animation: highlightSurprise 1.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+  </style>
 </head>
-<body>
-    <div class="ambient-glow" aria-hidden="true"></div>
+<body class="min-h-screen relative pb-28">
 
-    <!-- Floating Pill Navbar -->
-    <nav class="floating-pill-nav">
-        <a href="/" class="nav-brand">
-            <span class="nav-brand-symbol">✦</span>
-            <span class="nav-brand-text">Acervo & Referencia</span>
-        </a>
-        <div class="nav-right">
-            <a href="/" class="nav-link-pill">← Início</a>
+
+  <!-- Animated Colorful Mesh Background -->
+  <div class="aurora-bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+  </div>
+
+
+  <!-- Floating Liquid Glass Top Bar -->
+  <header class="sticky top-3 z-50 px-3 sm:px-6 max-w-4xl mx-auto">
+    <div class="glass-card px-4 py-2.5 rounded-full flex items-center justify-between gap-2">
+      <a href="index.html" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold glass-pill hover:scale-105 transition-transform text-white">
+        <span>← Ver todos os livros (16)</span>
+      </a>
+
+      <!-- Right Controls: Saved Drawer + Theme Toggle -->
+      <div class="flex items-center gap-2 shrink-0">
+        <button id="openSavedBtn" class="glass-pill px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold flex items-center gap-1.5 hover:scale-105 transition-transform" title="Ver itens salvos">
+          <span>❤️</span>
+          <span id="savedCountBadge">0</span>
+        </button>
+        <button id="themeToggleBtn" class="glass-pill w-9 h-9 rounded-full flex items-center justify-center text-base hover:scale-110 transition-transform" title="Alternar modo Aurora / Cristal">
+          ☀️
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="relative z-10 max-w-4xl mx-auto px-3.5 sm:px-6 pt-5 space-y-8">
+
+    <!-- Hero do Artigo / Coleção -->
+    <section class="glass-card p-6 sm:p-8 space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md">
+        <span>🧠 Hack Mental</span>
+      </div>
+      <h1 class="text-2xl sm:text-4xl font-display font-black text-white leading-tight">
+        Viktor Frankl e a Logoterapia: Obras Fundamentais sobre Propósito, Resiliência e Psicologia
+      </h1>
+      <p class="text-sm sm:text-base text-white/80 leading-relaxed max-w-2xl">
+        
+      </p>
+    </section>
+
+    <!-- Carrossel Swipe das Obras Desta Edição -->
+    <section class="space-y-3">
+      <div class="flex items-center justify-between px-1">
+        <h2 class="font-display font-bold text-sm sm:text-base text-white/80">Obras selecionadas nesta edição:</h2>
+        <span class="text-xs text-white/60">Deslize ➔</span>
+      </div>
+      <div class="flex items-center gap-3 overflow-x-auto no-scrollbar py-1 snap-x snap-mandatory">
+
+        <div class="glass-pill p-3 rounded-2xl flex-shrink-0 w-64 snap-center space-y-2 border border-white/20">
+          <div class="flex items-center gap-3">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/em-busca-de-sentido-viktor-frankl.jpg" alt="Em Busca de Sentido - Viktor Frankl" class="book-3d w-14 h-20 object-cover rounded-xl" />
+            </div>
+            <div class="min-w-0 flex-1">
+              <h4 class="font-display font-bold text-xs text-white truncate">Em Busca de Sentido - Viktor Frankl</h4>
+              <p class="text-[10px] text-white/70 truncate">Viktor Frankl</p>
+              <a href="#em-busca-de-sentido-viktor-frankl" class="inline-block text-[10px] font-extrabold text-cyan-300 hover:underline pt-1">Ver detalhes ↓</a>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-1">
+            <a href="https://www.amazon.com.br/s?k=Em+Busca+de+Sentido+-+Viktor+Frankl&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-[10px] py-1 px-1.5">🟠 Amazon</a>
+            <a href="https://lista.mercadolivre.com.br/em-busca-de-sentido-viktor-frankl?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-[10px] py-1 px-1.5">⚡ Meli</a>
+            <a href="https://shopee.com.br/search?keyword=Em+Busca+de+Sentido+-+Viktor+Frankl" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-[10px] py-1 px-1.5">🛍️ Shopee</a>
+          </div>
         </div>
-        <div class="pill-progress-bar" id="pill-progress"></div>
-    </nav>
+        
 
-    <main class="content-container">
-        <header class="article-intro-header">
-            <span class="article-topic-tag">Psicologia Existencial & Filosofia</span>
-            <h1 class="article-headline">Viktor Frankl e a Logoterapia: Obras Fundamentais sobre Propósito, Resiliência e Psicologia</h1>
-            <div class="article-read-meta">⏱ 6 min de leitura • Notas de edição</div>
-            <div class="article-lead-text">
-                Neste ensaio dedicado às ideias e ao legado de <strong>Viktor Frankl</strong>, reunimos as leituras fundamentais e instrumentos práticos para quem deseja compreender este tema com calma e profundidade.
+        <div class="glass-pill p-3 rounded-2xl flex-shrink-0 w-64 snap-center space-y-2 border border-white/20">
+          <div class="flex items-center gap-3">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/a-presenca-ignorada-de-deus-viktor-frankl.jpg" alt="A Presença Ignorada de Deus - Viktor Frankl" class="book-3d w-14 h-20 object-cover rounded-xl" />
             </div>
-        </header>
+            <div class="min-w-0 flex-1">
+              <h4 class="font-display font-bold text-xs text-white truncate">A Presença Ignorada de Deus - Viktor Frankl</h4>
+              <p class="text-[10px] text-white/70 truncate">Viktor Frankl</p>
+              <a href="#a-presenca-ignorada-de-deus-viktor-frankl" class="inline-block text-[10px] font-extrabold text-cyan-300 hover:underline pt-1">Ver detalhes ↓</a>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-1">
+            <a href="https://www.amazon.com.br/s?k=A+Presen%C3%A7a+Ignorada+de+Deus+-+Viktor+Frankl&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-[10px] py-1 px-1.5">🟠 Amazon</a>
+            <a href="https://lista.mercadolivre.com.br/a-presenca-ignorada-de-deus-viktor-frankl?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-[10px] py-1 px-1.5">⚡ Meli</a>
+            <a href="https://shopee.com.br/search?keyword=A+Presen%C3%A7a+Ignorada+de+Deus+-+Viktor+Frankl" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-[10px] py-1 px-1.5">🛍️ Shopee</a>
+          </div>
+        </div>
+        
 
-        <!-- Carrossel Swipe no Topo -->
-        <section class="carousel-section" id="topo-obras">
-            <div class="carousel-label">Obras desta edição (toque para navegar):</div>
-            <div class="swipe-carousel">
-                
-        <a href="#obra-1" class="carousel-card-item">
-            <span class="carousel-card-num">01</span>
-            <div class="carousel-card-thumb-wrap">
-                <img src="midia/capas/em-busca-de-sentido-viktor-frankl.jpg" alt="Em Busca de Sentido - Viktor Frankl" class="carousel-card-thumb" loading="lazy">
+        <div class="glass-pill p-3 rounded-2xl flex-shrink-0 w-64 snap-center space-y-2 border border-white/20">
+          <div class="flex items-center gap-3">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/o-homem-em-busca-de-um-sentido-ultimo-viktor-frankl.jpg" alt="O Homem em Busca de um Sentido Último - Viktor Frankl" class="book-3d w-14 h-20 object-cover rounded-xl" />
             </div>
-            <span class="carousel-card-name">Em Busca de Sentido</span>
-        </a>
+            <div class="min-w-0 flex-1">
+              <h4 class="font-display font-bold text-xs text-white truncate">O Homem em Busca de um Sentido Último - Viktor Frankl</h4>
+              <p class="text-[10px] text-white/70 truncate">Viktor Frankl</p>
+              <a href="#o-homem-em-busca-de-um-sentido-ultimo-viktor-frankl" class="inline-block text-[10px] font-extrabold text-cyan-300 hover:underline pt-1">Ver detalhes ↓</a>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-1">
+            <a href="https://www.amazon.com.br/s?k=O+Homem+em+Busca+de+um+Sentido+%C3%9Altimo+-+Viktor+Frankl&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-[10px] py-1 px-1.5">🟠 Amazon</a>
+            <a href="https://lista.mercadolivre.com.br/o-homem-em-busca-de-um-sentido-ultimo-viktor-frankl?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-[10px] py-1 px-1.5">⚡ Meli</a>
+            <a href="https://shopee.com.br/search?keyword=O+Homem+em+Busca+de+um+Sentido+%C3%9Altimo+-+Viktor+Frankl" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-[10px] py-1 px-1.5">🛍️ Shopee</a>
+          </div>
+        </div>
         
-        <a href="#obra-2" class="carousel-card-item">
-            <span class="carousel-card-num">02</span>
-            <div class="carousel-card-thumb-wrap">
-                <img src="midia/capas/a-presenca-ignorada-de-deus-viktor-frankl.jpg" alt="A Presença Ignorada de Deus - Viktor Frankl" class="carousel-card-thumb" loading="lazy">
-            </div>
-            <span class="carousel-card-name">A Presença Ignorada de Deus</span>
-        </a>
-        
-        <a href="#obra-3" class="carousel-card-item">
-            <span class="carousel-card-num">03</span>
-            <div class="carousel-card-thumb-wrap">
-                <img src="midia/capas/o-homem-em-busca-de-um-sentido-ultimo-viktor-frankl.jpg" alt="O Homem em Busca de um Sentido Último - Viktor Frankl" class="carousel-card-thumb" loading="lazy">
-            </div>
-            <span class="carousel-card-name">O Homem em Busca de um Sentido Último</span>
-        </a>
-        
-        <a href="#obra-4" class="carousel-card-item">
-            <span class="carousel-card-num">04</span>
-            <div class="carousel-card-thumb-wrap">
-                <img src="midia/capas/caderno-inteligente-para-diario-e-anotacoes.jpg" alt="Caderno Inteligente para Diário e Anotações" class="carousel-card-thumb" loading="lazy">
-            </div>
-            <span class="carousel-card-name">Caderno Inteligente para Diário e Anotações</span>
-        </a>
-        
-            </div>
-        </section>
 
-        <!-- Seções das Obras com Abas -->
-        <section class="books-flow">
+        <div class="glass-pill p-3 rounded-2xl flex-shrink-0 w-64 snap-center space-y-2 border border-white/20">
+          <div class="flex items-center gap-3">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/caderno-inteligente-para-diario-e-anotacoes.jpg" alt="Caderno Inteligente para Diário e Anotações" class="book-3d w-14 h-20 object-cover rounded-xl" />
+            </div>
+            <div class="min-w-0 flex-1">
+              <h4 class="font-display font-bold text-xs text-white truncate">Caderno Inteligente para Diário e Anotações</h4>
+              <p class="text-[10px] text-white/70 truncate">Viktor Frankl</p>
+              <a href="#caderno-inteligente-para-diario-e-anotacoes" class="inline-block text-[10px] font-extrabold text-cyan-300 hover:underline pt-1">Ver detalhes ↓</a>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-1">
+            <a href="https://www.amazon.com.br/s?k=Caderno+Inteligente+para+Di%C3%A1rio+e+Anota%C3%A7%C3%B5es&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-[10px] py-1 px-1.5">🟠 Amazon</a>
+            <a href="https://lista.mercadolivre.com.br/caderno-inteligente-para-diario-e-anotacoes?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-[10px] py-1 px-1.5">⚡ Meli</a>
+            <a href="https://shopee.com.br/search?keyword=Caderno+Inteligente+para+Di%C3%A1rio+e+Anota%C3%A7%C3%B5es" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-[10px] py-1 px-1.5">🛍️ Shopee</a>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Cards Detalhados dos Livros -->
+    <section class="space-y-8">
+
+        <article id="em-busca-de-sentido-viktor-frankl" class="glass-card book-viral-card p-5 sm:p-7 space-y-4 relative flex flex-col justify-between">
+          
+          <!-- Top Card Bar -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md">
+              <span>Obra 01 / 04</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Ponto de partida</span>
+              <button onclick="toggleFavoriteItem('em-busca-de-sentido-viktor-frankl', 'Em Busca de Sentido - Viktor Frankl', 'Viktor Frankl', 'midia/capas/em-busca-de-sentido-viktor-frankl.jpg', 'https://www.amazon.com.br/s?k=Em+Busca+de+Sentido+-+Viktor+Frankl&tag=acervoref-20', 'https://lista.mercadolivre.com.br/em-busca-de-sentido-viktor-frankl?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=Em+Busca+de+Sentido+-+Viktor+Frankl')" 
+                      data-item-key="em-busca-de-sentido-viktor-frankl"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
+            </div>
+          </div>
+
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/em-busca-de-sentido-viktor-frankl.jpg" alt="Em Busca de Sentido - Viktor Frankl" class="book-3d w-32 sm:w-36 h-44 sm:h-52 object-cover rounded-2xl border border-white/20" />
+            </div>
+            <div class="space-y-2.5 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-xl sm:text-2xl font-display font-black text-white leading-snug">Em Busca de Sentido - Viktor Frankl</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Viktor Frankl</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "Quem tem uma razão clara para viver consegue atravessar quase qualquer desafio. O sofrimento deixa de ser apenas dor quando encontramos um propósito que justifica a perseverança."
+              </p>
+            </div>
+          </div>
+
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">95%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 95%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">92%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 92%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
+            </div>
             
-        <article class="book-editorial-card" id="obra-1">
-            <div class="book-top-bar">
-                <span class="book-order-badge">01 / 04</span>
-                <span class="book-editorial-tag">Ponto de partida</span>
+            <div class="tab-content-container p-4 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Nascido da experiência extrema do psiquiatra austríaco Viktor Frankl nos campos de concentração da Segunda Guerra, &#x27;Em Busca de Sentido&#x27; é uma das obras mais comoventes e lúcidas da psicologia do século XX. Frankl observou que os prisioneiros que preservavam a integridade espiritual eram aqueles ancorados em um objetivo futuro concreto.
+
+A partir desse testemunho, ele formalizou a Logoterapia, mostrando que a motivação primária do ser humano não é o prazer nem o poder, mas a busca por sentido. Uma leitura transformadora sobre resiliência, dignidade e liberdade interior.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Sentir-se desorientado diante de adversidades, esperando que as circunstâncias externas mudem para encontrar paz.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Assumir a liberdade de escolher a própria atitude interior, encontrando significado no trabalho, nos laços e na superação.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Oferece uma estrutura de pensamento serena para lidar com períodos de incerteza e crise pessoal.</p>
+              </div>
             </div>
+          </div>
 
-            <!-- Capa 3D Reativa ao Scroll -->
-            <div class="book-cover-stage">
-                <div class="book-cover-3d" data-scroll-book>
-                    <img src="midia/capas/em-busca-de-sentido-viktor-frankl.jpg" alt="Em Busca de Sentido - Viktor Frankl" class="book-cover-img" loading="lazy">
-                    <div class="book-spine-shine"></div>
-                </div>
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
             </div>
-
-            <div class="book-text-header">
-                <h2 class="book-title">Em Busca de Sentido - Viktor Frankl</h2>
-                <p class="book-hook-quote">&ldquo;Quem tem uma razão clara para viver consegue atravessar quase qualquer desafio. O sofrimento deixa de ser apenas dor quando encontramos um propósito que justifica a perseverança.&rdquo;</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=Em+Busca+de+Sentido+-+Viktor+Frankl&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/em-busca-de-sentido-viktor-frankl?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=Em+Busca+de+Sentido+-+Viktor+Frankl" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
             </div>
+          </div>
 
-            <!-- Segmented Control de 3 Abas (Apple Books Style) -->
-            <div class="segmented-control" role="tablist">
-                <button class="seg-btn active" data-tab-target="idea-1" onclick="switchTab(this, 'idea-1')">A Ideia Central</button>
-                <button class="seg-btn" data-tab-target="practice-1" onclick="switchTab(this, 'practice-1')">Na Prática</button>
-                <button class="seg-btn" data-tab-target="why-1" onclick="switchTab(this, 'why-1')">Por que vale?</button>
-            </div>
-
-            <div class="tab-panels-wrapper">
-                <!-- Aba 1: A Ideia Central -->
-                <div class="tab-panel active" id="idea-1">
-                    <div class="editorial-prose">
-                        <p>Nascido da experiência extrema do psiquiatra austríaco Viktor Frankl nos campos de concentração da Segunda Guerra, 'Em Busca de Sentido' é uma das obras mais comoventes e lúcidas da psicologia do século XX. Frankl observou que os prisioneiros que preservavam a integridade espiritual eram aqueles ancorados em um objetivo futuro concreto.</p><p>A partir desse testemunho, ele formalizou a Logoterapia, mostrando que a motivação primária do ser humano não é o prazer nem o poder, mas a busca por sentido. Uma leitura transformadora sobre resiliência, dignidade e liberdade interior.</p>
-                    </div>
-                </div>
-
-                <!-- Aba 2: Na Prática -->
-                <div class="tab-panel" id="practice-1">
-                    <div class="practice-container">
-                        <div class="practice-item">
-                            <span class="practice-label-before">O que se pensa antes de ler:</span>
-                            <p>Sentir-se desorientado diante de adversidades, esperando que as circunstâncias externas mudem para encontrar paz.</p>
-                        </div>
-                        <div class="practice-item">
-                            <span class="practice-label-after">O que muda na prática depois:</span>
-                            <p>Assumir a liberdade de escolher a própria atitude interior, encontrando significado no trabalho, nos laços e na superação.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Aba 3: Por que vale? -->
-                <div class="tab-panel" id="why-1">
-                    <div class="why-container">
-                        <p class="why-core-text">Oferece uma estrutura de pensamento serena para lidar com períodos de incerteza e crise pessoal.</p>
-                        <blockquote class="why-quote">&ldquo;Quando não somos mais capazes de mudar uma situação, somos desafiados a mudar a nós mesmos.&rdquo;</blockquote>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Links de Lojas Elegantes e Anti-Vendedor -->
-            <div class="store-links-wrap">
-                <span class="store-intro">Conferir edição nas lojas oficiais:</span>
-                <div class="store-pills-row">
-                    <a href="https://www.amazon.com.br/s?k=Em+Busca+de+Sentido+-+Viktor+Frankl&tag=acervoref-20" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Amazon
-                    </a>
-                    <a href="https://lista.mercadolivre.com.br/Em+Busca+de+Sentido+-+Viktor+Frankl?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Mercado Livre
-                    </a>
-                    <a href="https://shopee.com.br/search?keyword=Em+Busca+de+Sentido+-+Viktor+Frankl&af_id=shopee_afiliado_id" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Shopee
-                    </a>
-                </div>
-            </div>
         </article>
         
-        <article class="book-editorial-card" id="obra-2">
-            <div class="book-top-bar">
-                <span class="book-order-badge">02 / 04</span>
-                <span class="book-editorial-tag">Visão aprofundada</span>
+
+        <article id="a-presenca-ignorada-de-deus-viktor-frankl" class="glass-card book-viral-card p-5 sm:p-7 space-y-4 relative flex flex-col justify-between">
+          
+          <!-- Top Card Bar -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md">
+              <span>Obra 02 / 04</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Visão aprofundada</span>
+              <button onclick="toggleFavoriteItem('a-presenca-ignorada-de-deus-viktor-frankl', 'A Presença Ignorada de Deus - Viktor Frankl', 'Viktor Frankl', 'midia/capas/a-presenca-ignorada-de-deus-viktor-frankl.jpg', 'https://www.amazon.com.br/s?k=A+Presen%C3%A7a+Ignorada+de+Deus+-+Viktor+Frankl&tag=acervoref-20', 'https://lista.mercadolivre.com.br/a-presenca-ignorada-de-deus-viktor-frankl?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=A+Presen%C3%A7a+Ignorada+de+Deus+-+Viktor+Frankl')" 
+                      data-item-key="a-presenca-ignorada-de-deus-viktor-frankl"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
             </div>
+          </div>
 
-            <!-- Capa 3D Reativa ao Scroll -->
-            <div class="book-cover-stage">
-                <div class="book-cover-3d" data-scroll-book>
-                    <img src="midia/capas/a-presenca-ignorada-de-deus-viktor-frankl.jpg" alt="A Presença Ignorada de Deus - Viktor Frankl" class="book-cover-img" loading="lazy">
-                    <div class="book-spine-shine"></div>
-                </div>
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/a-presenca-ignorada-de-deus-viktor-frankl.jpg" alt="A Presença Ignorada de Deus - Viktor Frankl" class="book-3d w-32 sm:w-36 h-44 sm:h-52 object-cover rounded-2xl border border-white/20" />
             </div>
-
-            <div class="book-text-header">
-                <h2 class="book-title">A Presença Ignorada de Deus - Viktor Frankl</h2>
-                <p class="book-hook-quote">&ldquo;A psicologia passou anos investigando os impulsos instintivos do ser humano, esquecendo que há também uma necessidade genuína de transcendência e responsabilidade ética na consciência moral de cada indivíduo.&rdquo;</p>
+            <div class="space-y-2.5 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-xl sm:text-2xl font-display font-black text-white leading-snug">A Presença Ignorada de Deus - Viktor Frankl</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Viktor Frankl</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "A psicologia passou anos investigando os impulsos instintivos do ser humano, esquecendo que há também uma necessidade genuína de transcendência e responsabilidade ética na consciência moral de cada indivíduo."
+              </p>
             </div>
+          </div>
 
-            <!-- Segmented Control de 3 Abas (Apple Books Style) -->
-            <div class="segmented-control" role="tablist">
-                <button class="seg-btn active" data-tab-target="idea-2" onclick="switchTab(this, 'idea-2')">A Ideia Central</button>
-                <button class="seg-btn" data-tab-target="practice-2" onclick="switchTab(this, 'practice-2')">Na Prática</button>
-                <button class="seg-btn" data-tab-target="why-2" onclick="switchTab(this, 'why-2')">Por que vale?</button>
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">97%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 97%"></div>
+              </div>
             </div>
-
-            <div class="tab-panels-wrapper">
-                <!-- Aba 1: A Ideia Central -->
-                <div class="tab-panel active" id="idea-2">
-                    <div class="editorial-prose">
-                        <p>Neste ensaio pioneiro, Frankl amplia a compreensão clássica do inconsciente para examinar o que chama de 'inconsciente espiritual' ou noético. Com base em observações clínicas, ele defende que a busca por significado e o senso de dever moral são traços fundamentais da condição humana.</p><p>A obra preenche um vazio importante na literatura de saúde mental, dialogando com a filosofia e a espiritualidade de modo rigoroso e sem dogmas. Uma leitura enriquecedora para quem busca profundidade além das fórmulas prontas de autoajuda.</p>
-                    </div>
-                </div>
-
-                <!-- Aba 2: Na Prática -->
-                <div class="tab-panel" id="practice-2">
-                    <div class="practice-container">
-                        <div class="practice-item">
-                            <span class="practice-label-before">O que se pensa antes de ler:</span>
-                            <p>Tratar questionamentos existenciais e morais apenas como sintomas de ansiedade ou fraqueza psicológica.</p>
-                        </div>
-                        <div class="practice-item">
-                            <span class="practice-label-after">O que muda na prática depois:</span>
-                            <p>Integrar a dimensão ética e os valores profundos ao autocuidado, vivendo com mais inteireza e coerência interior.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Aba 3: Por que vale? -->
-                <div class="tab-panel" id="why-2">
-                    <div class="why-container">
-                        <p class="why-core-text">Ajuda a alinhar decisões cotidianas com convicções éticas duradouras, trazendo paz de espírito.</p>
-                        <blockquote class="why-quote">&ldquo;A consciência moral é a voz da nossa responsabilidade diante da vida.&rdquo;</blockquote>
-                    </div>
-                </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">95%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 95%"></div>
+              </div>
             </div>
+          </div>
 
-            <!-- Links de Lojas Elegantes e Anti-Vendedor -->
-            <div class="store-links-wrap">
-                <span class="store-intro">Conferir edição nas lojas oficiais:</span>
-                <div class="store-pills-row">
-                    <a href="https://www.amazon.com.br/s?k=A+Presen%C3%A7a+Ignorada+de+Deus+-+Viktor+Frankl&tag=acervoref-20" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Amazon
-                    </a>
-                    <a href="https://lista.mercadolivre.com.br/A+Presen%C3%A7a+Ignorada+de+Deus+-+Viktor+Frankl?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Mercado Livre
-                    </a>
-                    <a href="https://shopee.com.br/search?keyword=A+Presen%C3%A7a+Ignorada+de+Deus+-+Viktor+Frankl&af_id=shopee_afiliado_id" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Shopee
-                    </a>
-                </div>
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
             </div>
+            
+            <div class="tab-content-container p-4 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Neste ensaio pioneiro, Frankl amplia a compreensão clássica do inconsciente para examinar o que chama de &#x27;inconsciente espiritual&#x27; ou noético. Com base em observações clínicas, ele defende que a busca por significado e o senso de dever moral são traços fundamentais da condição humana.
+
+A obra preenche um vazio importante na literatura de saúde mental, dialogando com a filosofia e a espiritualidade de modo rigoroso e sem dogmas. Uma leitura enriquecedora para quem busca profundidade além das fórmulas prontas de autoajuda.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Tratar questionamentos existenciais e morais apenas como sintomas de ansiedade ou fraqueza psicológica.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Integrar a dimensão ética e os valores profundos ao autocuidado, vivendo com mais inteireza e coerência interior.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Ajuda a alinhar decisões cotidianas com convicções éticas duradouras, trazendo paz de espírito.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=A+Presen%C3%A7a+Ignorada+de+Deus+-+Viktor+Frankl&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/a-presenca-ignorada-de-deus-viktor-frankl?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=A+Presen%C3%A7a+Ignorada+de+Deus+-+Viktor+Frankl" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
         </article>
         
-        <article class="book-editorial-card" id="obra-3">
-            <div class="book-top-bar">
-                <span class="book-order-badge">03 / 04</span>
-                <span class="book-editorial-tag">Leitura rápida</span>
+
+        <article id="o-homem-em-busca-de-um-sentido-ultimo-viktor-frankl" class="glass-card book-viral-card p-5 sm:p-7 space-y-4 relative flex flex-col justify-between">
+          
+          <!-- Top Card Bar -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md">
+              <span>Obra 03 / 04</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Leitura rápida</span>
+              <button onclick="toggleFavoriteItem('o-homem-em-busca-de-um-sentido-ultimo-viktor-frankl', 'O Homem em Busca de um Sentido Último - Viktor Frankl', 'Viktor Frankl', 'midia/capas/o-homem-em-busca-de-um-sentido-ultimo-viktor-frankl.jpg', 'https://www.amazon.com.br/s?k=O+Homem+em+Busca+de+um+Sentido+%C3%9Altimo+-+Viktor+Frankl&tag=acervoref-20', 'https://lista.mercadolivre.com.br/o-homem-em-busca-de-um-sentido-ultimo-viktor-frankl?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=O+Homem+em+Busca+de+um+Sentido+%C3%9Altimo+-+Viktor+Frankl')" 
+                      data-item-key="o-homem-em-busca-de-um-sentido-ultimo-viktor-frankl"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
             </div>
+          </div>
 
-            <!-- Capa 3D Reativa ao Scroll -->
-            <div class="book-cover-stage">
-                <div class="book-cover-3d" data-scroll-book>
-                    <img src="midia/capas/o-homem-em-busca-de-um-sentido-ultimo-viktor-frankl.jpg" alt="O Homem em Busca de um Sentido Último - Viktor Frankl" class="book-cover-img" loading="lazy">
-                    <div class="book-spine-shine"></div>
-                </div>
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/o-homem-em-busca-de-um-sentido-ultimo-viktor-frankl.jpg" alt="O Homem em Busca de um Sentido Último - Viktor Frankl" class="book-3d w-32 sm:w-36 h-44 sm:h-52 object-cover rounded-2xl border border-white/20" />
             </div>
-
-            <div class="book-text-header">
-                <h2 class="book-title">O Homem em Busca de um Sentido Último - Viktor Frankl</h2>
-                <p class="book-hook-quote">&ldquo;Muitas vezes o cansaço do dia a dia não vem de trabalhar demais, mas de trabalhar sem saber o porquê. O ser humano não precisa de uma rotina sem desafios, mas de metas dignas pelas quais valha a pena se dedicar.&rdquo;</p>
+            <div class="space-y-2.5 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-xl sm:text-2xl font-display font-black text-white leading-snug">O Homem em Busca de um Sentido Último - Viktor Frankl</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Viktor Frankl</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "Muitas vezes o cansaço do dia a dia não vem de trabalhar demais, mas de trabalhar sem saber o porquê. O ser humano não precisa de uma rotina sem desafios, mas de metas dignas pelas quais valha a pena se dedicar."
+              </p>
             </div>
+          </div>
 
-            <!-- Segmented Control de 3 Abas (Apple Books Style) -->
-            <div class="segmented-control" role="tablist">
-                <button class="seg-btn active" data-tab-target="idea-3" onclick="switchTab(this, 'idea-3')">A Ideia Central</button>
-                <button class="seg-btn" data-tab-target="practice-3" onclick="switchTab(this, 'practice-3')">Na Prática</button>
-                <button class="seg-btn" data-tab-target="why-3" onclick="switchTab(this, 'why-3')">Por que vale?</button>
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">99%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 99%"></div>
+              </div>
             </div>
-
-            <div class="tab-panels-wrapper">
-                <!-- Aba 1: A Ideia Central -->
-                <div class="tab-panel active" id="idea-3">
-                    <div class="editorial-prose">
-                        <p>Esta coletânea de conferências e ensaios de maturidade de Frankl aprofunda as bases teóricas da Logoterapia e responde aos dilemas da sociedade contemporânea. O autor aborda o 'vazio existencial' em meio à abundância material e explica por que a busca por bem-estar não substitui o compromisso com valores reais.</p><p>Com clareza e empatia, Frankl mostra que a saúde mental se apoia em uma tensão produtiva entre quem somos e aquilo que podemos realizar no mundo. Uma leitura reconfortante para quem lida com responsabilidades e decisões importantes.</p>
-                    </div>
-                </div>
-
-                <!-- Aba 2: Na Prática -->
-                <div class="tab-panel" id="practice-3">
-                    <div class="practice-container">
-                        <div class="practice-item">
-                            <span class="practice-label-before">O que se pensa antes de ler:</span>
-                            <p>Tentar fugir de qualquer desconforto, caindo na armadilha do tédio existencial e da desmotivação.</p>
-                        </div>
-                        <div class="practice-item">
-                            <span class="practice-label-after">O que muda na prática depois:</span>
-                            <p>Aprender a direcionar o esforço para projetos com sentido, experimentando a satisfação do crescimento real.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Aba 3: Por que vale? -->
-                <div class="tab-panel" id="why-3">
-                    <div class="why-container">
-                        <p class="why-core-text">Ajuda a selecionar prioridades autênticas, evitando o desperdício de energia com expectativas vazias.</p>
-                        <blockquote class="why-quote">&ldquo;O ser humano não precisa de um estado sem tensão, mas da dedicação a uma tarefa que valha a pena.&rdquo;</blockquote>
-                    </div>
-                </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">98%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 98%"></div>
+              </div>
             </div>
+          </div>
 
-            <!-- Links de Lojas Elegantes e Anti-Vendedor -->
-            <div class="store-links-wrap">
-                <span class="store-intro">Conferir edição nas lojas oficiais:</span>
-                <div class="store-pills-row">
-                    <a href="https://www.amazon.com.br/s?k=O+Homem+em+Busca+de+um+Sentido+%C3%9Altimo+-+Viktor+Frankl&tag=acervoref-20" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Amazon
-                    </a>
-                    <a href="https://lista.mercadolivre.com.br/O+Homem+em+Busca+de+um+Sentido+%C3%9Altimo+-+Viktor+Frankl?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Mercado Livre
-                    </a>
-                    <a href="https://shopee.com.br/search?keyword=O+Homem+em+Busca+de+um+Sentido+%C3%9Altimo+-+Viktor+Frankl&af_id=shopee_afiliado_id" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Shopee
-                    </a>
-                </div>
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
             </div>
+            
+            <div class="tab-content-container p-4 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Esta coletânea de conferências e ensaios de maturidade de Frankl aprofunda as bases teóricas da Logoterapia e responde aos dilemas da sociedade contemporânea. O autor aborda o &#x27;vazio existencial&#x27; em meio à abundância material e explica por que a busca por bem-estar não substitui o compromisso com valores reais.
+
+Com clareza e empatia, Frankl mostra que a saúde mental se apoia em uma tensão produtiva entre quem somos e aquilo que podemos realizar no mundo. Uma leitura reconfortante para quem lida com responsabilidades e decisões importantes.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Tentar fugir de qualquer desconforto, caindo na armadilha do tédio existencial e da desmotivação.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Aprender a direcionar o esforço para projetos com sentido, experimentando a satisfação do crescimento real.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Ajuda a selecionar prioridades autênticas, evitando o desperdício de energia com expectativas vazias.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=O+Homem+em+Busca+de+um+Sentido+%C3%9Altimo+-+Viktor+Frankl&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/o-homem-em-busca-de-um-sentido-ultimo-viktor-frankl?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=O+Homem+em+Busca+de+um+Sentido+%C3%9Altimo+-+Viktor+Frankl" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
         </article>
         
-        <article class="book-editorial-card" id="obra-4">
-            <div class="book-top-bar">
-                <span class="book-order-badge">04 / 04</span>
-                <span class="book-editorial-tag">Complemento prático</span>
+
+        <article id="caderno-inteligente-para-diario-e-anotacoes" class="glass-card book-viral-card p-5 sm:p-7 space-y-4 relative flex flex-col justify-between">
+          
+          <!-- Top Card Bar -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md">
+              <span>Obra 04 / 04</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Complemento prático</span>
+              <button onclick="toggleFavoriteItem('caderno-inteligente-para-diario-e-anotacoes', 'Caderno Inteligente para Diário e Anotações', 'Viktor Frankl', 'midia/capas/caderno-inteligente-para-diario-e-anotacoes.jpg', 'https://www.amazon.com.br/s?k=Caderno+Inteligente+para+Di%C3%A1rio+e+Anota%C3%A7%C3%B5es&tag=acervoref-20', 'https://lista.mercadolivre.com.br/caderno-inteligente-para-diario-e-anotacoes?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=Caderno+Inteligente+para+Di%C3%A1rio+e+Anota%C3%A7%C3%B5es')" 
+                      data-item-key="caderno-inteligente-para-diario-e-anotacoes"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
             </div>
+          </div>
 
-            <!-- Capa 3D Reativa ao Scroll -->
-            <div class="book-cover-stage">
-                <div class="book-cover-3d" data-scroll-book>
-                    <img src="midia/capas/caderno-inteligente-para-diario-e-anotacoes.jpg" alt="Caderno Inteligente para Diário e Anotações" class="book-cover-img" loading="lazy">
-                    <div class="book-spine-shine"></div>
-                </div>
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/caderno-inteligente-para-diario-e-anotacoes.jpg" alt="Caderno Inteligente para Diário e Anotações" class="book-3d w-32 sm:w-36 h-44 sm:h-52 object-cover rounded-2xl border border-white/20" />
             </div>
-
-            <div class="book-text-header">
-                <h2 class="book-title">Caderno Inteligente para Diário e Anotações</h2>
-                <p class="book-hook-quote">&ldquo;Ideias soltas na cabeça se misturam e geram ansiedade; organizadas no papel com calma, tornam-se planos claros. A escrita à mão desacelera o ritmo e ajuda a enxergar prioridades com nitidez.&rdquo;</p>
+            <div class="space-y-2.5 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-xl sm:text-2xl font-display font-black text-white leading-snug">Caderno Inteligente para Diário e Anotações</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Viktor Frankl</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "Ideias soltas na cabeça se misturam e geram ansiedade; organizadas no papel com calma, tornam-se planos claros. A escrita à mão desacelera o ritmo e ajuda a enxergar prioridades com nitidez."
+              </p>
             </div>
+          </div>
 
-            <!-- Segmented Control de 3 Abas (Apple Books Style) -->
-            <div class="segmented-control" role="tablist">
-                <button class="seg-btn active" data-tab-target="idea-4" onclick="switchTab(this, 'idea-4')">A Ideia Central</button>
-                <button class="seg-btn" data-tab-target="practice-4" onclick="switchTab(this, 'practice-4')">Na Prática</button>
-                <button class="seg-btn" data-tab-target="why-4" onclick="switchTab(this, 'why-4')">Por que vale?</button>
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">96%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 96%"></div>
+              </div>
             </div>
-
-            <div class="tab-panels-wrapper">
-                <!-- Aba 1: A Ideia Central -->
-                <div class="tab-panel active" id="idea-4">
-                    <div class="editorial-prose">
-                        <p>Escrever à mão estimula áreas cerebrais ligadas à síntese e à memória que a digitação rápida no teclado costuma ignorar. O caderno de folhas reposicionáveis une a liberdade de mover tópicos à elegância do registro durável.</p><p>Para quem pratica a reflexão diária ou quer resumir os pontos centrais dos livros que lê, ter um espaço físico bem cuidado faz toda a diferença no hábito. Um instrumento prático para clarear os pensamentos.</p>
-                    </div>
-                </div>
-
-                <!-- Aba 2: Na Prática -->
-                <div class="tab-panel" id="practice-4">
-                    <div class="practice-container">
-                        <div class="practice-item">
-                            <span class="practice-label-before">O que se pensa antes de ler:</span>
-                            <p>Deixar anotações e reflexões dispersas em aplicativos que nunca são relidos, sem reter os insights das leituras.</p>
-                        </div>
-                        <div class="practice-item">
-                            <span class="practice-label-after">O que muda na prática depois:</span>
-                            <p>Manter um diário de aprendizado organizado, revisando páginas e consolidando conclusões com regularidade.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Aba 3: Por que vale? -->
-                <div class="tab-panel" id="why-4">
-                    <div class="why-container">
-                        <p class="why-core-text">Colocar as ideias no papel é o caminho mais rápido para transformar inquietação em foco e ação tranquila.</p>
-                        <blockquote class="why-quote">&ldquo;Pensar na folha de papel é dar forma e ordem ao que antes era apenas pressentimento.&rdquo;</blockquote>
-                    </div>
-                </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">94%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 94%"></div>
+              </div>
             </div>
+          </div>
 
-            <!-- Links de Lojas Elegantes e Anti-Vendedor -->
-            <div class="store-links-wrap">
-                <span class="store-intro">Conferir edição nas lojas oficiais:</span>
-                <div class="store-pills-row">
-                    <a href="https://www.amazon.com.br/s?k=Caderno+Inteligente+para+Di%C3%A1rio+e+Anota%C3%A7%C3%B5es&tag=acervoref-20" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Amazon
-                    </a>
-                    <a href="https://lista.mercadolivre.com.br/Caderno+Inteligente+para+Di%C3%A1rio+e+Anota%C3%A7%C3%B5es?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Mercado Livre
-                    </a>
-                    <a href="https://shopee.com.br/search?keyword=Caderno+Inteligente+para+Di%C3%A1rio+e+Anota%C3%A7%C3%B5es&af_id=shopee_afiliado_id" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Shopee
-                    </a>
-                </div>
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
             </div>
+            
+            <div class="tab-content-container p-4 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Escrever à mão estimula áreas cerebrais ligadas à síntese e à memória que a digitação rápida no teclado costuma ignorar. O caderno de folhas reposicionáveis une a liberdade de mover tópicos à elegância do registro durável.
+
+Para quem pratica a reflexão diária ou quer resumir os pontos centrais dos livros que lê, ter um espaço físico bem cuidado faz toda a diferença no hábito. Um instrumento prático para clarear os pensamentos.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Deixar anotações e reflexões dispersas em aplicativos que nunca são relidos, sem reter os insights das leituras.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Manter um diário de aprendizado organizado, revisando páginas e consolidando conclusões com regularidade.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Colocar as ideias no papel é o caminho mais rápido para transformar inquietação em foco e ação tranquila.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=Caderno+Inteligente+para+Di%C3%A1rio+e+Anota%C3%A7%C3%B5es&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/caderno-inteligente-para-diario-e-anotacoes?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=Caderno+Inteligente+para+Di%C3%A1rio+e+Anota%C3%A7%C3%B5es" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
         </article>
         
-        </section>
-    </main>
+    </section>
 
-    <!-- Sticky Bottom Pill no Celular -->
-    <a href="#topo-obras" class="sticky-mobile-pill" id="sticky-pill">
-        <span>↑ Ver as 4 obras</span>
-    </a>
+  </main>
 
-    <footer class="footer-minimal">
-        <div class="footer-conar-text">
-            Transparencia Publicitaria (#publicidade): Este guia editorial independente contem links de afiliados. Compras realizadas atraves deles podem gerar comissao sem custo adicional para voce.
+  <!-- Rodapé -->
+  <footer class="relative z-10 max-w-4xl mx-auto px-4 pt-12 pb-8 text-center text-xs text-white/60 space-y-3 border-t border-white/10 mt-12">
+    <div class="flex items-center justify-center gap-4 text-sm font-bold text-white/80">
+      <a href="index.html" class="hover:text-pink-400 transition-colors">← Voltar para a Vitrine Geral</a>
+      <span>•</span>
+      <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="hover:text-cyan-400 transition-colors">↑ Topo</button>
+    </div>
+    <p>Links oficiais de afiliados para Amazon, Mercado Livre e Shopee. Preços e cupons sincronizados com as plataformas parceiras.</p>
+    <p class="text-[11px] text-white/40">© 2026 Descobertas & Livros Virais. Criado para mentes inquietas.</p>
+  </footer>
+
+
+  <!-- Drawer / Modal Lateral de Itens Salvos (Favoritos) -->
+  <div id="savedDrawer" class="fixed inset-0 z-[120] hidden bg-black/70 backdrop-blur-md flex justify-end transition-opacity">
+    <div class="w-full max-w-md h-full glass-card rounded-none sm:rounded-l-3xl p-5 sm:p-6 flex flex-col justify-between overflow-y-auto">
+      <div class="space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-white/10">
+          <div class="flex items-center gap-2">
+            <span class="text-2xl">❤️</span>
+            <h3 class="font-display font-black text-xl">Seus Livros Salvos</h3>
+          </div>
+          <button id="closeSavedBtn" class="glass-pill w-9 h-9 rounded-full flex items-center justify-center text-lg hover:scale-110 transition-transform">✕</button>
         </div>
-        <p>© 2026 Acervo & Referencia • Em conformidade com o STF (ADI 4815) e CONAR.</p>
-        <div class="footer-links-row" style="margin-top: 10px;">
-            <a href="/">Início</a>
-            <a href="https://www.youtube.com/@acervo-referencia" target="_blank">YouTube</a>
-            <a href="https://br.pinterest.com/acervoreferencia/" target="_blank">Pinterest</a>
+        <div id="savedItemsContainer" class="space-y-3 pt-2">
+          <!-- Preenchido dinamicamente via JS -->
         </div>
-    </footer>
+      </div>
+      <div class="pt-6 border-t border-white/10 text-center">
+        <p class="text-xs text-white/60">Todos os links oficiais abrem com cupom e tags oficiais de desconto.</p>
+      </div>
+    </div>
+  </div>
 
-    <script>
-    // 1. Reading Progress Bar integrada na Pill Navbar
-    window.addEventListener('scroll', () => {
-        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-        const bar = document.getElementById('pill-progress');
-        if (bar) bar.style.width = scrolled + '%';
+
+
+  <!-- Engine JS Interativo: Busca, Filtro, Favoritos, Me Surpreenda & Tema -->
+  <script>
+    // 1. Alternador de Tema (Aurora Dark / Cristal Claro)
+    const themeBtn = document.getElementById('themeToggleBtn');
+    function applySavedTheme() {
+      const saved = localStorage.getItem('dopamine_theme');
+      if (saved === 'light') {
+        document.body.classList.add('light-crystal');
+        if (themeBtn) themeBtn.textContent = '🌙';
+      } else {
+        document.body.classList.remove('light-crystal');
+        if (themeBtn) themeBtn.textContent = '☀️';
+      }
+    }
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('light-crystal');
+        const isLight = document.body.classList.contains('light-crystal');
+        localStorage.setItem('dopamine_theme', isLight ? 'light' : 'dark');
+        themeBtn.textContent = isLight ? '🌙' : '☀️';
+      });
+    }
+    applySavedTheme();
+
+    // 2. Filtro Interativo por Pílulas no Topo
+    const filterPills = document.querySelectorAll('.filter-pill');
+    const bookCards = document.querySelectorAll('.book-viral-card');
+
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        filterPills.forEach(p => {
+          p.classList.remove('active-pill', 'bg-gradient-to-r', 'from-pink-500', 'via-purple-500', 'to-indigo-500', 'text-white', 'shadow-lg', 'shadow-purple-500/30');
+          p.classList.add('glass-pill');
+        });
+        pill.classList.remove('glass-pill');
+        pill.classList.add('active-pill', 'bg-gradient-to-r', 'from-pink-500', 'via-purple-500', 'to-indigo-500', 'text-white', 'shadow-lg', 'shadow-purple-500/30');
+
+        const cat = pill.getAttribute('data-filter');
+        bookCards.forEach(card => {
+          if (cat === 'all' || card.getAttribute('data-category') === cat) {
+            card.style.display = 'block';
+            card.classList.remove('hidden');
+          } else {
+            card.style.display = 'none';
+            card.classList.add('hidden');
+          }
+        });
+      });
     });
 
-    // 2. Sistema de Abas Interativas (Segmented Control)
-    function switchTab(btn, targetId) {
-        const card = btn.closest('.book-editorial-card');
-        if (!card) return;
-        card.querySelectorAll('.seg-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        card.querySelectorAll('.tab-panel').forEach(p => {
-            p.classList.remove('active');
+    // 3. Busca em Tempo Real (Título, Autor, Gancho)
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        bookCards.forEach(card => {
+          const searchData = (card.getAttribute('data-search') || '').toLowerCase();
+          if (!query || searchData.includes(query)) {
+            card.style.display = 'block';
+            card.classList.remove('hidden');
+          } else {
+            card.style.display = 'none';
+            card.classList.add('hidden');
+          }
         });
-        const target = card.querySelector('#' + targetId);
-        if (target) {
-            target.classList.add('active');
-        }
+      });
     }
 
-    // 3. Scroll-Driven 3D Book Cover Animation
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('in-viewport');
-            } else {
-                entry.target.classList.remove('in-viewport');
-            }
-        });
-    }, { threshold: [0.15, 0.5, 0.85] });
-    document.querySelectorAll('[data-scroll-book]').forEach(el => observer.observe(el));
-    </script>
+    // 4. Botão "🎲 Me Surpreenda!"
+    const surpriseBtn = document.getElementById('surpriseMeBtn');
+    if (surpriseBtn) {
+      surpriseBtn.addEventListener('click', () => {
+        const visibleCards = Array.from(bookCards).filter(c => c.style.display !== 'none' && !c.classList.contains('hidden'));
+        if (visibleCards.length === 0) return;
+        const randomCard = visibleCards[Math.floor(Math.random() * visibleCards.length)];
+        randomCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        randomCard.classList.remove('surprise-highlight');
+        void randomCard.offsetWidth; // trigger reflow
+        randomCard.classList.add('surprise-highlight');
+      });
+    }
+
+    // 5. Sistema de Abas Rápidas de 1 Toque (Segmented Control)
+    function switchBookTab(btn, tabType) {
+      const card = btn.closest('.book-viral-card');
+      if (!card) return;
+      card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active-tab'));
+      btn.classList.add('active-tab');
+
+      card.querySelectorAll('.tab-content-pane').forEach(pane => {
+        pane.classList.add('hidden');
+      });
+      const targetPane = card.querySelector(`.tab-pane-${tabType}`);
+      if (targetPane) targetPane.classList.remove('hidden');
+    }
+
+    // 6. Sistema de Favoritos com Drawer Lateral / Modal
+    const savedCountBadge = document.getElementById('savedCountBadge');
+    const openSavedBtn = document.getElementById('openSavedBtn');
+    const savedDrawer = document.getElementById('savedDrawer');
+    const closeSavedBtn = document.getElementById('closeSavedBtn');
+    const savedItemsContainer = document.getElementById('savedItemsContainer');
+
+    function getSavedItems() {
+      try {
+        return JSON.parse(localStorage.getItem('dopamine_saved_items')) || [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function updateSavedBadge() {
+      const items = getSavedItems();
+      if (savedCountBadge) savedCountBadge.textContent = items.length;
+      document.querySelectorAll('.favorite-btn').forEach(btn => {
+        const key = btn.getAttribute('data-item-key');
+        if (items.some(it => it.key === key)) {
+          btn.innerHTML = '❤️';
+          btn.classList.add('text-pink-500');
+        } else {
+          btn.innerHTML = '🤍';
+          btn.classList.remove('text-pink-500');
+        }
+      });
+    }
+
+    function toggleFavoriteItem(itemKey, title, author, coverUrl, amazonUrl, meliUrl, shopeeUrl) {
+      let items = getSavedItems();
+      const existingIdx = items.findIndex(it => it.key === itemKey);
+      if (existingIdx >= 0) {
+        items.splice(existingIdx, 1);
+      } else {
+        items.push({ key: itemKey, title, author, coverUrl, amazonUrl, meliUrl, shopeeUrl });
+      }
+      localStorage.setItem('dopamine_saved_items', JSON.stringify(items));
+      updateSavedBadge();
+      renderSavedDrawer();
+    }
+
+    function renderSavedDrawer() {
+      if (!savedItemsContainer) return;
+      const items = getSavedItems();
+      if (items.length === 0) {
+        savedItemsContainer.innerHTML = `
+          <div class="text-center py-12 space-y-3">
+            <div class="text-5xl">✨</div>
+            <p class="font-display font-bold text-lg">Nenhum livro salvo ainda</p>
+            <p class="text-xs text-white/70 max-w-xs mx-auto">Toque no coração (🤍) em qualquer card para guardar seus achadinhos favoritos aqui!</p>
+          </div>
+        `;
+        return;
+      }
+      savedItemsContainer.innerHTML = items.map(it => `
+        <div class="glass-pill p-3.5 rounded-2xl flex items-center gap-3.5">
+          <img src="${it.coverUrl}" alt="${it.title}" class="w-14 h-20 object-cover rounded-xl shadow-md border border-white/20 shrink-0" />
+          <div class="flex-1 min-w-0">
+            <h4 class="font-display font-bold text-sm text-white truncate">${it.title}</h4>
+            <p class="text-xs text-white/70 truncate">${it.author}</p>
+            <div class="flex items-center gap-1.5 pt-2">
+              <a href="${it.amazonUrl}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg text-[10px] font-black btn-amazon">🟠 Amazon</a>
+              <a href="${it.meliUrl}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg text-[10px] font-black btn-meli">⚡ Meli</a>
+              <a href="${it.shopeeUrl}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg text-[10px] font-black btn-shopee">🛍️ Shopee</a>
+            </div>
+          </div>
+          <button onclick="toggleFavoriteItem('${it.key}')" class="text-white/60 hover:text-pink-400 p-1.5 transition-colors" title="Remover dos salvos">✕</button>
+        </div>
+      `).join('');
+    }
+
+    if (openSavedBtn && savedDrawer) {
+      openSavedBtn.addEventListener('click', () => {
+        renderSavedDrawer();
+        savedDrawer.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+    if (closeSavedBtn && savedDrawer) {
+      closeSavedBtn.addEventListener('click', () => {
+        savedDrawer.classList.add('hidden');
+        document.body.style.overflow = '';
+      });
+    }
+    updateSavedBadge();
+  </script>
+
+
 </body>
 </html>

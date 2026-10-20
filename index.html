@@ -1,433 +1,2553 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="p:domain_verify" content="ce70d1edfd74d2c46236a2c33a49eaeb">
-    <meta name="google-site-verification" content="GB_dWgpjlrdUpHIKw5Dl4EX5ZbRJbIKjiQODizXagvw">
-    <link rel="alternate" type="application/rss+xml" title="Feed RSS 2.0 - Acervo & Referencia" href="https://acervo-referencia.github.io/rss.xml">
-    <title>Acervo & Referencia | Notas de Leitura & Biblioteca Essencial</title>
-    <meta name="description" content="Ideias que sobrevivem ao tempo, explicadas sem pressa. Ensaios sobre livros fundamentais de ciência, psicologia e foco.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-base: #09090b;
-            --bg-elevated: rgba(24, 24, 28, 0.65);
-            --bg-card: #121216;
-            --border-subtle: rgba(255, 255, 255, 0.07);
-            --border-glass: rgba(255, 255, 255, 0.12);
-            --text-primary: #f4f4f6;
-            --text-secondary: #a1a1aa;
-            --text-muted: #71717a;
-            --accent-warm: #e2b86b;
-            --font-heading: 'Instrument Serif', 'Playfair Display', Georgia, serif;
-            --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            background-color: var(--bg-base);
-            color: var(--text-primary);
-            font-family: var(--font-body);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-            padding-bottom: 60px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Descobertas & Livros Virais — Vitrine Interativa</title>
+  <meta name="description" content="Descubra os livros mais transformadores em ciência, psicologia, foco e propósito com resumos diretos e links oficiais das melhores lojas." />
+  <link rel="canonical" href="https://acervo-referencia.github.io/" />
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
 
-        .ambient-glow {
-            position: fixed;
-            top: -80px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 380px;
-            height: 380px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(226, 184, 107, 0.08) 0%, transparent 70%);
-            filter: blur(80px);
-            pointer-events: none;
-            z-index: 0;
-        }
+:root {
+  --bg-deep: #0b071e;
+  --glass-surface: rgba(255, 255, 255, 0.09);
+  --glass-surface-hover: rgba(255, 255, 255, 0.14);
+  --glass-border: rgba(255, 255, 255, 0.22);
+  --glass-highlight: rgba(255, 255, 255, 0.45);
+  --text-main: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.78);
+}
 
-        /* Floating Pill Navbar */
-        .floating-pill-nav {
-            position: fixed;
-            top: 14px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-            width: calc(100% - 32px);
-            max-width: 520px;
-            border-radius: 999px;
-            padding: 10px 18px;
-            background: rgba(18, 18, 22, 0.72);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.09);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.45);
-        }
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-            color: var(--text-primary);
-        }
-        .nav-brand-symbol { color: var(--accent-warm); font-size: 0.95rem; }
-        .nav-brand-text {
-            font-family: var(--font-heading);
-            font-size: 1.15rem;
-            font-weight: 500;
-        }
-        .nav-link-pill {
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-size: 0.8rem;
-            font-weight: 500;
-            background: rgba(255,255,255,0.05);
-            padding: 5px 12px;
-            border-radius: 999px;
-            border: 1px solid rgba(255,255,255,0.06);
-            transition: color 0.2s, background 0.2s;
-        }
-        .nav-link-pill:hover { color: var(--text-primary); }
+body.light-crystal {
+  --bg-deep: #eef2ff;
+  --glass-surface: rgba(255, 255, 255, 0.68);
+  --glass-surface-hover: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.85);
+  --glass-highlight: rgba(255, 255, 255, 0.95);
+  --text-main: #0f172a;
+  --text-muted: #334155;
+}
 
-        /* Hero Section */
-        .hero-clean {
-            text-align: center;
-            padding: 95px 20px 30px;
-            max-width: 680px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-        .hero-tag {
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--accent-warm);
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            display: inline-block;
-            margin-bottom: 14px;
-        }
-        .hero-h1 {
-            font-family: var(--font-heading);
-            font-size: 2.8rem;
-            line-height: 1.15;
-            color: #ffffff;
-            font-weight: 500;
-            margin-bottom: 16px;
-            letter-spacing: -0.01em;
-        }
-        .hero-lead {
-            color: var(--text-secondary);
-            font-size: 1.05rem;
-            line-height: 1.6;
-            margin-bottom: 24px;
-        }
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
 
-        /* Filtro de Pílulas Deslizáveis */
-        .filter-pill-container {
-            margin: 0 auto 35px;
-            overflow-x: auto;
-            scrollbar-width: none;
-            -webkit-overflow-scrolling: touch;
-            padding: 4px 16px;
-            max-width: 680px;
-            position: relative;
-            z-index: 1;
-        }
-        .filter-pill-container::-webkit-scrollbar { display: none; }
-        .filter-pill-track {
-            display: flex;
-            gap: 8px;
-            justify-content: flex-start;
-        }
-        @media (min-width: 640px) {
-            .filter-pill-track { justify-content: center; }
-        }
-        .filter-pill {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid var(--border-subtle);
-            color: var(--text-secondary);
-            font-family: var(--font-body);
-            font-size: 0.82rem;
-            font-weight: 500;
-            padding: 7px 15px;
-            border-radius: 999px;
-            cursor: pointer;
-            white-space: nowrap;
-            transition: all 0.2s ease;
-        }
-        .filter-pill.active {
-            background: var(--accent-warm);
-            color: #09090b;
-            font-weight: 600;
-            border-color: var(--accent-warm);
-        }
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
 
-        /* Bento Grid */
-        .portal-grid-container {
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 0 16px;
-            position: relative;
-            z-index: 1;
-        }
-        .portal-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-        .bento-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 20px;
-            padding: 24px 20px;
-            transition: transform 0.2s, border-color 0.2s, opacity 0.25s;
-        }
-        .bento-card:hover {
-            border-color: var(--border-glass);
-            transform: translateY(-2px);
-        }
-        .bento-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 12px;
-        }
-        .bento-tag {
-            font-size: 0.72rem;
-            font-weight: 600;
-            color: var(--accent-warm);
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-        }
-        .bento-time {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-        }
-        .bento-title {
-            font-family: var(--font-heading);
-            font-size: 1.65rem;
-            line-height: 1.25;
-            font-weight: 500;
-            margin-bottom: 16px;
-        }
-        .bento-title a {
-            color: #ffffff;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        .bento-title a:hover { color: var(--accent-warm); }
+h1, h2, h3, .font-display {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.025em;
+}
 
-        /* Fan / Stacked Cover Effect */
-        .covers-fan-container {
-            position: relative;
-            height: 175px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 15px 0 20px;
-            perspective: 800px;
-        }
-        .fan-cover-img {
-            width: 86px;
-            height: 128px;
-            border-radius: 6px;
-            box-shadow: 0 10px 24px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.08);
-            object-fit: contain;
-            position: absolute;
-            transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-        .fan-pos-1 { transform: translateX(-65px) rotate(-10deg) scale(0.92); z-index: 1; }
-        .fan-pos-2 { transform: translateX(-22px) rotate(-4deg) scale(0.96); z-index: 2; }
-        .fan-pos-3 { transform: translateX(22px) rotate(4deg) scale(0.98); z-index: 3; }
-        .fan-pos-4 { transform: translateX(65px) rotate(10deg) scale(1.0); z-index: 4; }
-        .bento-card:hover .fan-pos-1 { transform: translateX(-78px) rotate(-14deg) scale(0.94); }
-        .bento-card:hover .fan-pos-2 { transform: translateX(-26px) rotate(-6deg) scale(0.98); }
-        .bento-card:hover .fan-pos-3 { transform: translateX(26px) rotate(6deg) scale(1.01); }
-        .bento-card:hover .fan-pos-4 { transform: translateX(78px) rotate(14deg) scale(1.04); }
+/* Animated Aurora Mesh Orbs Behind Glass */
+.aurora-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
 
-        .bento-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid var(--border-subtle);
-            padding-top: 14px;
-        }
-        .bento-count {
-            font-size: 0.78rem;
-            color: var(--text-muted);
-        }
-        .bento-cta {
-            color: var(--text-primary);
-            text-decoration: none;
-            font-size: 0.82rem;
-            font-weight: 600;
-            background: rgba(255,255,255,0.05);
-            padding: 6px 14px;
-            border-radius: 999px;
-            border: 1px solid rgba(255,255,255,0.08);
-            transition: all 0.2s;
-        }
-        .bento-cta:hover {
-            background: rgba(255,255,255,0.1);
-            color: var(--accent-warm);
-        }
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(85px);
+  opacity: 0.72;
+  animation: floatOrb 14s infinite alternate ease-in-out;
+}
 
-        .footer-minimal {
-            border-top: 1px solid var(--border-subtle);
-            padding: 30px 20px;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.8rem;
-            line-height: 1.6;
-            margin-top: 40px;
-        }
-        .footer-conar-text { max-width: 580px; margin: 0 auto 12px; }
+body.light-crystal .orb {
+  opacity: 0.55;
+  filter: blur(95px);
+}
 
-        @media (min-width: 600px) {
-            .hero-h1 { font-size: 3.4rem; }
-            .bento-card { padding: 28px 26px; }
-            .fan-cover-img { width: 94px; height: 140px; }
-        }
-    </style>
+.orb-1 {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, #ec4899 0%, #8b5cf6 70%);
+  top: -8%;
+  left: -10%;
+}
+
+.orb-2 {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, #06b6d4 0%, #3b82f6 70%);
+  top: 28%;
+  right: -12%;
+  animation-delay: -4s;
+}
+
+.orb-3 {
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, #f59e0b 0%, #ef4444 70%);
+  bottom: -5%;
+  left: 15%;
+  animation-delay: -8s;
+}
+
+.orb-4 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #10b981 0%, #06b6d4 70%);
+  top: 65%;
+  left: -8%;
+  animation-delay: -2s;
+}
+
+@keyframes floatOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(28px, -34px) scale(1.12); }
+  100% { transform: translate(-22px, 26px) scale(0.94); }
+}
+
+/* True 3D Frosted Glassmorphism Cards */
+.glass-card {
+  background: var(--glass-surface);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1.5px solid var(--glass-border);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.28),
+    inset 0 1.5px 2px var(--glass-highlight),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, background 0.3s ease;
+}
+
+body.light-crystal .glass-card {
+  box-shadow:
+    0 18px 40px rgba(99, 102, 241, 0.14),
+    inset 0 2px 3px rgba(255, 255, 255, 0.95);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: inset 0 1px 1px var(--glass-highlight);
+}
+
+body.light-crystal .glass-pill {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+/* 3D Floating Book Cover with Specular Spine */
+.book-3d-wrap {
+  perspective: 1000px;
+}
+
+.book-3d {
+  position: relative;
+  border-radius: 16px;
+  transform-style: preserve-3d;
+  transform: rotateY(-10deg) rotateX(4deg);
+  box-shadow:
+    -12px 16px 28px rgba(0, 0, 0, 0.45),
+    inset 3px 0 6px rgba(255, 255, 255, 0.45);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+}
+
+.book-3d:hover, .book-3d.active-tilt {
+  transform: rotateY(0deg) rotateX(0deg) scale(1.06);
+  box-shadow:
+    0 22px 40px rgba(139, 92, 246, 0.45),
+    inset 2px 0 8px rgba(255, 255, 255, 0.65);
+}
+
+/* Branded High-Converting Store Buttons with Light Sweep */
+.store-btn {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 16px;
+  transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.22s ease, filter 0.22s ease;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+}
+
+.store-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-25deg);
+  transition: left 0.55s ease;
+}
+
+.store-btn:hover::before, .store-btn:active::before {
+  left: 130%;
+}
+
+.store-btn:active {
+  transform: scale(0.96);
+}
+
+.btn-amazon {
+  background: linear-gradient(135deg, #FF9900 0%, #FF5E00 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 10px 24px -6px rgba(255, 153, 0, 0.65), inset 0 1.5px 1px rgba(255, 255, 255, 0.5);
+}
+
+.btn-meli {
+  background: linear-gradient(135deg, #FFE600 0%, #F59E0B 100%);
+  color: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 10px 24px -6px rgba(250, 204, 21, 0.6), inset 0 1.5px 1px rgba(255, 255, 255, 0.75);
+}
+
+.btn-shopee {
+  background: linear-gradient(135deg, #FF5722 0%, #EE2A7B 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 10px 24px -6px rgba(238, 77, 45, 0.65), inset 0 1.5px 1px rgba(255, 255, 255, 0.5);
+}
+
+.store-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.06);
+}
+
+/* Hide Scrollbars on Swipe Carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Pulse Badge */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.55); }
+  50% { box-shadow: 0 0 0 8px rgba(236, 72, 153, 0); }
+}
+.pulse-badge {
+  animation: pulseGlow 2.2s infinite;
+}
+
+/* Gamified power bars */
+.power-bar-fill-mind {
+  background: linear-gradient(90deg, #ec4899, #8b5cf6);
+}
+.power-bar-fill-flow {
+  background: linear-gradient(90deg, #06b6d4, #3b82f6);
+}
+
+/* Active Segmented Tab Style */
+.tab-btn.active-tab {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.35) 0%, rgba(139, 92, 246, 0.35) 100%);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(236, 72, 153, 0.3);
+}
+body.light-crystal .tab-btn.active-tab {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.25) 0%, rgba(236, 72, 153, 0.25) 100%);
+  border-color: rgba(99, 102, 241, 0.6);
+  color: #0f172a;
+}
+
+/* Highlight Animation for Surprise Me */
+@keyframes highlightSurprise {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.8); }
+  50% { transform: scale(1.03); box-shadow: 0 0 50px 15px rgba(6, 182, 212, 0.7); border-color: #06b6d4; }
+  100% { transform: scale(1); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28); }
+}
+.surprise-highlight {
+  animation: highlightSurprise 1.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+  </style>
 </head>
-<body>
-    <div class="ambient-glow" aria-hidden="true"></div>
+<body class="min-h-screen relative pb-28">
 
-    <nav class="floating-pill-nav">
-        <a href="/" class="nav-brand">
-            <span class="nav-brand-symbol">✦</span>
-            <span class="nav-brand-text">Acervo & Referencia</span>
-        </a>
-        <div class="nav-right">
-            <a href="#edicoes" class="nav-link-pill">Explorar temas</a>
-        </div>
-    </nav>
 
-    <header class="hero-clean">
-        <span class="hero-tag">Notas de leitura & biblioteca essencial</span>
-        <h1 class="hero-h1">Ideias que sobrevivem ao tempo, explicadas sem pressa.</h1>
-        <p class="hero-lead">Ensaios curtos e diretos sobre os livros fundamentais de ciência, psicologia, filosofia prática e foco.</p>
-    </header>
+  <!-- Animated Colorful Mesh Background -->
+  <div class="aurora-bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+  </div>
 
-    <div class="filter-pill-container" id="edicoes">
-        <div class="filter-pill-track">
-            <button class="filter-pill active" data-filter="all">Todos</button>
-            <button class="filter-pill" data-filter="mente">Mente & Decisão</button>
-            <button class="filter-pill" data-filter="ciencia">Ciência & Cosmos</button>
-            <button class="filter-pill" data-filter="proposito">Propósito</button>
-            <button class="filter-pill" data-filter="foco">Foco & Rotina</button>
-        </div>
+
+  <!-- Floating Liquid Glass Top Bar (Zero Formal Brand Name!) -->
+  <header class="sticky top-3 z-50 px-3 sm:px-6 max-w-5xl mx-auto">
+    <div class="glass-card px-3.5 py-2.5 rounded-full flex items-center justify-between gap-2">
+      <!-- Category Quick Pills -->
+      <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5" id="topNavPills">
+        <button data-filter="all" class="filter-pill active-pill px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold whitespace-nowrap transition-all bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white shadow-lg shadow-purple-500/30">
+          🔥 Todos (16)
+        </button>
+        <button data-filter="mente" class="filter-pill glass-pill px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap transition-all hover:scale-105">
+          🧠 Hack Mental
+        </button>
+        <button data-filter="universo" class="filter-pill glass-pill px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap transition-all hover:scale-105">
+          🌌 Universo & Ciência
+        </button>
+        <button data-filter="foco" class="filter-pill glass-pill px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap transition-all hover:scale-105">
+          ⚡ Foco & Rotina
+        </button>
+        <button data-filter="sentido" class="filter-pill glass-pill px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap transition-all hover:scale-105">
+          ✨ Vida & Coragem
+        </button>
+      </div>
+
+      <!-- Right Controls: Saved Drawer + Theme Toggle -->
+      <div class="flex items-center gap-2 shrink-0">
+        <button id="openSavedBtn" class="glass-pill px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold flex items-center gap-1.5 hover:scale-105 transition-transform" title="Ver itens salvos">
+          <span>❤️</span>
+          <span id="savedCountBadge">0</span>
+        </button>
+        <button id="themeToggleBtn" class="glass-pill w-9 h-9 rounded-full flex items-center justify-center text-base hover:scale-110 transition-transform" title="Alternar modo Aurora / Cristal">
+          ☀️
+        </button>
+      </div>
     </div>
+  </header>
 
-    <main class="portal-grid-container">
-        <div class="portal-grid">
+  <!-- Main Content Container -->
+  <main class="relative z-10 max-w-5xl mx-auto px-3.5 sm:px-6 pt-5 space-y-8">
+
+    <!-- Vibrant Glass Hero Banner -->
+    <section class="glass-card p-5 sm:p-8 relative overflow-hidden">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+        <div class="md:col-span-7 space-y-3.5 text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider bg-gradient-to-r from-pink-500/30 to-cyan-500/30 border border-white/30 pulse-badge">
+            <span>✨ Achadinhos que mudam o jogo</span>
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-black leading-tight">
+            Livros que dão um <span class="bg-gradient-to-r from-amber-300 via-pink-400 to-cyan-300 bg-clip-text text-transparent">upgrade real</span> no seu cérebro 🚀
+          </h1>
+          <p class="text-sm sm:text-base opacity-90 leading-relaxed max-w-xl">
+            Sem resenha chata de escola. Escolha um card abaixo, descubra o segredo em 10 segundos e vá direto para a sua loja favorita com 1 toque.
+          </p>
+
+          <!-- Search + Surprise Me Bar -->
+          <div class="pt-1 flex flex-col sm:flex-row gap-2.5">
+            <div class="relative flex-1">
+              <input
+                id="searchInput"
+                type="text"
+                placeholder="🔍 Buscar livro, tema ou ideia (ex: foco, ansiedade, espaço)..."
+                class="w-full glass-pill rounded-2xl px-4 py-3 text-sm font-medium placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-pink-400"
+              />
+            </div>
+            <button id="surpriseMeBtn" class="px-5 py-3 rounded-2xl font-display font-extrabold text-sm bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-white shadow-lg shadow-cyan-500/30 hover:scale-105 active:scale-95 transition-transform whitespace-nowrap">
+              🎲 Me Surpreenda!
+            </button>
+          </div>
+        </div>
+
+        <!-- 3D Glass Hero Visual (Fan de Capas Reais) -->
+        <div class="md:col-span-5 flex justify-center">
+
+    <div class="relative w-full max-w-xs sm:max-w-sm mx-auto h-72 sm:h-80 flex items-center justify-center book-3d-wrap">
+      <!-- Glow Central -->
+      <div class="absolute w-48 h-48 rounded-full bg-pink-500/30 blur-2xl pointer-events-none"></div>
+      
+      <!-- Livro 1 (Esquerda) -->
+      <div class="absolute transform -rotate-12 -translate-x-12 translate-y-2 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-2xl">
+        <img src="midia/capas/rapido-e-devagar-duas-formas-de-pensar-daniel-kahneman.jpg" class="book-3d w-28 sm:w-32 h-40 sm:h-48 object-cover rounded-xl border border-white/20" alt="Destaque 1" />
+      </div>
+      <!-- Livro 3 (Direita) -->
+      <div class="absolute transform rotate-12 translate-x-12 translate-y-2 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-2xl">
+        <img src="midia/capas/em-busca-de-sentido-viktor-frankl.jpg" class="book-3d w-28 sm:w-32 h-40 sm:h-48 object-cover rounded-xl border border-white/20" alt="Destaque 3" />
+      </div>
+      <!-- Livro 2 (Centro) -->
+      <div class="relative z-10 transform hover:scale-110 transition-all duration-300 shadow-2xl">
+        <img src="midia/capas/o-mundo-assombrado-pelos-demonios-carl-sagan.jpg" class="book-3d w-32 sm:w-36 h-44 sm:h-52 object-cover rounded-2xl border-2 border-white/40 shadow-purple-500/40" alt="Destaque Centro" />
+        <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-gradient-to-r from-pink-500 to-purple-600 text-white whitespace-nowrap shadow-lg border border-white/30">
+          🔥 #1 em Curadoria
+        </div>
+      </div>
+    </div>
+    
+        </div>
+      </div>
+    </section>
+
+    <!-- Carrossel Horizontal Swipe ("🔥 Favoritos da Galera") -->
+    <section class="space-y-3">
+      <div class="flex items-center justify-between px-1">
+        <h2 class="font-display font-black text-lg sm:text-xl text-white flex items-center gap-2">
+          <span>🔥 Favoritos da Galera</span>
+          <span class="text-xs px-2.5 py-0.5 rounded-full bg-pink-500/20 text-pink-300 border border-pink-400/30">Top Tendências</span>
+        </h2>
+        <span class="text-xs text-white/60">Deslize para o lado ➔</span>
+      </div>
+      <div class="flex items-center gap-3 overflow-x-auto no-scrollbar py-2 snap-x snap-mandatory">
+
+        <div class="glass-pill p-3 rounded-2xl flex-shrink-0 w-64 sm:w-72 snap-center space-y-2.5 border border-white/20">
+          <div class="flex items-center gap-3">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/rapido-e-devagar-duas-formas-de-pensar-daniel-kahneman.jpg" alt="Rápido e Devagar: Duas Formas de Pensar - Daniel Kahneman" class="book-3d w-16 h-24 object-cover rounded-xl" />
+            </div>
+            <div class="min-w-0 flex-1">
+              <span class="inline-block px-2 py-0.5 rounded-full text-[10px] font-black bg-pink-500/30 text-pink-300 border border-pink-400/30">🧠 Hack Mental</span>
+              <h4 class="font-display font-bold text-xs sm:text-sm text-white truncate pt-1">Rápido e Devagar: Duas Formas de Pensar - Daniel Kahneman</h4>
+              <p class="text-[11px] text-white/70 truncate">Daniel Kahneman</p>
+              <div class="text-[10px] font-black text-amber-300 pt-0.5">🤯 95% Explode a Mente</div>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-1.5 pt-1">
+            <a href="https://www.amazon.com.br/s?k=R%C3%A1pido+e+Devagar%3A+Duas+Formas+de+Pensar+-+Daniel+Kahneman&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-[11px] py-1.5 px-2">🟠 Amazon</a>
+            <a href="https://lista.mercadolivre.com.br/rapido-e-devagar-duas-formas-de-pensar-daniel-kahneman?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-[11px] py-1.5 px-2">⚡ Meli</a>
+            <a href="https://shopee.com.br/search?keyword=R%C3%A1pido+e+Devagar%3A+Duas+Formas+de+Pensar+-+Daniel+Kahneman" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-[11px] py-1.5 px-2">🛍️ Shopee</a>
+          </div>
+        </div>
+        
+
+        <div class="glass-pill p-3 rounded-2xl flex-shrink-0 w-64 sm:w-72 snap-center space-y-2.5 border border-white/20">
+          <div class="flex items-center gap-3">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/o-mundo-assombrado-pelos-demonios-carl-sagan.jpg" alt="O Mundo Assombrado pelos Demônios - Carl Sagan" class="book-3d w-16 h-24 object-cover rounded-xl" />
+            </div>
+            <div class="min-w-0 flex-1">
+              <span class="inline-block px-2 py-0.5 rounded-full text-[10px] font-black bg-pink-500/30 text-pink-300 border border-pink-400/30">🌌 Universo & Ciência</span>
+              <h4 class="font-display font-bold text-xs sm:text-sm text-white truncate pt-1">O Mundo Assombrado pelos Demônios - Carl Sagan</h4>
+              <p class="text-[11px] text-white/70 truncate">Carl Sagan</p>
+              <div class="text-[10px] font-black text-amber-300 pt-0.5">🤯 95% Explode a Mente</div>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-1.5 pt-1">
+            <a href="https://www.amazon.com.br/s?k=O+Mundo+Assombrado+pelos+Dem%C3%B4nios+-+Carl+Sagan&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-[11px] py-1.5 px-2">🟠 Amazon</a>
+            <a href="https://lista.mercadolivre.com.br/o-mundo-assombrado-pelos-demonios-carl-sagan?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-[11px] py-1.5 px-2">⚡ Meli</a>
+            <a href="https://shopee.com.br/search?keyword=O+Mundo+Assombrado+pelos+Dem%C3%B4nios+-+Carl+Sagan" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-[11px] py-1.5 px-2">🛍️ Shopee</a>
+          </div>
+        </div>
+        
+
+        <div class="glass-pill p-3 rounded-2xl flex-shrink-0 w-64 sm:w-72 snap-center space-y-2.5 border border-white/20">
+          <div class="flex items-center gap-3">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/em-busca-de-sentido-viktor-frankl.jpg" alt="Em Busca de Sentido - Viktor Frankl" class="book-3d w-16 h-24 object-cover rounded-xl" />
+            </div>
+            <div class="min-w-0 flex-1">
+              <span class="inline-block px-2 py-0.5 rounded-full text-[10px] font-black bg-pink-500/30 text-pink-300 border border-pink-400/30">🧠 Hack Mental</span>
+              <h4 class="font-display font-bold text-xs sm:text-sm text-white truncate pt-1">Em Busca de Sentido - Viktor Frankl</h4>
+              <p class="text-[11px] text-white/70 truncate">Viktor Frankl</p>
+              <div class="text-[10px] font-black text-amber-300 pt-0.5">🤯 95% Explode a Mente</div>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-1.5 pt-1">
+            <a href="https://www.amazon.com.br/s?k=Em+Busca+de+Sentido+-+Viktor+Frankl&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-[11px] py-1.5 px-2">🟠 Amazon</a>
+            <a href="https://lista.mercadolivre.com.br/em-busca-de-sentido-viktor-frankl?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-[11px] py-1.5 px-2">⚡ Meli</a>
+            <a href="https://shopee.com.br/search?keyword=Em+Busca+de+Sentido+-+Viktor+Frankl" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-[11px] py-1.5 px-2">🛍️ Shopee</a>
+          </div>
+        </div>
+        
+
+        <div class="glass-pill p-3 rounded-2xl flex-shrink-0 w-64 sm:w-72 snap-center space-y-2.5 border border-white/20">
+          <div class="flex items-center gap-3">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/trabalho-focado-deep-work-cal-newport.jpg" alt="Trabalho Focado (Deep Work) - Cal Newport" class="book-3d w-16 h-24 object-cover rounded-xl" />
+            </div>
+            <div class="min-w-0 flex-1">
+              <span class="inline-block px-2 py-0.5 rounded-full text-[10px] font-black bg-pink-500/30 text-pink-300 border border-pink-400/30">⚡ Foco & Rotina</span>
+              <h4 class="font-display font-bold text-xs sm:text-sm text-white truncate pt-1">Trabalho Focado (Deep Work) - Cal Newport</h4>
+              <p class="text-[11px] text-white/70 truncate">Cal Newport</p>
+              <div class="text-[10px] font-black text-amber-300 pt-0.5">🤯 95% Explode a Mente</div>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-1.5 pt-1">
+            <a href="https://www.amazon.com.br/s?k=Trabalho+Focado+%28Deep+Work%29+-+Cal+Newport&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-[11px] py-1.5 px-2">🟠 Amazon</a>
+            <a href="https://lista.mercadolivre.com.br/trabalho-focado-deep-work-cal-newport?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-[11px] py-1.5 px-2">⚡ Meli</a>
+            <a href="https://shopee.com.br/search?keyword=Trabalho+Focado+%28Deep+Work%29+-+Cal+Newport" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-[11px] py-1.5 px-2">🛍️ Shopee</a>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Grid Principal com Todos os 16 Livros -->
+    <section class="space-y-4 pt-2">
+      <div class="flex items-center justify-between px-1">
+        <h2 class="font-display font-black text-xl sm:text-2xl text-white flex items-center gap-2">
+          <span>📚 Vitrine Completa de Obras</span>
+          <span class="text-xs px-2.5 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-400/30">16 Obras Selecionadas</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="booksGridContainer">
+
+        <article class="glass-card book-viral-card p-5 sm:p-6 space-y-4 relative flex flex-col justify-between"
+                 data-category="mente"
+                 data-search="rápido e devagar: duas formas de pensar - daniel kahneman daniel kahneman 🧠 hack mental passamos o dia acreditando que decidimos com a lógica, mas na maior parte do tempo nosso cérebro só quer economizar energia. o erro não está em ter intuição, mas em confiar cegamente nela justamente onde a probabilidade exige cálculo frio. daniel kahneman dedicou décadas de pesquisa empírica para responder a uma pergunta incômoda: por que pessoas inteligentes tomam decisões visivelmente irracionais? ao apresentar a dinâmica entre o sistema 1 (rápido e intuitivo) e o sistema 2 (lento e deliberativo), a obra desconstrói a ideia do ser humano puramente lógico.
+
+mais do que um tratado acadêmico, o livro funciona como um filtro de lucidez para o dia a dia. ao entender fenômenos como ancoragem, aversão à perda e excesso de confiança, o leitor ganha uma bússola precisa para negociar, avaliar projetos e proteger seu próprio julgamento. uma única decisão equivocada evitada em negócios ou na vida pessoal já justifica o tempo dedicado a estas páginas.">
+          
+          <!-- Top Card Bar: Badge + Favorite Heart Button -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md">
+              <span>🧠 Hack Mental</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Ponto de partida</span>
+              <button onclick="toggleFavoriteItem('rapido-e-devagar-duas-formas-de-pensar-daniel-kahneman', 'Rápido e Devagar: Duas Formas de Pensar - Daniel Kahneman', 'Daniel Kahneman', 'midia/capas/rapido-e-devagar-duas-formas-de-pensar-daniel-kahneman.jpg', 'https://www.amazon.com.br/s?k=R%C3%A1pido+e+Devagar%3A+Duas+Formas+de+Pensar+-+Daniel+Kahneman&tag=acervoref-20', 'https://lista.mercadolivre.com.br/rapido-e-devagar-duas-formas-de-pensar-daniel-kahneman?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=R%C3%A1pido+e+Devagar%3A+Duas+Formas+de+Pensar+-+Daniel+Kahneman')" 
+                      data-item-key="rapido-e-devagar-duas-formas-de-pensar-daniel-kahneman"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
+            </div>
+          </div>
+
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/rapido-e-devagar-duas-formas-de-pensar-daniel-kahneman.jpg" alt="Rápido e Devagar: Duas Formas de Pensar - Daniel Kahneman" class="book-3d w-28 sm:w-32 h-40 sm:h-48 object-cover rounded-2xl border border-white/20" />
+            </div>
+            <div class="space-y-2 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-display font-black text-white leading-snug">Rápido e Devagar: Duas Formas de Pensar - Daniel Kahneman</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Daniel Kahneman</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "Passamos o dia acreditando que decidimos com a lógica, mas na maior parte do tempo nosso cérebro só quer economizar energia. O erro não está em ter intuição, mas em confiar cegamente nela justamente onde a probabilidade exige cálculo frio."
+              </p>
+            </div>
+          </div>
+
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">95%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 95%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">92%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 92%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
+            </div>
             
-        <article class="bento-card" data-category="foco">
-            <div class="bento-top">
-                <span class="bento-tag">Produtividade & Gestão de Carreira</span>
-                <span class="bento-time">⏱ 4 min de leitura</span>
-            </div>
-            <h2 class="bento-title"><a href="cal-newport-trabalho-focado-deep-work-produtividade.html">Cal Newport: Livros e Ferramentas para Trabalho Focado (Deep Work) e Produtividade Sem Distração</a></h2>
+            <div class="tab-content-container p-3.5 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Daniel Kahneman dedicou décadas de pesquisa empírica para responder a uma pergunta incômoda: por que pessoas inteligentes tomam decisões visivelmente irracionais? Ao apresentar a dinâmica entre o Sistema 1 (rápido e intuitivo) e o Sistema 2 (lento e deliberativo), a obra desconstrói a ideia do ser humano puramente lógico.
 
-            <div class="covers-fan-container">
-                <img src="midia/capas/trabalho-focado-deep-work-cal-newport.jpg" class="fan-cover-img fan-pos-1" alt="Trabalho Focado (Deep Work) - Cal Newport" loading="lazy"><img src="midia/capas/minimalismo-digital-cal-newport.jpg" class="fan-cover-img fan-pos-2" alt="Minimalismo Digital - Cal Newport" loading="lazy"><img src="midia/capas/devagar-slow-productivity-cal-newport.jpg" class="fan-cover-img fan-pos-3" alt="Devagar (Slow Productivity) - Cal Newport" loading="lazy"><img src="midia/capas/fone-de-ouvido-com-cancelamento-de-ruido-anc.jpg" class="fan-cover-img fan-pos-4" alt="Fone de Ouvido com Cancelamento de Ruído ANC" loading="lazy">
+Mais do que um tratado acadêmico, o livro funciona como um filtro de lucidez para o dia a dia. Ao entender fenômenos como ancoragem, aversão à perda e excesso de confiança, o leitor ganha uma bússola precisa para negociar, avaliar projetos e proteger seu próprio julgamento.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Decidir no impulso acreditando que o instinto é infalível, caindo em armadilhas de julgamento fáceis de prever.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Reconhecer quando acionar o pensamento reflexivo e pausado, calibrando riscos reais antes de qualquer escolha importante.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Uma única decisão equivocada evitada em negócios ou na vida pessoal já justifica o tempo dedicado a estas páginas.</p>
+              </div>
             </div>
+          </div>
 
-            <div class="bento-bottom">
-                <span class="bento-count">4 obras analisadas</span>
-                <a href="cal-newport-trabalho-focado-deep-work-produtividade.html" class="bento-cta">Ler ensaio e notas →</a>
+          <!-- Link para Coleção Completa do Autor -->
+          <div class="pt-1 text-center sm:text-left">
+            <a href="daniel-kahneman-tomada-de-decisao-economia-comportamental.html" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-cyan-300 hover:text-pink-300 transition-colors">
+              <span>Ver coleção completa de Daniel Kahneman</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
             </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=R%C3%A1pido+e+Devagar%3A+Duas+Formas+de+Pensar+-+Daniel+Kahneman&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/rapido-e-devagar-duas-formas-de-pensar-daniel-kahneman?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=R%C3%A1pido+e+Devagar%3A+Duas+Formas+de+Pensar+-+Daniel+Kahneman" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
         </article>
         
-        <article class="bento-card" data-category="proposito">
-            <div class="bento-top">
-                <span class="bento-tag">Psicologia Existencial & Filosofia</span>
-                <span class="bento-time">⏱ 4 min de leitura</span>
-            </div>
-            <h2 class="bento-title"><a href="viktor-frankl-logoterapia-proposito-resiliencia.html">Viktor Frankl e a Logoterapia: Obras Fundamentais sobre Propósito, Resiliência e Psicologia</a></h2>
 
-            <div class="covers-fan-container">
-                <img src="midia/capas/em-busca-de-sentido-viktor-frankl.jpg" class="fan-cover-img fan-pos-1" alt="Em Busca de Sentido - Viktor Frankl" loading="lazy"><img src="midia/capas/a-presenca-ignorada-de-deus-viktor-frankl.jpg" class="fan-cover-img fan-pos-2" alt="A Presença Ignorada de Deus - Viktor Frankl" loading="lazy"><img src="midia/capas/o-homem-em-busca-de-um-sentido-ultimo-viktor-frankl.jpg" class="fan-cover-img fan-pos-3" alt="O Homem em Busca de um Sentido Último - Viktor Frankl" loading="lazy"><img src="midia/capas/caderno-inteligente-para-diario-e-anotacoes.jpg" class="fan-cover-img fan-pos-4" alt="Caderno Inteligente para Diário e Anotações" loading="lazy">
-            </div>
+        <article class="glass-card book-viral-card p-5 sm:p-6 space-y-4 relative flex flex-col justify-between"
+                 data-category="mente"
+                 data-search="ruído: uma falha no julgamento humano - daniel kahneman daniel kahneman 🧠 hack mental se dois profissionais experientes chegam a conclusões opostas sobre o mesmo problema, não se trata de má vontade: é o ruído invisível atuando. onde há julgamento humano, há variabilidade indesejada distorcendo diagnósticos silenciosamente. escrito em parceria com olivier sibony e cass sunstein, &#x27;ruído&#x27; explora o outro lado do erro de julgamento. enquanto o viés é uma distorção previsível na mesma direção, o ruído é a variabilidade caótica que custa fortunas a organizações e mina a justiça de avaliações cotidianas.
 
-            <div class="bento-bottom">
-                <span class="bento-count">4 obras analisadas</span>
-                <a href="viktor-frankl-logoterapia-proposito-resiliencia.html" class="bento-cta">Ler ensaio e notas →</a>
+a grande contribuição da obra é apresentar o conceito de &#x27;higiene de decisões&#x27; — rotinas práticas para desacoplar impressões pessoais e harmonizar julgamentos em grupo. uma leitura essencial para quem coordena equipes ou toma decisões de impacto duradouro. tornar o julgamento da sua equipe mais consistente poupa meses de retrabalho e desgaste operacional.">
+          
+          <!-- Top Card Bar: Badge + Favorite Heart Button -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md">
+              <span>🧠 Hack Mental</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Visão aprofundada</span>
+              <button onclick="toggleFavoriteItem('ruido-uma-falha-no-julgamento-humano-daniel-kahneman', 'Ruído: Uma Falha no Julgamento Humano - Daniel Kahneman', 'Daniel Kahneman', 'midia/capas/ruido-uma-falha-no-julgamento-humano-daniel-kahneman.jpg', 'https://www.amazon.com.br/s?k=Ru%C3%ADdo%3A+Uma+Falha+no+Julgamento+Humano+-+Daniel+Kahneman&tag=acervoref-20', 'https://lista.mercadolivre.com.br/ruido-uma-falha-no-julgamento-humano-daniel-kahneman?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=Ru%C3%ADdo%3A+Uma+Falha+no+Julgamento+Humano+-+Daniel+Kahneman')" 
+                      data-item-key="ruido-uma-falha-no-julgamento-humano-daniel-kahneman"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
             </div>
+          </div>
+
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/ruido-uma-falha-no-julgamento-humano-daniel-kahneman.jpg" alt="Ruído: Uma Falha no Julgamento Humano - Daniel Kahneman" class="book-3d w-28 sm:w-32 h-40 sm:h-48 object-cover rounded-2xl border border-white/20" />
+            </div>
+            <div class="space-y-2 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-display font-black text-white leading-snug">Ruído: Uma Falha no Julgamento Humano - Daniel Kahneman</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Daniel Kahneman</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "Se dois profissionais experientes chegam a conclusões opostas sobre o mesmo problema, não se trata de má vontade: é o ruído invisível atuando. Onde há julgamento humano, há variabilidade indesejada distorcendo diagnósticos silenciosamente."
+              </p>
+            </div>
+          </div>
+
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">97%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 97%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">95%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 95%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
+            </div>
+            
+            <div class="tab-content-container p-3.5 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Escrito em parceria com Olivier Sibony e Cass Sunstein, &#x27;Ruído&#x27; explora o outro lado do erro de julgamento. Enquanto o viés é uma distorção previsível na mesma direção, o ruído é a variabilidade caótica que custa fortunas a organizações e mina a justiça de avaliações cotidianas.
+
+A grande contribuição da obra é apresentar o conceito de &#x27;higiene de decisões&#x27; — rotinas práticas para desacoplar impressões pessoais e harmonizar julgamentos em grupo. Uma leitura essencial para quem coordena equipes ou toma decisões de impacto duradouro.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Acreditar que divergências em decisões vêm apenas de falta de dados, ignorando a oscilação aleatória do humor e do cansaço.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Estruturar processos claros e critérios objetivos para auditar decisões e diminuir a inconsistência em avaliações complexas.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Tornar o julgamento da sua equipe mais consistente poupa meses de retrabalho e desgaste operacional.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Link para Coleção Completa do Autor -->
+          <div class="pt-1 text-center sm:text-left">
+            <a href="daniel-kahneman-tomada-de-decisao-economia-comportamental.html" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-cyan-300 hover:text-pink-300 transition-colors">
+              <span>Ver coleção completa de Daniel Kahneman</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=Ru%C3%ADdo%3A+Uma+Falha+no+Julgamento+Humano+-+Daniel+Kahneman&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/ruido-uma-falha-no-julgamento-humano-daniel-kahneman?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=Ru%C3%ADdo%3A+Uma+Falha+no+Julgamento+Humano+-+Daniel+Kahneman" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
         </article>
         
-        <article class="bento-card" data-category="all">
-            <div class="bento-top">
-                <span class="bento-tag">Divulgação Científica & Astronomia</span>
-                <span class="bento-time">⏱ 4 min de leitura</span>
-            </div>
-            <h2 class="bento-title"><a href="carl-sagan-leituras-essenciais-ciencia-cosmologia.html">Carl Sagan: As Leituras Essenciais de Ciência, Cosmologia e Pensamento Crítico</a></h2>
 
-            <div class="covers-fan-container">
-                <img src="midia/capas/o-mundo-assombrado-pelos-demonios-carl-sagan.jpg" class="fan-cover-img fan-pos-1" alt="O Mundo Assombrado pelos Demônios - Carl Sagan" loading="lazy"><img src="midia/capas/cosmos-carl-sagan.jpg" class="fan-cover-img fan-pos-2" alt="Cosmos - Carl Sagan" loading="lazy"><img src="midia/capas/palido-ponto-azul-carl-sagan.jpg" class="fan-cover-img fan-pos-3" alt="Pálido Ponto Azul - Carl Sagan" loading="lazy"><img src="midia/capas/telescopio-refrator-iniciante-astronomia.jpg" class="fan-cover-img fan-pos-4" alt="Telescópio Refrator Iniciante Astronomia" loading="lazy">
-            </div>
+        <article class="glass-card book-viral-card p-5 sm:p-6 space-y-4 relative flex flex-col justify-between"
+                 data-category="mente"
+                 data-search="previsivelmente irracional - dan ariely daniel kahneman 🧠 hack mental a palavra &#x27;grátis&#x27; é uma das mais caras do nosso vocabulário: ela nos faz gastar tempo, atenção e energia com coisas que jamais compraríamos. nossas escolhas diárias não erram ao acaso, mas seguem um padrão previsível e repetitivo. dan ariely une o rigor experimental do mit a uma prosa leve e bem-humorada sobre as pequenas loucuras do comportamento humano. de por que procrastinamos tarefas decisivas até o motivo de supervalorizarmos o que já possuímos, o livro ilustra como o ambiente dita nossas escolhas sem que percebamos.
 
-            <div class="bento-bottom">
-                <span class="bento-count">4 obras analisadas</span>
-                <a href="carl-sagan-leituras-essenciais-ciencia-cosmologia.html" class="bento-cta">Ler ensaio e notas →</a>
+a leitura oferece um olhar curioso sobre a psicologia do consumo e da tomada de decisão. é um guia de autodefesa para quem quer entender como o cérebro reage a comparações, expectativas e incentivos sociais. compreender os truques do contexto de escolha transforma a forma como você lida com dinheiro e prioridades diárias.">
+          
+          <!-- Top Card Bar: Badge + Favorite Heart Button -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md">
+              <span>🧠 Hack Mental</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Leitura rápida</span>
+              <button onclick="toggleFavoriteItem('previsivelmente-irracional-dan-ariely', 'Previsivelmente Irracional - Dan Ariely', 'Daniel Kahneman', 'midia/capas/previsivelmente-irracional-dan-ariely.jpg', 'https://www.amazon.com.br/s?k=Previsivelmente+Irracional+-+Dan+Ariely&tag=acervoref-20', 'https://lista.mercadolivre.com.br/previsivelmente-irracional-dan-ariely?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=Previsivelmente+Irracional+-+Dan+Ariely')" 
+                      data-item-key="previsivelmente-irracional-dan-ariely"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
             </div>
+          </div>
+
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/previsivelmente-irracional-dan-ariely.jpg" alt="Previsivelmente Irracional - Dan Ariely" class="book-3d w-28 sm:w-32 h-40 sm:h-48 object-cover rounded-2xl border border-white/20" />
+            </div>
+            <div class="space-y-2 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-display font-black text-white leading-snug">Previsivelmente Irracional - Dan Ariely</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Daniel Kahneman</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "A palavra &#x27;grátis&#x27; é uma das mais caras do nosso vocabulário: ela nos faz gastar tempo, atenção e energia com coisas que jamais compraríamos. Nossas escolhas diárias não erram ao acaso, mas seguem um padrão previsível e repetitivo."
+              </p>
+            </div>
+          </div>
+
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">99%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 99%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">98%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 98%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
+            </div>
+            
+            <div class="tab-content-container p-3.5 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Dan Ariely une o rigor experimental do MIT a uma prosa leve e bem-humorada sobre as pequenas loucuras do comportamento humano. De por que procrastinamos tarefas decisivas até o motivo de supervalorizarmos o que já possuímos, o livro ilustra como o ambiente dita nossas escolhas sem que percebamos.
+
+A leitura oferece um olhar curioso sobre a psicologia do consumo e da tomada de decisão. É um guia de autodefesa para quem quer entender como o cérebro reage a comparações, expectativas e incentivos sociais.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Ser atraído por ancoragens de preço e promoções que parecem vantajosas, gastando recursos em impulsos momentâneos.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Perceber com naturalidade os gatilhos de contexto e precificação, comprando e escolhendo com independência e clareza.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Compreender os truques do contexto de escolha transforma a forma como você lida com dinheiro e prioridades diárias.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Link para Coleção Completa do Autor -->
+          <div class="pt-1 text-center sm:text-left">
+            <a href="daniel-kahneman-tomada-de-decisao-economia-comportamental.html" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-cyan-300 hover:text-pink-300 transition-colors">
+              <span>Ver coleção completa de Daniel Kahneman</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=Previsivelmente+Irracional+-+Dan+Ariely&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/previsivelmente-irracional-dan-ariely?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=Previsivelmente+Irracional+-+Dan+Ariely" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
         </article>
         
-        <article class="bento-card" data-category="mente">
-            <div class="bento-top">
-                <span class="bento-tag">Economia Comportamental & Psicologia</span>
-                <span class="bento-time">⏱ 4 min de leitura</span>
-            </div>
-            <h2 class="bento-title"><a href="daniel-kahneman-tomada-de-decisao-economia-comportamental.html">Daniel Kahneman (Prêmio Nobel): Os Livros e Métodos sobre Tomada de Decisão e Economia Comportamental</a></h2>
 
-            <div class="covers-fan-container">
-                <img src="midia/capas/rapido-e-devagar-duas-formas-de-pensar-daniel-kahneman.jpg" class="fan-cover-img fan-pos-1" alt="Rápido e Devagar: Duas Formas de Pensar - Daniel Kahneman" loading="lazy"><img src="midia/capas/ruido-uma-falha-no-julgamento-humano-daniel-kahneman.jpg" class="fan-cover-img fan-pos-2" alt="Ruído: Uma Falha no Julgamento Humano - Daniel Kahneman" loading="lazy"><img src="midia/capas/previsivelmente-irracional-dan-ariely.jpg" class="fan-cover-img fan-pos-3" alt="Previsivelmente Irracional - Dan Ariely" loading="lazy"><img src="midia/capas/kindle-paperwhite-amazon.jpg" class="fan-cover-img fan-pos-4" alt="Kindle Paperwhite Amazon" loading="lazy">
-            </div>
+        <article class="glass-card book-viral-card p-5 sm:p-6 space-y-4 relative flex flex-col justify-between"
+                 data-category="mente"
+                 data-search="kindle paperwhite amazon daniel kahneman 🧠 hack mental tentar ler obras densas na tela do celular é disputar atenção com dezenas de notificações a cada cinco minutos. ter um leitor dedicado não é capricho tecnológico, mas uma escolha consciente para resgatar o prazer da leitura contínua. o kindle paperwhite é um aparelho desenhado para fazer exatamente uma coisa com excelência: permitir que você leia sem distrações. com tela de tinta eletrônica de 300 ppi que imita papel fosco e iluminação ajustável, ele elimina o reflexo solar e o cansaço ocular típico de telas convencionais.
 
-            <div class="bento-bottom">
-                <span class="bento-count">4 obras analisadas</span>
-                <a href="daniel-kahneman-tomada-de-decisao-economia-comportamental.html" class="bento-cta">Ler ensaio e notas →</a>
+a possibilidade de carregar centenas de livros com anotações e dicionário integrado transforma qualquer intervalo da rotina em oportunidade de estudo. é uma ferramenta discreta que apoia diretamente a consistência intelectual. eliminar o atrito da leitura faz você terminar no ano o dobro dos livros que costumava deixar pela metade.">
+          
+          <!-- Top Card Bar: Badge + Favorite Heart Button -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md">
+              <span>🧠 Hack Mental</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Complemento prático</span>
+              <button onclick="toggleFavoriteItem('kindle-paperwhite-amazon', 'Kindle Paperwhite Amazon', 'Daniel Kahneman', 'midia/capas/kindle-paperwhite-amazon.jpg', 'https://www.amazon.com.br/s?k=Kindle+Paperwhite+Amazon&tag=acervoref-20', 'https://lista.mercadolivre.com.br/kindle-paperwhite-amazon?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=Kindle+Paperwhite+Amazon')" 
+                      data-item-key="kindle-paperwhite-amazon"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
             </div>
+          </div>
+
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/kindle-paperwhite-amazon.jpg" alt="Kindle Paperwhite Amazon" class="book-3d w-28 sm:w-32 h-40 sm:h-48 object-cover rounded-2xl border border-white/20" />
+            </div>
+            <div class="space-y-2 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-display font-black text-white leading-snug">Kindle Paperwhite Amazon</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Daniel Kahneman</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "Tentar ler obras densas na tela do celular é disputar atenção com dezenas de notificações a cada cinco minutos. Ter um leitor dedicado não é capricho tecnológico, mas uma escolha consciente para resgatar o prazer da leitura contínua."
+              </p>
+            </div>
+          </div>
+
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">96%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 96%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">94%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 94%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
+            </div>
+            
+            <div class="tab-content-container p-3.5 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>O Kindle Paperwhite é um aparelho desenhado para fazer exatamente uma coisa com excelência: permitir que você leia sem distrações. Com tela de tinta eletrônica de 300 ppi que imita papel fosco e iluminação ajustável, ele elimina o reflexo solar e o cansaço ocular típico de telas convencionais.
+
+A possibilidade de carregar centenas de livros com anotações e dicionário integrado transforma qualquer intervalo da rotina em oportunidade de estudo. É uma ferramenta discreta que apoia diretamente a consistência intelectual.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Tentar ler no celular ou computador, interrompendo o raciocínio a cada aviso de mensagem e sentindo cansaço na vista.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Criar um espaço reservado para leitura diária, avançando capítulos com facilidade e bateria que dura semanas.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Eliminar o atrito da leitura faz você terminar no ano o dobro dos livros que costumava deixar pela metade.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Link para Coleção Completa do Autor -->
+          <div class="pt-1 text-center sm:text-left">
+            <a href="daniel-kahneman-tomada-de-decisao-economia-comportamental.html" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-cyan-300 hover:text-pink-300 transition-colors">
+              <span>Ver coleção completa de Daniel Kahneman</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=Kindle+Paperwhite+Amazon&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/kindle-paperwhite-amazon?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=Kindle+Paperwhite+Amazon" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
         </article>
         
+
+        <article class="glass-card book-viral-card p-5 sm:p-6 space-y-4 relative flex flex-col justify-between"
+                 data-category="universo"
+                 data-search="o mundo assombrado pelos demônios - carl sagan carl sagan 🌌 universo &amp; ciência não faltam pessoas inteligentes acreditando em ideias infundadas; o que falta é o hábito de pedir evidências antes de concordar. o método científico não pertence aos laboratórios: é uma atitude lúcida de respeito à verdade no dia a dia. em uma de suas obras mais apaixonadas, carl sagan defende a ciência não como um dogma frio, mas como uma vela acesa na escuridão da credulidade e do preconceito. ele demonstra como a curiosidade e o ceticismo andam juntos para proteger a sociedade contra manipulações e mitos confortáveis.
+
+o famoso capítulo sobre o &#x27;kit de detecção de mentiras&#x27; ensina a desarmar falácias lógicas com simplicidade e elegância. um livro formador de caráter intelectual, indispensável em tempos de excesso de ruído informativo. aprender a checar premissas antes de aceitar conclusões protege suas decisões contra enganos custosos.">
+          
+          <!-- Top Card Bar: Badge + Favorite Heart Button -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-md">
+              <span>🌌 Universo & Ciência</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Ponto de partida</span>
+              <button onclick="toggleFavoriteItem('o-mundo-assombrado-pelos-demonios-carl-sagan', 'O Mundo Assombrado pelos Demônios - Carl Sagan', 'Carl Sagan', 'midia/capas/o-mundo-assombrado-pelos-demonios-carl-sagan.jpg', 'https://www.amazon.com.br/s?k=O+Mundo+Assombrado+pelos+Dem%C3%B4nios+-+Carl+Sagan&tag=acervoref-20', 'https://lista.mercadolivre.com.br/o-mundo-assombrado-pelos-demonios-carl-sagan?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=O+Mundo+Assombrado+pelos+Dem%C3%B4nios+-+Carl+Sagan')" 
+                      data-item-key="o-mundo-assombrado-pelos-demonios-carl-sagan"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
+            </div>
+          </div>
+
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/o-mundo-assombrado-pelos-demonios-carl-sagan.jpg" alt="O Mundo Assombrado pelos Demônios - Carl Sagan" class="book-3d w-28 sm:w-32 h-40 sm:h-48 object-cover rounded-2xl border border-white/20" />
+            </div>
+            <div class="space-y-2 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-display font-black text-white leading-snug">O Mundo Assombrado pelos Demônios - Carl Sagan</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Carl Sagan</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "Não faltam pessoas inteligentes acreditando em ideias infundadas; o que falta é o hábito de pedir evidências antes de concordar. O método científico não pertence aos laboratórios: é uma atitude lúcida de respeito à verdade no dia a dia."
+              </p>
+            </div>
+          </div>
+
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">95%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 95%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">92%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 92%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
+            </div>
+            
+            <div class="tab-content-container p-3.5 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Em uma de suas obras mais apaixonadas, Carl Sagan defende a ciência não como um dogma frio, mas como uma vela acesa na escuridão da credulidade e do preconceito. Ele demonstra como a curiosidade e o ceticismo andam juntos para proteger a sociedade contra manipulações e mitos confortáveis.
+
+O famoso capítulo sobre o &#x27;Kit de Detecção de Mentiras&#x27; ensina a desarmar falácias lógicas com simplicidade e elegância. Um livro formador de caráter intelectual, indispensável em tempos de excesso de ruído informativo.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Aceitar discursos de autoridade e promessas fáceis sem checar fatos, ficando vulnerável a desinformação e falácias.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Aplicar um ceticismo sereno e construtivo, separando argumentos bem fundamentados de meras opiniões retóricas.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Aprender a checar premissas antes de aceitar conclusões protege suas decisões contra enganos custosos.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Link para Coleção Completa do Autor -->
+          <div class="pt-1 text-center sm:text-left">
+            <a href="carl-sagan-leituras-essenciais-ciencia-cosmologia.html" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-cyan-300 hover:text-pink-300 transition-colors">
+              <span>Ver coleção completa de Carl Sagan</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=O+Mundo+Assombrado+pelos+Dem%C3%B4nios+-+Carl+Sagan&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/o-mundo-assombrado-pelos-demonios-carl-sagan?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=O+Mundo+Assombrado+pelos+Dem%C3%B4nios+-+Carl+Sagan" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
+        </article>
+        
+
+        <article class="glass-card book-viral-card p-5 sm:p-6 space-y-4 relative flex flex-col justify-between"
+                 data-category="universo"
+                 data-search="cosmos - carl sagan carl sagan 🌌 universo &amp; ciência passamos tanto tempo absorvidos pelos detalhes da nossa rotina que esquecemos da jornada extraordinária que nos trouxe até aqui. olhar para a história do universo não nos diminui: coloca nossos desafios em uma perspectiva libertadora. cosmos é o clássico absoluto que aproximou milhões de pessoas da beleza da astronomia e da história do pensamento. com prosa lírica e precisão científica, sagan reconstrói quinze bilhões de anos de evolução cósmica, resgatando a coragem dos pensadores gregos e os avanços que moldaram a civilização.
+
+a leitura expande a imaginação e transmite uma sensação genuína de reverência diante da vida. é uma daquelas obras que alteram permanentemente a maneira como olhamos para o céu e para as pessoas ao nosso redor. uma expansão de repertório que devolve o encanto pelo aprendizado e estimula conversas profundas.">
+          
+          <!-- Top Card Bar: Badge + Favorite Heart Button -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-md">
+              <span>🌌 Universo & Ciência</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Visão aprofundada</span>
+              <button onclick="toggleFavoriteItem('cosmos-carl-sagan', 'Cosmos - Carl Sagan', 'Carl Sagan', 'midia/capas/cosmos-carl-sagan.jpg', 'https://www.amazon.com.br/s?k=Cosmos+-+Carl+Sagan&tag=acervoref-20', 'https://lista.mercadolivre.com.br/cosmos-carl-sagan?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=Cosmos+-+Carl+Sagan')" 
+                      data-item-key="cosmos-carl-sagan"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
+            </div>
+          </div>
+
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/cosmos-carl-sagan.jpg" alt="Cosmos - Carl Sagan" class="book-3d w-28 sm:w-32 h-40 sm:h-48 object-cover rounded-2xl border border-white/20" />
+            </div>
+            <div class="space-y-2 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-display font-black text-white leading-snug">Cosmos - Carl Sagan</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Carl Sagan</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "Passamos tanto tempo absorvidos pelos detalhes da nossa rotina que esquecemos da jornada extraordinária que nos trouxe até aqui. Olhar para a história do universo não nos diminui: coloca nossos desafios em uma perspectiva libertadora."
+              </p>
+            </div>
+          </div>
+
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">97%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 97%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">95%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 95%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
+            </div>
+            
+            <div class="tab-content-container p-3.5 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Cosmos é o clássico absoluto que aproximou milhões de pessoas da beleza da astronomia e da história do pensamento. Com prosa lírica e precisão científica, Sagan reconstrói quinze bilhões de anos de evolução cósmica, resgatando a coragem dos pensadores gregos e os avanços que moldaram a civilização.
+
+A leitura expande a imaginação e transmite uma sensação genuína de reverência diante da vida. É uma daquelas obras que alteram permanentemente a maneira como olhamos para o céu e para as pessoas ao nosso redor.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Viver focado exclusivamente nas pressões imediatas, sem uma visão ampla sobre a história da vida e do conhecimento.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Ganhar uma perspectiva ampla e serena sobre a existência, valorizando a curiosidade e o tempo que temos para aprender.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Uma expansão de repertório que devolve o encanto pelo aprendizado e estimula conversas profundas.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Link para Coleção Completa do Autor -->
+          <div class="pt-1 text-center sm:text-left">
+            <a href="carl-sagan-leituras-essenciais-ciencia-cosmologia.html" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-cyan-300 hover:text-pink-300 transition-colors">
+              <span>Ver coleção completa de Carl Sagan</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=Cosmos+-+Carl+Sagan&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/cosmos-carl-sagan?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=Cosmos+-+Carl+Sagan" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
+        </article>
+        
+
+        <article class="glass-card book-viral-card p-5 sm:p-6 space-y-4 relative flex flex-col justify-between"
+                 data-category="universo"
+                 data-search="pálido ponto azul - carl sagan carl sagan 🌌 universo &amp; ciência todas as disputas, vaidades e glórias humanas aconteceram em um minúsculo grão de poeira suspenso num raio de sol. quando a gente enxerga a fragilidade da terra vista de longe, o egoísmo perde o sentido e a tolerância vira necessidade. inspirado na icônica fotografia registrada pela sonda voyager 1 nas bordas do sistema solar, sagan reflete sobre o futuro da espécie humana e nossa responsabilidade com o único lar que conhecemos. ele argumenta com clareza que explorar o desconhecido é parte vital da nossa natureza aventureira.
+
+com tom humanista e reflexivo, o livro toca em questões ambientais, éticas e filosóficas sem perder o rigor científico. uma leitura reconfortante que lembra o que realmente merece nossa dedicação. uma dose de perspectiva e calma que ajuda a relativizar o estresse com coisas passageiras.">
+          
+          <!-- Top Card Bar: Badge + Favorite Heart Button -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-md">
+              <span>🌌 Universo & Ciência</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Leitura rápida</span>
+              <button onclick="toggleFavoriteItem('palido-ponto-azul-carl-sagan', 'Pálido Ponto Azul - Carl Sagan', 'Carl Sagan', 'midia/capas/palido-ponto-azul-carl-sagan.jpg', 'https://www.amazon.com.br/s?k=P%C3%A1lido+Ponto+Azul+-+Carl+Sagan&tag=acervoref-20', 'https://lista.mercadolivre.com.br/palido-ponto-azul-carl-sagan?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=P%C3%A1lido+Ponto+Azul+-+Carl+Sagan')" 
+                      data-item-key="palido-ponto-azul-carl-sagan"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
+            </div>
+          </div>
+
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/palido-ponto-azul-carl-sagan.jpg" alt="Pálido Ponto Azul - Carl Sagan" class="book-3d w-28 sm:w-32 h-40 sm:h-48 object-cover rounded-2xl border border-white/20" />
+            </div>
+            <div class="space-y-2 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-display font-black text-white leading-snug">Pálido Ponto Azul - Carl Sagan</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Carl Sagan</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "Todas as disputas, vaidades e glórias humanas aconteceram em um minúsculo grão de poeira suspenso num raio de sol. Quando a gente enxerga a fragilidade da Terra vista de longe, o egoísmo perde o sentido e a tolerância vira necessidade."
+              </p>
+            </div>
+          </div>
+
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">99%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 99%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">98%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 98%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
+            </div>
+            
+            <div class="tab-content-container p-3.5 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Inspirado na icônica fotografia registrada pela sonda Voyager 1 nas bordas do Sistema Solar, Sagan reflete sobre o futuro da espécie humana e nossa responsabilidade com o único lar que conhecemos. Ele argumenta com clareza que explorar o desconhecido é parte vital da nossa natureza aventureira.
+
+Com tom humanista e reflexivo, o livro toca em questões ambientais, éticas e filosóficas sem perder o rigor científico. Uma leitura reconfortante que lembra o que realmente merece nossa dedicação.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Supervalorizar pequenas disputas do cotidiano, esquecendo a brevidade da nossa passagem e a fragilidade do planeta.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Cultivar uma postura de serenidade, empatia e compromisso em preservar o espaço e as relações ao seu redor.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Uma dose de perspectiva e calma que ajuda a relativizar o estresse com coisas passageiras.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Link para Coleção Completa do Autor -->
+          <div class="pt-1 text-center sm:text-left">
+            <a href="carl-sagan-leituras-essenciais-ciencia-cosmologia.html" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-cyan-300 hover:text-pink-300 transition-colors">
+              <span>Ver coleção completa de Carl Sagan</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=P%C3%A1lido+Ponto+Azul+-+Carl+Sagan&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/palido-ponto-azul-carl-sagan?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=P%C3%A1lido+Ponto+Azul+-+Carl+Sagan" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
+        </article>
+        
+
+        <article class="glass-card book-viral-card p-5 sm:p-6 space-y-4 relative flex flex-col justify-between"
+                 data-category="universo"
+                 data-search="telescópio refrator iniciante astronomia carl sagan 🌌 universo &amp; ciência ler sobre as luas de júpiter em um livro é fascinante; apontar uma lente para o céu e enxergar os relevos da lua com os próprios olhos é inesquecível. o instrumento faz a teoria se transformar em experiência direta. um telescópio refrator para iniciantes é o ponto de encontro perfeito entre o estudo teórico e a prática ao ar livre. com montagem intuitiva e ótica ajustada para objetos do sistema solar, ele permite observar detalhes de relevo da lua, fases de vênus e os maiores satélites de júpiter.
+
+para quem aprecia as ideias de sagan e quer estimular o pensamento curioso em casa, ter uma luneta à mão transforma noites comuns em explorações reais. uma ferramenta durável que incentiva pausas longe do celular. cria memórias em família e um contato real com a ciência que telas digitais não conseguem proporcionar.">
+          
+          <!-- Top Card Bar: Badge + Favorite Heart Button -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-md">
+              <span>🌌 Universo & Ciência</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Complemento prático</span>
+              <button onclick="toggleFavoriteItem('telescopio-refrator-iniciante-astronomia', 'Telescópio Refrator Iniciante Astronomia', 'Carl Sagan', 'midia/capas/telescopio-refrator-iniciante-astronomia.jpg', 'https://www.amazon.com.br/s?k=Telesc%C3%B3pio+Refrator+Iniciante+Astronomia&tag=acervoref-20', 'https://lista.mercadolivre.com.br/telescopio-refrator-iniciante-astronomia?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=Telesc%C3%B3pio+Refrator+Iniciante+Astronomia')" 
+                      data-item-key="telescopio-refrator-iniciante-astronomia"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
+            </div>
+          </div>
+
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/telescopio-refrator-iniciante-astronomia.jpg" alt="Telescópio Refrator Iniciante Astronomia" class="book-3d w-28 sm:w-32 h-40 sm:h-48 object-cover rounded-2xl border border-white/20" />
+            </div>
+            <div class="space-y-2 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-display font-black text-white leading-snug">Telescópio Refrator Iniciante Astronomia</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Carl Sagan</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "Ler sobre as luas de Júpiter em um livro é fascinante; apontar uma lente para o céu e enxergar os relevos da Lua com os próprios olhos é inesquecível. O instrumento faz a teoria se transformar em experiência direta."
+              </p>
+            </div>
+          </div>
+
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">96%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 96%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">94%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 94%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
+            </div>
+            
+            <div class="tab-content-container p-3.5 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Um telescópio refrator para iniciantes é o ponto de encontro perfeito entre o estudo teórico e a prática ao ar livre. Com montagem intuitiva e ótica ajustada para objetos do sistema solar, ele permite observar detalhes de relevo da Lua, fases de Vênus e os maiores satélites de Júpiter.
+
+Para quem aprecia as ideias de Sagan e quer estimular o pensamento curioso em casa, ter uma luneta à mão transforma noites comuns em explorações reais. Uma ferramenta durável que incentiva pausas longe do celular.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Conhecer a astronomia apenas através de telas, sem nunca ter experimentado a observação direta do céu noturno.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Aprender a localizar planetas e detalhes lunares em noites claras, criando momentos marcantes de descoberta com a família.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Cria memórias em família e um contato real com a ciência que telas digitais não conseguem proporcionar.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Link para Coleção Completa do Autor -->
+          <div class="pt-1 text-center sm:text-left">
+            <a href="carl-sagan-leituras-essenciais-ciencia-cosmologia.html" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-cyan-300 hover:text-pink-300 transition-colors">
+              <span>Ver coleção completa de Carl Sagan</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=Telesc%C3%B3pio+Refrator+Iniciante+Astronomia&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/telescopio-refrator-iniciante-astronomia?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=Telesc%C3%B3pio+Refrator+Iniciante+Astronomia" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
+        </article>
+        
+
+        <article class="glass-card book-viral-card p-5 sm:p-6 space-y-4 relative flex flex-col justify-between"
+                 data-category="mente"
+                 data-search="em busca de sentido - viktor frankl viktor frankl 🧠 hack mental quem tem uma razão clara para viver consegue atravessar quase qualquer desafio. o sofrimento deixa de ser apenas dor quando encontramos um propósito que justifica a perseverança. nascido da experiência extrema do psiquiatra austríaco viktor frankl nos campos de concentração da segunda guerra, &#x27;em busca de sentido&#x27; é uma das obras mais comoventes e lúcidas da psicologia do século xx. frankl observou que os prisioneiros que preservavam a integridade espiritual eram aqueles ancorados em um objetivo futuro concreto.
+
+a partir desse testemunho, ele formalizou a logoterapia, mostrando que a motivação primária do ser humano não é o prazer nem o poder, mas a busca por sentido. uma leitura transformadora sobre resiliência, dignidade e liberdade interior. oferece uma estrutura de pensamento serena para lidar com períodos de incerteza e crise pessoal.">
+          
+          <!-- Top Card Bar: Badge + Favorite Heart Button -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md">
+              <span>🧠 Hack Mental</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Ponto de partida</span>
+              <button onclick="toggleFavoriteItem('em-busca-de-sentido-viktor-frankl', 'Em Busca de Sentido - Viktor Frankl', 'Viktor Frankl', 'midia/capas/em-busca-de-sentido-viktor-frankl.jpg', 'https://www.amazon.com.br/s?k=Em+Busca+de+Sentido+-+Viktor+Frankl&tag=acervoref-20', 'https://lista.mercadolivre.com.br/em-busca-de-sentido-viktor-frankl?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=Em+Busca+de+Sentido+-+Viktor+Frankl')" 
+                      data-item-key="em-busca-de-sentido-viktor-frankl"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
+            </div>
+          </div>
+
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/em-busca-de-sentido-viktor-frankl.jpg" alt="Em Busca de Sentido - Viktor Frankl" class="book-3d w-28 sm:w-32 h-40 sm:h-48 object-cover rounded-2xl border border-white/20" />
+            </div>
+            <div class="space-y-2 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-display font-black text-white leading-snug">Em Busca de Sentido - Viktor Frankl</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Viktor Frankl</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "Quem tem uma razão clara para viver consegue atravessar quase qualquer desafio. O sofrimento deixa de ser apenas dor quando encontramos um propósito que justifica a perseverança."
+              </p>
+            </div>
+          </div>
+
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">95%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 95%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">92%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 92%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
+            </div>
+            
+            <div class="tab-content-container p-3.5 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Nascido da experiência extrema do psiquiatra austríaco Viktor Frankl nos campos de concentração da Segunda Guerra, &#x27;Em Busca de Sentido&#x27; é uma das obras mais comoventes e lúcidas da psicologia do século XX. Frankl observou que os prisioneiros que preservavam a integridade espiritual eram aqueles ancorados em um objetivo futuro concreto.
+
+A partir desse testemunho, ele formalizou a Logoterapia, mostrando que a motivação primária do ser humano não é o prazer nem o poder, mas a busca por sentido. Uma leitura transformadora sobre resiliência, dignidade e liberdade interior.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Sentir-se desorientado diante de adversidades, esperando que as circunstâncias externas mudem para encontrar paz.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Assumir a liberdade de escolher a própria atitude interior, encontrando significado no trabalho, nos laços e na superação.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Oferece uma estrutura de pensamento serena para lidar com períodos de incerteza e crise pessoal.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Link para Coleção Completa do Autor -->
+          <div class="pt-1 text-center sm:text-left">
+            <a href="viktor-frankl-logoterapia-proposito-resiliencia.html" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-cyan-300 hover:text-pink-300 transition-colors">
+              <span>Ver coleção completa de Viktor Frankl</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=Em+Busca+de+Sentido+-+Viktor+Frankl&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/em-busca-de-sentido-viktor-frankl?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=Em+Busca+de+Sentido+-+Viktor+Frankl" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
+        </article>
+        
+
+        <article class="glass-card book-viral-card p-5 sm:p-6 space-y-4 relative flex flex-col justify-between"
+                 data-category="mente"
+                 data-search="a presença ignorada de deus - viktor frankl viktor frankl 🧠 hack mental a psicologia passou anos investigando os impulsos instintivos do ser humano, esquecendo que há também uma necessidade genuína de transcendência e responsabilidade ética na consciência moral de cada indivíduo. neste ensaio pioneiro, frankl amplia a compreensão clássica do inconsciente para examinar o que chama de &#x27;inconsciente espiritual&#x27; ou noético. com base em observações clínicas, ele defende que a busca por significado e o senso de dever moral são traços fundamentais da condição humana.
+
+a obra preenche um vazio importante na literatura de saúde mental, dialogando com a filosofia e a espiritualidade de modo rigoroso e sem dogmas. uma leitura enriquecedora para quem busca profundidade além das fórmulas prontas de autoajuda. ajuda a alinhar decisões cotidianas com convicções éticas duradouras, trazendo paz de espírito.">
+          
+          <!-- Top Card Bar: Badge + Favorite Heart Button -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md">
+              <span>🧠 Hack Mental</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Visão aprofundada</span>
+              <button onclick="toggleFavoriteItem('a-presenca-ignorada-de-deus-viktor-frankl', 'A Presença Ignorada de Deus - Viktor Frankl', 'Viktor Frankl', 'midia/capas/a-presenca-ignorada-de-deus-viktor-frankl.jpg', 'https://www.amazon.com.br/s?k=A+Presen%C3%A7a+Ignorada+de+Deus+-+Viktor+Frankl&tag=acervoref-20', 'https://lista.mercadolivre.com.br/a-presenca-ignorada-de-deus-viktor-frankl?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=A+Presen%C3%A7a+Ignorada+de+Deus+-+Viktor+Frankl')" 
+                      data-item-key="a-presenca-ignorada-de-deus-viktor-frankl"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
+            </div>
+          </div>
+
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/a-presenca-ignorada-de-deus-viktor-frankl.jpg" alt="A Presença Ignorada de Deus - Viktor Frankl" class="book-3d w-28 sm:w-32 h-40 sm:h-48 object-cover rounded-2xl border border-white/20" />
+            </div>
+            <div class="space-y-2 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-display font-black text-white leading-snug">A Presença Ignorada de Deus - Viktor Frankl</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Viktor Frankl</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "A psicologia passou anos investigando os impulsos instintivos do ser humano, esquecendo que há também uma necessidade genuína de transcendência e responsabilidade ética na consciência moral de cada indivíduo."
+              </p>
+            </div>
+          </div>
+
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">97%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 97%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">95%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 95%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
+            </div>
+            
+            <div class="tab-content-container p-3.5 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Neste ensaio pioneiro, Frankl amplia a compreensão clássica do inconsciente para examinar o que chama de &#x27;inconsciente espiritual&#x27; ou noético. Com base em observações clínicas, ele defende que a busca por significado e o senso de dever moral são traços fundamentais da condição humana.
+
+A obra preenche um vazio importante na literatura de saúde mental, dialogando com a filosofia e a espiritualidade de modo rigoroso e sem dogmas. Uma leitura enriquecedora para quem busca profundidade além das fórmulas prontas de autoajuda.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Tratar questionamentos existenciais e morais apenas como sintomas de ansiedade ou fraqueza psicológica.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Integrar a dimensão ética e os valores profundos ao autocuidado, vivendo com mais inteireza e coerência interior.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Ajuda a alinhar decisões cotidianas com convicções éticas duradouras, trazendo paz de espírito.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Link para Coleção Completa do Autor -->
+          <div class="pt-1 text-center sm:text-left">
+            <a href="viktor-frankl-logoterapia-proposito-resiliencia.html" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-cyan-300 hover:text-pink-300 transition-colors">
+              <span>Ver coleção completa de Viktor Frankl</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=A+Presen%C3%A7a+Ignorada+de+Deus+-+Viktor+Frankl&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/a-presenca-ignorada-de-deus-viktor-frankl?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=A+Presen%C3%A7a+Ignorada+de+Deus+-+Viktor+Frankl" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
+        </article>
+        
+
+        <article class="glass-card book-viral-card p-5 sm:p-6 space-y-4 relative flex flex-col justify-between"
+                 data-category="mente"
+                 data-search="o homem em busca de um sentido último - viktor frankl viktor frankl 🧠 hack mental muitas vezes o cansaço do dia a dia não vem de trabalhar demais, mas de trabalhar sem saber o porquê. o ser humano não precisa de uma rotina sem desafios, mas de metas dignas pelas quais valha a pena se dedicar. esta coletânea de conferências e ensaios de maturidade de frankl aprofunda as bases teóricas da logoterapia e responde aos dilemas da sociedade contemporânea. o autor aborda o &#x27;vazio existencial&#x27; em meio à abundância material e explica por que a busca por bem-estar não substitui o compromisso com valores reais.
+
+com clareza e empatia, frankl mostra que a saúde mental se apoia em uma tensão produtiva entre quem somos e aquilo que podemos realizar no mundo. uma leitura reconfortante para quem lida com responsabilidades e decisões importantes. ajuda a selecionar prioridades autênticas, evitando o desperdício de energia com expectativas vazias.">
+          
+          <!-- Top Card Bar: Badge + Favorite Heart Button -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md">
+              <span>🧠 Hack Mental</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Leitura rápida</span>
+              <button onclick="toggleFavoriteItem('o-homem-em-busca-de-um-sentido-ultimo-viktor-frankl', 'O Homem em Busca de um Sentido Último - Viktor Frankl', 'Viktor Frankl', 'midia/capas/o-homem-em-busca-de-um-sentido-ultimo-viktor-frankl.jpg', 'https://www.amazon.com.br/s?k=O+Homem+em+Busca+de+um+Sentido+%C3%9Altimo+-+Viktor+Frankl&tag=acervoref-20', 'https://lista.mercadolivre.com.br/o-homem-em-busca-de-um-sentido-ultimo-viktor-frankl?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=O+Homem+em+Busca+de+um+Sentido+%C3%9Altimo+-+Viktor+Frankl')" 
+                      data-item-key="o-homem-em-busca-de-um-sentido-ultimo-viktor-frankl"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
+            </div>
+          </div>
+
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/o-homem-em-busca-de-um-sentido-ultimo-viktor-frankl.jpg" alt="O Homem em Busca de um Sentido Último - Viktor Frankl" class="book-3d w-28 sm:w-32 h-40 sm:h-48 object-cover rounded-2xl border border-white/20" />
+            </div>
+            <div class="space-y-2 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-display font-black text-white leading-snug">O Homem em Busca de um Sentido Último - Viktor Frankl</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Viktor Frankl</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "Muitas vezes o cansaço do dia a dia não vem de trabalhar demais, mas de trabalhar sem saber o porquê. O ser humano não precisa de uma rotina sem desafios, mas de metas dignas pelas quais valha a pena se dedicar."
+              </p>
+            </div>
+          </div>
+
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">99%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 99%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">98%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 98%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
+            </div>
+            
+            <div class="tab-content-container p-3.5 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Esta coletânea de conferências e ensaios de maturidade de Frankl aprofunda as bases teóricas da Logoterapia e responde aos dilemas da sociedade contemporânea. O autor aborda o &#x27;vazio existencial&#x27; em meio à abundância material e explica por que a busca por bem-estar não substitui o compromisso com valores reais.
+
+Com clareza e empatia, Frankl mostra que a saúde mental se apoia em uma tensão produtiva entre quem somos e aquilo que podemos realizar no mundo. Uma leitura reconfortante para quem lida com responsabilidades e decisões importantes.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Tentar fugir de qualquer desconforto, caindo na armadilha do tédio existencial e da desmotivação.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Aprender a direcionar o esforço para projetos com sentido, experimentando a satisfação do crescimento real.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Ajuda a selecionar prioridades autênticas, evitando o desperdício de energia com expectativas vazias.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Link para Coleção Completa do Autor -->
+          <div class="pt-1 text-center sm:text-left">
+            <a href="viktor-frankl-logoterapia-proposito-resiliencia.html" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-cyan-300 hover:text-pink-300 transition-colors">
+              <span>Ver coleção completa de Viktor Frankl</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=O+Homem+em+Busca+de+um+Sentido+%C3%9Altimo+-+Viktor+Frankl&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/o-homem-em-busca-de-um-sentido-ultimo-viktor-frankl?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=O+Homem+em+Busca+de+um+Sentido+%C3%9Altimo+-+Viktor+Frankl" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
+        </article>
+        
+
+        <article class="glass-card book-viral-card p-5 sm:p-6 space-y-4 relative flex flex-col justify-between"
+                 data-category="mente"
+                 data-search="caderno inteligente para diário e anotações viktor frankl 🧠 hack mental ideias soltas na cabeça se misturam e geram ansiedade; organizadas no papel com calma, tornam-se planos claros. a escrita à mão desacelera o ritmo e ajuda a enxergar prioridades com nitidez. escrever à mão estimula áreas cerebrais ligadas à síntese e à memória que a digitação rápida no teclado costuma ignorar. o caderno de folhas reposicionáveis une a liberdade de mover tópicos à elegância do registro durável.
+
+para quem pratica a reflexão diária ou quer resumir os pontos centrais dos livros que lê, ter um espaço físico bem cuidado faz toda a diferença no hábito. um instrumento prático para clarear os pensamentos. colocar as ideias no papel é o caminho mais rápido para transformar inquietação em foco e ação tranquila.">
+          
+          <!-- Top Card Bar: Badge + Favorite Heart Button -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md">
+              <span>🧠 Hack Mental</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Complemento prático</span>
+              <button onclick="toggleFavoriteItem('caderno-inteligente-para-diario-e-anotacoes', 'Caderno Inteligente para Diário e Anotações', 'Viktor Frankl', 'midia/capas/caderno-inteligente-para-diario-e-anotacoes.jpg', 'https://www.amazon.com.br/s?k=Caderno+Inteligente+para+Di%C3%A1rio+e+Anota%C3%A7%C3%B5es&tag=acervoref-20', 'https://lista.mercadolivre.com.br/caderno-inteligente-para-diario-e-anotacoes?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=Caderno+Inteligente+para+Di%C3%A1rio+e+Anota%C3%A7%C3%B5es')" 
+                      data-item-key="caderno-inteligente-para-diario-e-anotacoes"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
+            </div>
+          </div>
+
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/caderno-inteligente-para-diario-e-anotacoes.jpg" alt="Caderno Inteligente para Diário e Anotações" class="book-3d w-28 sm:w-32 h-40 sm:h-48 object-cover rounded-2xl border border-white/20" />
+            </div>
+            <div class="space-y-2 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-display font-black text-white leading-snug">Caderno Inteligente para Diário e Anotações</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Viktor Frankl</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "Ideias soltas na cabeça se misturam e geram ansiedade; organizadas no papel com calma, tornam-se planos claros. A escrita à mão desacelera o ritmo e ajuda a enxergar prioridades com nitidez."
+              </p>
+            </div>
+          </div>
+
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">96%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 96%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">94%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 94%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
+            </div>
+            
+            <div class="tab-content-container p-3.5 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Escrever à mão estimula áreas cerebrais ligadas à síntese e à memória que a digitação rápida no teclado costuma ignorar. O caderno de folhas reposicionáveis une a liberdade de mover tópicos à elegância do registro durável.
+
+Para quem pratica a reflexão diária ou quer resumir os pontos centrais dos livros que lê, ter um espaço físico bem cuidado faz toda a diferença no hábito. Um instrumento prático para clarear os pensamentos.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Deixar anotações e reflexões dispersas em aplicativos que nunca são relidos, sem reter os insights das leituras.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Manter um diário de aprendizado organizado, revisando páginas e consolidando conclusões com regularidade.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Colocar as ideias no papel é o caminho mais rápido para transformar inquietação em foco e ação tranquila.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Link para Coleção Completa do Autor -->
+          <div class="pt-1 text-center sm:text-left">
+            <a href="viktor-frankl-logoterapia-proposito-resiliencia.html" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-cyan-300 hover:text-pink-300 transition-colors">
+              <span>Ver coleção completa de Viktor Frankl</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=Caderno+Inteligente+para+Di%C3%A1rio+e+Anota%C3%A7%C3%B5es&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/caderno-inteligente-para-diario-e-anotacoes?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=Caderno+Inteligente+para+Di%C3%A1rio+e+Anota%C3%A7%C3%B5es" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
+        </article>
+        
+
+        <article class="glass-card book-viral-card p-5 sm:p-6 space-y-4 relative flex flex-col justify-between"
+                 data-category="foco"
+                 data-search="trabalho focado (deep work) - cal newport cal newport ⚡ foco &amp; rotina passar o dia inteiro respondendo mensagens e apagando incêndios dá a impressão de muito trabalho, mas quase sempre gera pouco valor duradouro. a capacidade de se concentrar por horas em problemas difíceis tornou-se a habilidade mais rara e valiosa do nosso tempo. cal newport, professor de ciência da computação na universidade de georgetown, definiu o conceito mais importante para o trabalhador do conhecimento moderno: o trabalho focado (deep work). em uma economia dominada pela comunicação constante, quem aprende a desligar o ruído e se dedicar a tarefas complexas desenvolve uma vantagem competitiva nítida.
+
+o livro combina argumentos econômicos lúcidos com quatro regras práticas para estruturar a rotina, combater a pressa rasa e treinar a mente para suportar o esforço sem buscar o celular. uma obra fundamental para quem produz ideias, códigos, textos ou projetos. recuperar duas horas diárias de foco ininterrupto eleva o nível do seu trabalho e devolve seu descanso no fim do dia.">
+          
+          <!-- Top Card Bar: Badge + Favorite Heart Button -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-amber-500 to-red-500 text-white shadow-md">
+              <span>⚡ Foco & Rotina</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Ponto de partida</span>
+              <button onclick="toggleFavoriteItem('trabalho-focado-deep-work-cal-newport', 'Trabalho Focado (Deep Work) - Cal Newport', 'Cal Newport', 'midia/capas/trabalho-focado-deep-work-cal-newport.jpg', 'https://www.amazon.com.br/s?k=Trabalho+Focado+%28Deep+Work%29+-+Cal+Newport&tag=acervoref-20', 'https://lista.mercadolivre.com.br/trabalho-focado-deep-work-cal-newport?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=Trabalho+Focado+%28Deep+Work%29+-+Cal+Newport')" 
+                      data-item-key="trabalho-focado-deep-work-cal-newport"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
+            </div>
+          </div>
+
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/trabalho-focado-deep-work-cal-newport.jpg" alt="Trabalho Focado (Deep Work) - Cal Newport" class="book-3d w-28 sm:w-32 h-40 sm:h-48 object-cover rounded-2xl border border-white/20" />
+            </div>
+            <div class="space-y-2 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-display font-black text-white leading-snug">Trabalho Focado (Deep Work) - Cal Newport</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Cal Newport</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "Passar o dia inteiro respondendo mensagens e apagando incêndios dá a impressão de muito trabalho, mas quase sempre gera pouco valor duradouro. A capacidade de se concentrar por horas em problemas difíceis tornou-se a habilidade mais rara e valiosa do nosso tempo."
+              </p>
+            </div>
+          </div>
+
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">95%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 95%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">92%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 92%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
+            </div>
+            
+            <div class="tab-content-container p-3.5 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Cal Newport, professor de Ciência da Computação na Universidade de Georgetown, definiu o conceito mais importante para o trabalhador do conhecimento moderno: o Trabalho Focado (Deep Work). Em uma economia dominada pela comunicação constante, quem aprende a desligar o ruído e se dedicar a tarefas complexas desenvolve uma vantagem competitiva nítida.
+
+O livro combina argumentos econômicos lúcidos com quatro regras práticas para estruturar a rotina, combater a pressa rasa e treinar a mente para suportar o esforço sem buscar o celular. Uma obra fundamental para quem produz ideias, códigos, textos ou projetos.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Trabalhar fragmentado entre abas abertas e notificações, chegando ao fim do dia cansado e com sensação de improdutividade.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Organizar blocos protegidos de concentração, produzindo com qualidade superior e terminando o expediente sem estresse.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Recuperar duas horas diárias de foco ininterrupto eleva o nível do seu trabalho e devolve seu descanso no fim do dia.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Link para Coleção Completa do Autor -->
+          <div class="pt-1 text-center sm:text-left">
+            <a href="cal-newport-trabalho-focado-deep-work-produtividade.html" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-cyan-300 hover:text-pink-300 transition-colors">
+              <span>Ver coleção completa de Cal Newport</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=Trabalho+Focado+%28Deep+Work%29+-+Cal+Newport&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/trabalho-focado-deep-work-cal-newport?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=Trabalho+Focado+%28Deep+Work%29+-+Cal+Newport" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
+        </article>
+        
+
+        <article class="glass-card book-viral-card p-5 sm:p-6 space-y-4 relative flex flex-col justify-between"
+                 data-category="foco"
+                 data-search="minimalismo digital - cal newport cal newport ⚡ foco &amp; rotina nenhum de nós comprou um smartphone para virar refém de algoritmos desenhados para capturar nossos olhares. se você não definir com rigor quando e por que vai usar as redes, elas ocuparão seu tempo livre sem pedir licença. em &#x27;minimalismo digital&#x27;, newport estende a filosofia da simplificação para a nossa convivência com telas, aplicativos e notificações. longe de pregar o isolamento, ele sugere uma postura seletiva: manter apenas as tecnologias que apoiam diretamente valores essenciais e descartar o restante com tranquilidade.
+
+o livro destaca a importância da solitude — a oportunidade de ficar a sós com os próprios pensamentos — e propõe atividades práticas de lazer ativo para reconstruir a atenção. uma leitura libertadora para viver em paz na era dos feeds infinitos. reduzir o tempo de tela libera centenas de horas ao ano para conversas reais, leitura e projetos pessoais.">
+          
+          <!-- Top Card Bar: Badge + Favorite Heart Button -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-amber-500 to-red-500 text-white shadow-md">
+              <span>⚡ Foco & Rotina</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Visão aprofundada</span>
+              <button onclick="toggleFavoriteItem('minimalismo-digital-cal-newport', 'Minimalismo Digital - Cal Newport', 'Cal Newport', 'midia/capas/minimalismo-digital-cal-newport.jpg', 'https://www.amazon.com.br/s?k=Minimalismo+Digital+-+Cal+Newport&tag=acervoref-20', 'https://lista.mercadolivre.com.br/minimalismo-digital-cal-newport?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=Minimalismo+Digital+-+Cal+Newport')" 
+                      data-item-key="minimalismo-digital-cal-newport"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
+            </div>
+          </div>
+
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/minimalismo-digital-cal-newport.jpg" alt="Minimalismo Digital - Cal Newport" class="book-3d w-28 sm:w-32 h-40 sm:h-48 object-cover rounded-2xl border border-white/20" />
+            </div>
+            <div class="space-y-2 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-display font-black text-white leading-snug">Minimalismo Digital - Cal Newport</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Cal Newport</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "Nenhum de nós comprou um smartphone para virar refém de algoritmos desenhados para capturar nossos olhares. Se você não definir com rigor quando e por que vai usar as redes, elas ocuparão seu tempo livre sem pedir licença."
+              </p>
+            </div>
+          </div>
+
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">97%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 97%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">95%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 95%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
+            </div>
+            
+            <div class="tab-content-container p-3.5 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Em &#x27;Minimalismo Digital&#x27;, Newport estende a filosofia da simplificação para a nossa convivência com telas, aplicativos e notificações. Longe de pregar o isolamento, ele sugere uma postura seletiva: manter apenas as tecnologias que apoiam diretamente valores essenciais e descartar o restante com tranquilidade.
+
+O livro destaca a importância da solitude — a oportunidade de ficar a sós com os próprios pensamentos — e propõe atividades práticas de lazer ativo para reconstruir a atenção. Uma leitura libertadora para viver em paz na era dos feeds infinitos.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Checar redes sociais no piloto automático em qualquer momento de espera, sentindo cansaço mental constante.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Definir limites claros e saudáveis para as ferramentas digitais, aproveitando o mundo conectado sem dependência.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Reduzir o tempo de tela libera centenas de horas ao ano para conversas reais, leitura e projetos pessoais.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Link para Coleção Completa do Autor -->
+          <div class="pt-1 text-center sm:text-left">
+            <a href="cal-newport-trabalho-focado-deep-work-produtividade.html" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-cyan-300 hover:text-pink-300 transition-colors">
+              <span>Ver coleção completa de Cal Newport</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=Minimalismo+Digital+-+Cal+Newport&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/minimalismo-digital-cal-newport?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=Minimalismo+Digital+-+Cal+Newport" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
+        </article>
+        
+
+        <article class="glass-card book-viral-card p-5 sm:p-6 space-y-4 relative flex flex-col justify-between"
+                 data-category="foco"
+                 data-search="devagar (slow productivity) - cal newport cal newport ⚡ foco &amp; rotina fazer muitas coisas ao mesmo tempo e a toda velocidade é o modelo herdado das fábricas, mas não funciona para quem trabalha com ideias. as contribuições mais marcantes da história nasceram de poucas prioridades, ritmo sustentável e atenção aos detalhes. nesta análise oportuna, cal newport diagnostica a armadilha do pseudotrabalho moderno — a tendência de usar o volume de e-mails e reuniões como medida de dedicação. ao examinar a trajetória de pensadores e criadores como marie curie, galileu e jane austen, ele mostra que o tempo dilatado é pré-requisito da qualidade.
+
+&#x27;slow productivity&#x27; resume sua tese em três princípios claros: faça menos coisas, trabalhe no seu ritmo natural e concentre-se na qualidade do que entrega. uma bússola inteligente para escapar da pressa contínua e construir realizações duradouras. substituir a correria pelo foco sustentável protege a saúde mental e melhora a consistência das suas entregas.">
+          
+          <!-- Top Card Bar: Badge + Favorite Heart Button -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-amber-500 to-red-500 text-white shadow-md">
+              <span>⚡ Foco & Rotina</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Leitura rápida</span>
+              <button onclick="toggleFavoriteItem('devagar-slow-productivity-cal-newport', 'Devagar (Slow Productivity) - Cal Newport', 'Cal Newport', 'midia/capas/devagar-slow-productivity-cal-newport.jpg', 'https://www.amazon.com.br/s?k=Devagar+%28Slow+Productivity%29+-+Cal+Newport&tag=acervoref-20', 'https://lista.mercadolivre.com.br/devagar-slow-productivity-cal-newport?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=Devagar+%28Slow+Productivity%29+-+Cal+Newport')" 
+                      data-item-key="devagar-slow-productivity-cal-newport"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
+            </div>
+          </div>
+
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/devagar-slow-productivity-cal-newport.jpg" alt="Devagar (Slow Productivity) - Cal Newport" class="book-3d w-28 sm:w-32 h-40 sm:h-48 object-cover rounded-2xl border border-white/20" />
+            </div>
+            <div class="space-y-2 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-display font-black text-white leading-snug">Devagar (Slow Productivity) - Cal Newport</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Cal Newport</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "Fazer muitas coisas ao mesmo tempo e a toda velocidade é o modelo herdado das fábricas, mas não funciona para quem trabalha com ideias. As contribuições mais marcantes da história nasceram de poucas prioridades, ritmo sustentável e atenção aos detalhes."
+              </p>
+            </div>
+          </div>
+
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">99%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 99%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">98%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 98%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
+            </div>
+            
+            <div class="tab-content-container p-3.5 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Nesta análise oportuna, Cal Newport diagnostica a armadilha do pseudotrabalho moderno — a tendência de usar o volume de e-mails e reuniões como medida de dedicação. Ao examinar a trajetória de pensadores e criadores como Marie Curie, Galileu e Jane Austen, ele mostra que o tempo dilatado é pré-requisito da qualidade.
+
+&#x27;Slow Productivity&#x27; resume sua tese em três princípios claros: faça menos coisas, trabalhe no seu ritmo natural e concentre-se na qualidade do que entrega. Uma bússola inteligente para escapar da pressa contínua e construir realizações duradouras.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Acumular compromissos demais para parecer produtivo, operando perto do esgotamento sem avançar nas metas principais.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Selecionar menos projetos e trabalhar com ritmo cadenciado, priorizando a excelência do resultado final.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Substituir a correria pelo foco sustentável protege a saúde mental e melhora a consistência das suas entregas.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Link para Coleção Completa do Autor -->
+          <div class="pt-1 text-center sm:text-left">
+            <a href="cal-newport-trabalho-focado-deep-work-produtividade.html" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-cyan-300 hover:text-pink-300 transition-colors">
+              <span>Ver coleção completa de Cal Newport</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=Devagar+%28Slow+Productivity%29+-+Cal+Newport&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/devagar-slow-productivity-cal-newport?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=Devagar+%28Slow+Productivity%29+-+Cal+Newport" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
+        </article>
+        
+
+        <article class="glass-card book-viral-card p-5 sm:p-6 space-y-4 relative flex flex-col justify-between"
+                 data-category="foco"
+                 data-search="fone de ouvido com cancelamento de ruído anc cal newport ⚡ foco &amp; rotina o cérebro gasta energia contínua tentando filtrar conversas ao redor, buzinas e ruídos de escritório mesmo quando achamos que não estamos prestando atenção. o silêncio sob demanda ajuda a mente a entrar no ritmo de estudo muito mais rápido. um fone com cancelamento ativo de ruído (anc) é o parceiro ideal de quem precisa estudar ou trabalhar em cafeterias, viagens ou escritórios compartilhados. ao neutralizar frequências graves e constantes do ambiente através de microfones antirruído, ele cria uma bolha de serenidade ao redor do leitor.
+
+além de permitir ouvir música ambiente ou áudios com clareza em volume baixo, ele pode ser usado apenas para gerar silêncio. um investimento que protege a energia mental ao longo de jornadas cansativas. diminuir o estresse com barulhos cotidianos devolve o foco necessário para concluir tarefas com serenidade.">
+          
+          <!-- Top Card Bar: Badge + Favorite Heart Button -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-amber-500 to-red-500 text-white shadow-md">
+              <span>⚡ Foco & Rotina</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Complemento prático</span>
+              <button onclick="toggleFavoriteItem('fone-de-ouvido-com-cancelamento-de-ruido-anc', 'Fone de Ouvido com Cancelamento de Ruído ANC', 'Cal Newport', 'midia/capas/fone-de-ouvido-com-cancelamento-de-ruido-anc.jpg', 'https://www.amazon.com.br/s?k=Fone+de+Ouvido+com+Cancelamento+de+Ru%C3%ADdo+ANC&tag=acervoref-20', 'https://lista.mercadolivre.com.br/fone-de-ouvido-com-cancelamento-de-ruido-anc?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=Fone+de+Ouvido+com+Cancelamento+de+Ru%C3%ADdo+ANC')" 
+                      data-item-key="fone-de-ouvido-com-cancelamento-de-ruido-anc"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
+            </div>
+          </div>
+
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/fone-de-ouvido-com-cancelamento-de-ruido-anc.jpg" alt="Fone de Ouvido com Cancelamento de Ruído ANC" class="book-3d w-28 sm:w-32 h-40 sm:h-48 object-cover rounded-2xl border border-white/20" />
+            </div>
+            <div class="space-y-2 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-display font-black text-white leading-snug">Fone de Ouvido com Cancelamento de Ruído ANC</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Cal Newport</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "O cérebro gasta energia contínua tentando filtrar conversas ao redor, buzinas e ruídos de escritório mesmo quando achamos que não estamos prestando atenção. O silêncio sob demanda ajuda a mente a entrar no ritmo de estudo muito mais rápido."
+              </p>
+            </div>
+          </div>
+
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">96%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 96%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">94%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 94%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
+            </div>
+            
+            <div class="tab-content-container p-3.5 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Um fone com cancelamento ativo de ruído (ANC) é o parceiro ideal de quem precisa estudar ou trabalhar em cafeterias, viagens ou escritórios compartilhados. Ao neutralizar frequências graves e constantes do ambiente através de microfones antirruído, ele cria uma bolha de serenidade ao redor do leitor.
+
+Além de permitir ouvir música ambiente ou áudios com clareza em volume baixo, ele pode ser usado apenas para gerar silêncio. Um investimento que protege a energia mental ao longo de jornadas cansativas.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Tentar se concentrar em ambientes movimentados, perdendo o fio da meada a cada barulho externo.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Acionar o cancelamento de ruído e mergulhar em um espaço de tranquilidade imediata para ler e refletir.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Diminuir o estresse com barulhos cotidianos devolve o foco necessário para concluir tarefas com serenidade.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Link para Coleção Completa do Autor -->
+          <div class="pt-1 text-center sm:text-left">
+            <a href="cal-newport-trabalho-focado-deep-work-produtividade.html" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-cyan-300 hover:text-pink-300 transition-colors">
+              <span>Ver coleção completa de Cal Newport</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=Fone+de+Ouvido+com+Cancelamento+de+Ru%C3%ADdo+ANC&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/fone-de-ouvido-com-cancelamento-de-ruido-anc?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=Fone+de+Ouvido+com+Cancelamento+de+Ru%C3%ADdo+ANC" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
+        </article>
+        
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodapé Clean Gamificado -->
+  <footer class="relative z-10 max-w-5xl mx-auto px-4 pt-12 pb-8 text-center text-xs text-white/60 space-y-3 border-t border-white/10 mt-12">
+    <div class="flex items-center justify-center gap-4 text-sm font-bold text-white/80">
+      <a href="https://acervo-referencia.github.io/" class="hover:text-pink-400 transition-colors">Início</a>
+      <span>•</span>
+      <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="hover:text-cyan-400 transition-colors">↑ Topo</button>
+    </div>
+    <p>Links oficiais de afiliados para Amazon, Mercado Livre e Shopee. Preços e cupons sincronizados com as plataformas parceiras.</p>
+    <p class="text-[11px] text-white/40">© 2026 Descobertas & Livros Virais. Criado para mentes inquietas.</p>
+  </footer>
+
+
+  <!-- Drawer / Modal Lateral de Itens Salvos (Favoritos) -->
+  <div id="savedDrawer" class="fixed inset-0 z-[120] hidden bg-black/70 backdrop-blur-md flex justify-end transition-opacity">
+    <div class="w-full max-w-md h-full glass-card rounded-none sm:rounded-l-3xl p-5 sm:p-6 flex flex-col justify-between overflow-y-auto">
+      <div class="space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-white/10">
+          <div class="flex items-center gap-2">
+            <span class="text-2xl">❤️</span>
+            <h3 class="font-display font-black text-xl">Seus Livros Salvos</h3>
+          </div>
+          <button id="closeSavedBtn" class="glass-pill w-9 h-9 rounded-full flex items-center justify-center text-lg hover:scale-110 transition-transform">✕</button>
         </div>
-    </main>
-
-    <footer class="footer-minimal">
-        <div class="footer-conar-text">
-            Transparencia Publicitaria (#publicidade): Este guia editorial independente contem links de afiliados. Compras realizadas atraves deles podem gerar comissao sem custo adicional para voce.
+        <div id="savedItemsContainer" class="space-y-3 pt-2">
+          <!-- Preenchido dinamicamente via JS -->
         </div>
-        <p>© 2026 Acervo & Referencia • Em conformidade com o STF (ADI 4815) e CONAR.</p>
-    </footer>
+      </div>
+      <div class="pt-6 border-t border-white/10 text-center">
+        <p class="text-xs text-white/60">Todos os links oficiais abrem com cupom e tags oficiais de desconto.</p>
+      </div>
+    </div>
+  </div>
 
-    <script>
-    // Filtro Interativo por Pílulas no Celular
-    document.querySelectorAll('.filter-pill').forEach(btn => {
-        btn.addEventListener('click', () => {
-            document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            const filter = btn.getAttribute('data-filter');
-            document.querySelectorAll('.bento-card').forEach(card => {
-                const cat = card.getAttribute('data-category');
-                if (filter === 'all' || cat === filter) {
-                    card.style.display = 'block';
-                    setTimeout(() => { card.style.opacity = '1'; }, 10);
-                } else {
-                    card.style.opacity = '0';
-                    setTimeout(() => { card.style.display = 'none'; }, 250);
-                }
-            });
+
+
+  <!-- Engine JS Interativo: Busca, Filtro, Favoritos, Me Surpreenda & Tema -->
+  <script>
+    // 1. Alternador de Tema (Aurora Dark / Cristal Claro)
+    const themeBtn = document.getElementById('themeToggleBtn');
+    function applySavedTheme() {
+      const saved = localStorage.getItem('dopamine_theme');
+      if (saved === 'light') {
+        document.body.classList.add('light-crystal');
+        if (themeBtn) themeBtn.textContent = '🌙';
+      } else {
+        document.body.classList.remove('light-crystal');
+        if (themeBtn) themeBtn.textContent = '☀️';
+      }
+    }
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('light-crystal');
+        const isLight = document.body.classList.contains('light-crystal');
+        localStorage.setItem('dopamine_theme', isLight ? 'light' : 'dark');
+        themeBtn.textContent = isLight ? '🌙' : '☀️';
+      });
+    }
+    applySavedTheme();
+
+    // 2. Filtro Interativo por Pílulas no Topo
+    const filterPills = document.querySelectorAll('.filter-pill');
+    const bookCards = document.querySelectorAll('.book-viral-card');
+
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        filterPills.forEach(p => {
+          p.classList.remove('active-pill', 'bg-gradient-to-r', 'from-pink-500', 'via-purple-500', 'to-indigo-500', 'text-white', 'shadow-lg', 'shadow-purple-500/30');
+          p.classList.add('glass-pill');
         });
+        pill.classList.remove('glass-pill');
+        pill.classList.add('active-pill', 'bg-gradient-to-r', 'from-pink-500', 'via-purple-500', 'to-indigo-500', 'text-white', 'shadow-lg', 'shadow-purple-500/30');
+
+        const cat = pill.getAttribute('data-filter');
+        bookCards.forEach(card => {
+          if (cat === 'all' || card.getAttribute('data-category') === cat) {
+            card.style.display = 'block';
+            card.classList.remove('hidden');
+          } else {
+            card.style.display = 'none';
+            card.classList.add('hidden');
+          }
+        });
+      });
     });
-    </script>
+
+    // 3. Busca em Tempo Real (Título, Autor, Gancho)
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        bookCards.forEach(card => {
+          const searchData = (card.getAttribute('data-search') || '').toLowerCase();
+          if (!query || searchData.includes(query)) {
+            card.style.display = 'block';
+            card.classList.remove('hidden');
+          } else {
+            card.style.display = 'none';
+            card.classList.add('hidden');
+          }
+        });
+      });
+    }
+
+    // 4. Botão "🎲 Me Surpreenda!"
+    const surpriseBtn = document.getElementById('surpriseMeBtn');
+    if (surpriseBtn) {
+      surpriseBtn.addEventListener('click', () => {
+        const visibleCards = Array.from(bookCards).filter(c => c.style.display !== 'none' && !c.classList.contains('hidden'));
+        if (visibleCards.length === 0) return;
+        const randomCard = visibleCards[Math.floor(Math.random() * visibleCards.length)];
+        randomCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        randomCard.classList.remove('surprise-highlight');
+        void randomCard.offsetWidth; // trigger reflow
+        randomCard.classList.add('surprise-highlight');
+      });
+    }
+
+    // 5. Sistema de Abas Rápidas de 1 Toque (Segmented Control)
+    function switchBookTab(btn, tabType) {
+      const card = btn.closest('.book-viral-card');
+      if (!card) return;
+      card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active-tab'));
+      btn.classList.add('active-tab');
+
+      card.querySelectorAll('.tab-content-pane').forEach(pane => {
+        pane.classList.add('hidden');
+      });
+      const targetPane = card.querySelector(`.tab-pane-${tabType}`);
+      if (targetPane) targetPane.classList.remove('hidden');
+    }
+
+    // 6. Sistema de Favoritos com Drawer Lateral / Modal
+    const savedCountBadge = document.getElementById('savedCountBadge');
+    const openSavedBtn = document.getElementById('openSavedBtn');
+    const savedDrawer = document.getElementById('savedDrawer');
+    const closeSavedBtn = document.getElementById('closeSavedBtn');
+    const savedItemsContainer = document.getElementById('savedItemsContainer');
+
+    function getSavedItems() {
+      try {
+        return JSON.parse(localStorage.getItem('dopamine_saved_items')) || [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function updateSavedBadge() {
+      const items = getSavedItems();
+      if (savedCountBadge) savedCountBadge.textContent = items.length;
+      document.querySelectorAll('.favorite-btn').forEach(btn => {
+        const key = btn.getAttribute('data-item-key');
+        if (items.some(it => it.key === key)) {
+          btn.innerHTML = '❤️';
+          btn.classList.add('text-pink-500');
+        } else {
+          btn.innerHTML = '🤍';
+          btn.classList.remove('text-pink-500');
+        }
+      });
+    }
+
+    function toggleFavoriteItem(itemKey, title, author, coverUrl, amazonUrl, meliUrl, shopeeUrl) {
+      let items = getSavedItems();
+      const existingIdx = items.findIndex(it => it.key === itemKey);
+      if (existingIdx >= 0) {
+        items.splice(existingIdx, 1);
+      } else {
+        items.push({ key: itemKey, title, author, coverUrl, amazonUrl, meliUrl, shopeeUrl });
+      }
+      localStorage.setItem('dopamine_saved_items', JSON.stringify(items));
+      updateSavedBadge();
+      renderSavedDrawer();
+    }
+
+    function renderSavedDrawer() {
+      if (!savedItemsContainer) return;
+      const items = getSavedItems();
+      if (items.length === 0) {
+        savedItemsContainer.innerHTML = `
+          <div class="text-center py-12 space-y-3">
+            <div class="text-5xl">✨</div>
+            <p class="font-display font-bold text-lg">Nenhum livro salvo ainda</p>
+            <p class="text-xs text-white/70 max-w-xs mx-auto">Toque no coração (🤍) em qualquer card para guardar seus achadinhos favoritos aqui!</p>
+          </div>
+        `;
+        return;
+      }
+      savedItemsContainer.innerHTML = items.map(it => `
+        <div class="glass-pill p-3.5 rounded-2xl flex items-center gap-3.5">
+          <img src="${it.coverUrl}" alt="${it.title}" class="w-14 h-20 object-cover rounded-xl shadow-md border border-white/20 shrink-0" />
+          <div class="flex-1 min-w-0">
+            <h4 class="font-display font-bold text-sm text-white truncate">${it.title}</h4>
+            <p class="text-xs text-white/70 truncate">${it.author}</p>
+            <div class="flex items-center gap-1.5 pt-2">
+              <a href="${it.amazonUrl}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg text-[10px] font-black btn-amazon">🟠 Amazon</a>
+              <a href="${it.meliUrl}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg text-[10px] font-black btn-meli">⚡ Meli</a>
+              <a href="${it.shopeeUrl}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg text-[10px] font-black btn-shopee">🛍️ Shopee</a>
+            </div>
+          </div>
+          <button onclick="toggleFavoriteItem('${it.key}')" class="text-white/60 hover:text-pink-400 p-1.5 transition-colors" title="Remover dos salvos">✕</button>
+        </div>
+      `).join('');
+    }
+
+    if (openSavedBtn && savedDrawer) {
+      openSavedBtn.addEventListener('click', () => {
+        renderSavedDrawer();
+        savedDrawer.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+    if (closeSavedBtn && savedDrawer) {
+      closeSavedBtn.addEventListener('click', () => {
+        savedDrawer.classList.add('hidden');
+        document.body.style.overflow = '';
+      });
+    }
+    updateSavedBadge();
+  </script>
+
+
 </body>
 </html>

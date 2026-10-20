@@ -1,952 +1,1061 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="p:domain_verify" content="ce70d1edfd74d2c46236a2c33a49eaeb">
-    <meta name="google-site-verification" content="GB_dWgpjlrdUpHIKw5Dl4EX5ZbRJbIKjiQODizXagvw">
-    <link rel="alternate" type="application/rss+xml" title="Feed RSS 2.0 - Acervo & Referencia" href="https://acervo-referencia.github.io/rss.xml">
-    <title>Cal Newport: Livros e Ferramentas para Trabalho Focado (Deep Work) e Produtividade Sem Distração | Acervo & Referencia</title>
-    <meta name="description" content="Notas de leitura e ensaio editorial sobre as obras de Cal Newport.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-base: #09090b;
-            --bg-elevated: rgba(24, 24, 28, 0.65);
-            --bg-card: #121216;
-            --border-subtle: rgba(255, 255, 255, 0.07);
-            --border-glass: rgba(255, 255, 255, 0.12);
-            --text-primary: #f4f4f6;
-            --text-secondary: #a1a1aa;
-            --text-muted: #71717a;
-            --accent-warm: #e2b86b;
-            --font-heading: 'Instrument Serif', 'Playfair Display', Georgia, serif;
-            --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            background-color: var(--bg-base);
-            color: var(--text-primary);
-            font-family: var(--font-body);
-            line-height: 1.65;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-            padding-bottom: 90px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Cal Newport: Livros e Ferramentas para Trabalho Focado (Deep Work) e Produtividade Sem Distração — Descobertas & Livros Virais</title>
+  <meta name="description" content="" />
+  <link rel="canonical" href="https://acervo-referencia.github.io/cal-newport-trabalho-focado-deep-work-produtividade.html" />
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
 
-        /* Ambient Glow Cinematográfico */
-        .ambient-glow {
-            position: fixed;
-            top: -80px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 360px;
-            height: 360px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(226, 184, 107, 0.08) 0%, transparent 70%);
-            filter: blur(80px);
-            pointer-events: none;
-            z-index: 0;
-        }
+:root {
+  --bg-deep: #0b071e;
+  --glass-surface: rgba(255, 255, 255, 0.09);
+  --glass-surface-hover: rgba(255, 255, 255, 0.14);
+  --glass-border: rgba(255, 255, 255, 0.22);
+  --glass-highlight: rgba(255, 255, 255, 0.45);
+  --text-main: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.78);
+}
 
-        /* Floating Liquid Glass Pill Navbar */
-        .floating-pill-nav {
-            position: fixed;
-            top: 14px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-            width: calc(100% - 32px);
-            max-width: 520px;
-            border-radius: 999px;
-            padding: 10px 18px;
-            background: rgba(18, 18, 22, 0.72);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.09);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.45);
-            overflow: hidden;
-        }
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-            color: var(--text-primary);
-        }
-        .nav-brand-symbol {
-            color: var(--accent-warm);
-            font-size: 0.95rem;
-        }
-        .nav-brand-text {
-            font-family: var(--font-heading);
-            font-size: 1.15rem;
-            font-weight: 500;
-            letter-spacing: 0.02em;
-        }
-        .nav-link-pill {
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-size: 0.8rem;
-            font-weight: 500;
-            background: rgba(255,255,255,0.05);
-            padding: 5px 12px;
-            border-radius: 999px;
-            border: 1px solid rgba(255,255,255,0.06);
-            transition: color 0.2s, background 0.2s;
-        }
-        .nav-link-pill:hover, .nav-link-pill:active {
-            color: var(--text-primary);
-            background: rgba(255,255,255,0.1);
-        }
-        .pill-progress-bar {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 2px;
-            width: 0%;
-            background: var(--accent-warm);
-            transition: width 0.1s ease;
-        }
+body.light-crystal {
+  --bg-deep: #eef2ff;
+  --glass-surface: rgba(255, 255, 255, 0.68);
+  --glass-surface-hover: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.85);
+  --glass-highlight: rgba(255, 255, 255, 0.95);
+  --text-main: #0f172a;
+  --text-muted: #334155;
+}
 
-        /* Main Container */
-        .content-container {
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 85px 20px 40px;
-            position: relative;
-            z-index: 1;
-        }
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
 
-        /* Article Header */
-        .article-intro-header {
-            margin-bottom: 30px;
-        }
-        .article-topic-tag {
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--accent-warm);
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            display: inline-block;
-            margin-bottom: 12px;
-        }
-        h1.article-headline {
-            font-family: var(--font-heading);
-            font-size: 2.5rem;
-            line-height: 1.18;
-            font-weight: 500;
-            color: #ffffff;
-            margin-bottom: 14px;
-            letter-spacing: -0.01em;
-        }
-        .article-read-meta {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-        }
-        .article-lead-text {
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-            line-height: 1.68;
-            border-left: 2px solid var(--accent-warm);
-            padding-left: 16px;
-            margin-bottom: 35px;
-        }
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
 
-        /* Carrossel Horizontal Swipe no Topo */
-        .carousel-section {
-            margin-bottom: 45px;
-        }
-        .carousel-label {
-            font-size: 0.78rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        .swipe-carousel {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            gap: 12px;
-            padding: 4px 2px 14px;
-            scrollbar-width: none;
-            -webkit-overflow-scrolling: touch;
-        }
-        .swipe-carousel::-webkit-scrollbar { display: none; }
-        .carousel-card-item {
-            flex: 0 0 130px;
-            scroll-snap-align: start;
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 14px;
-            padding: 10px;
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: transform 0.2s, border-color 0.2s;
-        }
-        .carousel-card-item:hover, .carousel-card-item:active {
-            border-color: var(--border-glass);
-            transform: translateY(-2px);
-        }
-        .carousel-card-num {
-            font-size: 0.68rem;
-            font-weight: 700;
-            color: var(--accent-warm);
-            align-self: flex-start;
-            margin-bottom: 6px;
-        }
-        .carousel-card-thumb-wrap {
-            height: 110px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 8px;
-        }
-        .carousel-card-thumb {
-            max-height: 100%;
-            max-width: 100%;
-            border-radius: 4px;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.6);
-            object-fit: contain;
-        }
-        .carousel-card-name {
-            font-size: 0.72rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            text-align: center;
-            line-height: 1.25;
-            height: 28px;
-            overflow: hidden;
-        }
+h1, h2, h3, .font-display {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.025em;
+}
 
-        /* Book Editorial Card */
-        .book-editorial-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 22px;
-            padding: 28px 20px;
-            margin-bottom: 45px;
-            position: relative;
-        }
-        .book-top-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 22px;
-        }
-        .book-order-badge {
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            letter-spacing: 0.05em;
-        }
-        .book-editorial-tag {
-            font-size: 0.72rem;
-            font-weight: 600;
-            color: var(--accent-warm);
-            background: rgba(226, 184, 107, 0.08);
-            border: 1px solid rgba(226, 184, 107, 0.18);
-            padding: 4px 10px;
-            border-radius: 999px;
-        }
+/* Animated Aurora Mesh Orbs Behind Glass */
+.aurora-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
 
-        /* 3D Scroll Stage */
-        .book-cover-stage {
-            display: flex;
-            justify-content: center;
-            margin: 10px 0 26px;
-            perspective: 900px;
-        }
-        .book-cover-3d {
-            position: relative;
-            transform-style: preserve-3d;
-            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
-            transform: perspective(900px) rotateY(-4deg) rotateX(2deg) scale(0.98);
-        }
-        .book-cover-3d.in-viewport {
-            transform: perspective(900px) rotateY(-8deg) rotateX(3deg) scale(1.03);
-        }
-        .book-cover-img {
-            height: 270px;
-            width: auto;
-            max-width: 100%;
-            border-radius: 6px;
-            box-shadow: -10px 18px 36px rgba(0,0,0,0.85), 0 0 0 1px rgba(255,255,255,0.08);
-            object-fit: contain;
-            display: block;
-        }
-        .book-spine-shine {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 8px;
-            height: 100%;
-            background: linear-gradient(90deg, rgba(255,255,255,0.18), transparent);
-            border-radius: 6px 0 0 6px;
-            pointer-events: none;
-        }
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(85px);
+  opacity: 0.72;
+  animation: floatOrb 14s infinite alternate ease-in-out;
+}
 
-        .book-text-header {
-            margin-bottom: 22px;
-        }
-        .book-title {
-            font-family: var(--font-heading);
-            font-size: 1.85rem;
-            line-height: 1.22;
-            color: #ffffff;
-            font-weight: 500;
-            margin-bottom: 12px;
-        }
-        .book-hook-quote {
-            font-size: 1rem;
-            color: #e4e4e7;
-            line-height: 1.6;
-            font-style: italic;
-            border-left: 2px solid rgba(226, 184, 107, 0.4);
-            padding-left: 12px;
-            margin-bottom: 20px;
-        }
+body.light-crystal .orb {
+  opacity: 0.55;
+  filter: blur(95px);
+}
 
-        /* Segmented Control (iOS Style) */
-        .segmented-control {
-            background: rgba(0, 0, 0, 0.45);
-            border: 1px solid var(--border-subtle);
-            border-radius: 12px;
-            padding: 4px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 4px;
-            margin-bottom: 20px;
-        }
-        .seg-btn {
-            background: transparent;
-            border: none;
-            color: var(--text-secondary);
-            font-family: var(--font-body);
-            font-size: 0.8rem;
-            font-weight: 600;
-            padding: 8px 4px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-            text-align: center;
-        }
-        .seg-btn.active {
-            background: rgba(255, 255, 255, 0.1);
-            color: #ffffff;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-        }
+.orb-1 {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, #ec4899 0%, #8b5cf6 70%);
+  top: -8%;
+  left: -10%;
+}
 
-        .tab-panels-wrapper {
-            margin-bottom: 24px;
-            min-height: 120px;
-        }
-        .tab-panel {
-            display: none;
-            opacity: 0;
-            transform: translateY(4px);
-            transition: opacity 0.25s ease, transform 0.25s ease;
-        }
-        .tab-panel.active {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
-        }
+.orb-2 {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, #06b6d4 0%, #3b82f6 70%);
+  top: 28%;
+  right: -12%;
+  animation-delay: -4s;
+}
 
-        .editorial-prose p {
-            font-size: 0.95rem;
-            color: #d4d4d8;
-            line-height: 1.7;
-            margin-bottom: 12px;
-        }
+.orb-3 {
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, #f59e0b 0%, #ef4444 70%);
+  bottom: -5%;
+  left: 15%;
+  animation-delay: -8s;
+}
 
-        /* Na Prática */
-        .practice-container {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-        .practice-item {
-            background: rgba(255, 255, 255, 0.02);
-            border-left: 2px solid var(--border-glass);
-            padding: 10px 14px;
-            border-radius: 0 8px 8px 0;
-        }
-        .practice-label-before {
-            font-size: 0.72rem;
-            color: #f87171;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            display: block;
-            margin-bottom: 4px;
-        }
-        .practice-label-after {
-            font-size: 0.72rem;
-            color: #34d399;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            display: block;
-            margin-bottom: 4px;
-        }
-        .practice-item p {
-            font-size: 0.9rem;
-            color: #d4d4d8;
-            line-height: 1.55;
-        }
+.orb-4 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #10b981 0%, #06b6d4 70%);
+  top: 65%;
+  left: -8%;
+  animation-delay: -2s;
+}
 
-        /* Por que vale? */
-        .why-container {
-            background: rgba(226, 184, 107, 0.03);
-            border: 1px solid rgba(226, 184, 107, 0.12);
-            padding: 16px;
-            border-radius: 12px;
-        }
-        .why-core-text {
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: #f4f4f6;
-            line-height: 1.6;
-            margin-bottom: 12px;
-        }
-        .why-quote {
-            font-family: var(--font-heading);
-            font-style: italic;
-            font-size: 1.05rem;
-            color: var(--accent-warm);
-            line-height: 1.45;
-        }
+@keyframes floatOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(28px, -34px) scale(1.12); }
+  100% { transform: translate(-22px, 26px) scale(0.94); }
+}
 
-        /* Store Links Anti-Vendedor */
-        .store-links-wrap {
-            border-top: 1px solid var(--border-subtle);
-            padding-top: 18px;
-        }
-        .store-intro {
-            font-size: 0.72rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            display: block;
-            margin-bottom: 10px;
-        }
-        .store-pills-row {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-        .store-pill {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid var(--border-subtle);
-            color: var(--text-primary);
-            text-decoration: none;
-            font-size: 0.8rem;
-            font-weight: 500;
-            padding: 8px 14px;
-            border-radius: 999px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: background 0.2s, border-color 0.2s, color 0.2s;
-        }
-        .store-pill:hover, .store-pill:active {
-            background: rgba(255, 255, 255, 0.09);
-            border-color: rgba(255, 255, 255, 0.18);
-            color: #ffffff;
-        }
-        .store-arrow {
-            color: var(--accent-warm);
-            font-size: 0.85rem;
-        }
+/* True 3D Frosted Glassmorphism Cards */
+.glass-card {
+  background: var(--glass-surface);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1.5px solid var(--glass-border);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.28),
+    inset 0 1.5px 2px var(--glass-highlight),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, background 0.3s ease;
+}
 
-        /* Sticky Bottom Pill on Mobile */
-        .sticky-mobile-pill {
-            position: fixed;
-            bottom: 16px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 990;
-            background: rgba(24, 24, 28, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--border-glass);
-            border-radius: 999px;
-            padding: 8px 18px;
-            color: var(--text-secondary);
-            font-size: 0.78rem;
-            font-weight: 600;
-            text-decoration: none;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
-            transition: color 0.2s, background 0.2s;
-        }
-        .sticky-mobile-pill:hover, .sticky-mobile-pill:active {
-            color: var(--text-primary);
-            background: rgba(30, 30, 36, 0.95);
-        }
+body.light-crystal .glass-card {
+  box-shadow:
+    0 18px 40px rgba(99, 102, 241, 0.14),
+    inset 0 2px 3px rgba(255, 255, 255, 0.95);
+}
 
-        /* Footer */
-        .footer-minimal {
-            border-top: 1px solid var(--border-subtle);
-            padding: 30px 20px;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.8rem;
-            line-height: 1.6;
-        }
-        .footer-conar-text {
-            max-width: 580px;
-            margin: 0 auto 12px;
-        }
-        .footer-links-row {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-        }
-        .footer-links-row a {
-            color: var(--text-secondary);
-            text-decoration: none;
-        }
-        .footer-links-row a:hover { color: var(--accent-warm); }
+.glass-card:hover {
+  transform: translateY(-4px);
+}
 
-        @media (min-width: 600px) {
-            h1.article-headline { font-size: 3rem; }
-            .book-editorial-card { padding: 34px 28px; }
-            .book-cover-img { height: 310px; }
-        }
-    </style>
+.glass-pill {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: inset 0 1px 1px var(--glass-highlight);
+}
+
+body.light-crystal .glass-pill {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+/* 3D Floating Book Cover with Specular Spine */
+.book-3d-wrap {
+  perspective: 1000px;
+}
+
+.book-3d {
+  position: relative;
+  border-radius: 16px;
+  transform-style: preserve-3d;
+  transform: rotateY(-10deg) rotateX(4deg);
+  box-shadow:
+    -12px 16px 28px rgba(0, 0, 0, 0.45),
+    inset 3px 0 6px rgba(255, 255, 255, 0.45);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+}
+
+.book-3d:hover, .book-3d.active-tilt {
+  transform: rotateY(0deg) rotateX(0deg) scale(1.06);
+  box-shadow:
+    0 22px 40px rgba(139, 92, 246, 0.45),
+    inset 2px 0 8px rgba(255, 255, 255, 0.65);
+}
+
+/* Branded High-Converting Store Buttons with Light Sweep */
+.store-btn {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 16px;
+  transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.22s ease, filter 0.22s ease;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+}
+
+.store-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-25deg);
+  transition: left 0.55s ease;
+}
+
+.store-btn:hover::before, .store-btn:active::before {
+  left: 130%;
+}
+
+.store-btn:active {
+  transform: scale(0.96);
+}
+
+.btn-amazon {
+  background: linear-gradient(135deg, #FF9900 0%, #FF5E00 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 10px 24px -6px rgba(255, 153, 0, 0.65), inset 0 1.5px 1px rgba(255, 255, 255, 0.5);
+}
+
+.btn-meli {
+  background: linear-gradient(135deg, #FFE600 0%, #F59E0B 100%);
+  color: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 10px 24px -6px rgba(250, 204, 21, 0.6), inset 0 1.5px 1px rgba(255, 255, 255, 0.75);
+}
+
+.btn-shopee {
+  background: linear-gradient(135deg, #FF5722 0%, #EE2A7B 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 10px 24px -6px rgba(238, 77, 45, 0.65), inset 0 1.5px 1px rgba(255, 255, 255, 0.5);
+}
+
+.store-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.06);
+}
+
+/* Hide Scrollbars on Swipe Carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Pulse Badge */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.55); }
+  50% { box-shadow: 0 0 0 8px rgba(236, 72, 153, 0); }
+}
+.pulse-badge {
+  animation: pulseGlow 2.2s infinite;
+}
+
+/* Gamified power bars */
+.power-bar-fill-mind {
+  background: linear-gradient(90deg, #ec4899, #8b5cf6);
+}
+.power-bar-fill-flow {
+  background: linear-gradient(90deg, #06b6d4, #3b82f6);
+}
+
+/* Active Segmented Tab Style */
+.tab-btn.active-tab {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.35) 0%, rgba(139, 92, 246, 0.35) 100%);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(236, 72, 153, 0.3);
+}
+body.light-crystal .tab-btn.active-tab {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.25) 0%, rgba(236, 72, 153, 0.25) 100%);
+  border-color: rgba(99, 102, 241, 0.6);
+  color: #0f172a;
+}
+
+/* Highlight Animation for Surprise Me */
+@keyframes highlightSurprise {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.8); }
+  50% { transform: scale(1.03); box-shadow: 0 0 50px 15px rgba(6, 182, 212, 0.7); border-color: #06b6d4; }
+  100% { transform: scale(1); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28); }
+}
+.surprise-highlight {
+  animation: highlightSurprise 1.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+  </style>
 </head>
-<body>
-    <div class="ambient-glow" aria-hidden="true"></div>
+<body class="min-h-screen relative pb-28">
 
-    <!-- Floating Pill Navbar -->
-    <nav class="floating-pill-nav">
-        <a href="/" class="nav-brand">
-            <span class="nav-brand-symbol">✦</span>
-            <span class="nav-brand-text">Acervo & Referencia</span>
-        </a>
-        <div class="nav-right">
-            <a href="/" class="nav-link-pill">← Início</a>
+
+  <!-- Animated Colorful Mesh Background -->
+  <div class="aurora-bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+  </div>
+
+
+  <!-- Floating Liquid Glass Top Bar -->
+  <header class="sticky top-3 z-50 px-3 sm:px-6 max-w-4xl mx-auto">
+    <div class="glass-card px-4 py-2.5 rounded-full flex items-center justify-between gap-2">
+      <a href="index.html" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold glass-pill hover:scale-105 transition-transform text-white">
+        <span>← Ver todos os livros (16)</span>
+      </a>
+
+      <!-- Right Controls: Saved Drawer + Theme Toggle -->
+      <div class="flex items-center gap-2 shrink-0">
+        <button id="openSavedBtn" class="glass-pill px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold flex items-center gap-1.5 hover:scale-105 transition-transform" title="Ver itens salvos">
+          <span>❤️</span>
+          <span id="savedCountBadge">0</span>
+        </button>
+        <button id="themeToggleBtn" class="glass-pill w-9 h-9 rounded-full flex items-center justify-center text-base hover:scale-110 transition-transform" title="Alternar modo Aurora / Cristal">
+          ☀️
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="relative z-10 max-w-4xl mx-auto px-3.5 sm:px-6 pt-5 space-y-8">
+
+    <!-- Hero do Artigo / Coleção -->
+    <section class="glass-card p-6 sm:p-8 space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-amber-500 to-red-500 text-white shadow-md">
+        <span>⚡ Foco & Rotina</span>
+      </div>
+      <h1 class="text-2xl sm:text-4xl font-display font-black text-white leading-tight">
+        Cal Newport: Livros e Ferramentas para Trabalho Focado (Deep Work) e Produtividade Sem Distração
+      </h1>
+      <p class="text-sm sm:text-base text-white/80 leading-relaxed max-w-2xl">
+        
+      </p>
+    </section>
+
+    <!-- Carrossel Swipe das Obras Desta Edição -->
+    <section class="space-y-3">
+      <div class="flex items-center justify-between px-1">
+        <h2 class="font-display font-bold text-sm sm:text-base text-white/80">Obras selecionadas nesta edição:</h2>
+        <span class="text-xs text-white/60">Deslize ➔</span>
+      </div>
+      <div class="flex items-center gap-3 overflow-x-auto no-scrollbar py-1 snap-x snap-mandatory">
+
+        <div class="glass-pill p-3 rounded-2xl flex-shrink-0 w-64 snap-center space-y-2 border border-white/20">
+          <div class="flex items-center gap-3">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/trabalho-focado-deep-work-cal-newport.jpg" alt="Trabalho Focado (Deep Work) - Cal Newport" class="book-3d w-14 h-20 object-cover rounded-xl" />
+            </div>
+            <div class="min-w-0 flex-1">
+              <h4 class="font-display font-bold text-xs text-white truncate">Trabalho Focado (Deep Work) - Cal Newport</h4>
+              <p class="text-[10px] text-white/70 truncate">Cal Newport</p>
+              <a href="#trabalho-focado-deep-work-cal-newport" class="inline-block text-[10px] font-extrabold text-cyan-300 hover:underline pt-1">Ver detalhes ↓</a>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-1">
+            <a href="https://www.amazon.com.br/s?k=Trabalho+Focado+%28Deep+Work%29+-+Cal+Newport&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-[10px] py-1 px-1.5">🟠 Amazon</a>
+            <a href="https://lista.mercadolivre.com.br/trabalho-focado-deep-work-cal-newport?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-[10px] py-1 px-1.5">⚡ Meli</a>
+            <a href="https://shopee.com.br/search?keyword=Trabalho+Focado+%28Deep+Work%29+-+Cal+Newport" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-[10px] py-1 px-1.5">🛍️ Shopee</a>
+          </div>
         </div>
-        <div class="pill-progress-bar" id="pill-progress"></div>
-    </nav>
+        
 
-    <main class="content-container">
-        <header class="article-intro-header">
-            <span class="article-topic-tag">Produtividade & Gestão de Carreira</span>
-            <h1 class="article-headline">Cal Newport: Livros e Ferramentas para Trabalho Focado (Deep Work) e Produtividade Sem Distração</h1>
-            <div class="article-read-meta">⏱ 6 min de leitura • Notas de edição</div>
-            <div class="article-lead-text">
-                Neste ensaio dedicado às ideias e ao legado de <strong>Cal Newport</strong>, reunimos as leituras fundamentais e instrumentos práticos para quem deseja compreender este tema com calma e profundidade.
+        <div class="glass-pill p-3 rounded-2xl flex-shrink-0 w-64 snap-center space-y-2 border border-white/20">
+          <div class="flex items-center gap-3">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/minimalismo-digital-cal-newport.jpg" alt="Minimalismo Digital - Cal Newport" class="book-3d w-14 h-20 object-cover rounded-xl" />
             </div>
-        </header>
+            <div class="min-w-0 flex-1">
+              <h4 class="font-display font-bold text-xs text-white truncate">Minimalismo Digital - Cal Newport</h4>
+              <p class="text-[10px] text-white/70 truncate">Cal Newport</p>
+              <a href="#minimalismo-digital-cal-newport" class="inline-block text-[10px] font-extrabold text-cyan-300 hover:underline pt-1">Ver detalhes ↓</a>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-1">
+            <a href="https://www.amazon.com.br/s?k=Minimalismo+Digital+-+Cal+Newport&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-[10px] py-1 px-1.5">🟠 Amazon</a>
+            <a href="https://lista.mercadolivre.com.br/minimalismo-digital-cal-newport?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-[10px] py-1 px-1.5">⚡ Meli</a>
+            <a href="https://shopee.com.br/search?keyword=Minimalismo+Digital+-+Cal+Newport" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-[10px] py-1 px-1.5">🛍️ Shopee</a>
+          </div>
+        </div>
+        
 
-        <!-- Carrossel Swipe no Topo -->
-        <section class="carousel-section" id="topo-obras">
-            <div class="carousel-label">Obras desta edição (toque para navegar):</div>
-            <div class="swipe-carousel">
-                
-        <a href="#obra-1" class="carousel-card-item">
-            <span class="carousel-card-num">01</span>
-            <div class="carousel-card-thumb-wrap">
-                <img src="midia/capas/trabalho-focado-deep-work-cal-newport.jpg" alt="Trabalho Focado (Deep Work) - Cal Newport" class="carousel-card-thumb" loading="lazy">
+        <div class="glass-pill p-3 rounded-2xl flex-shrink-0 w-64 snap-center space-y-2 border border-white/20">
+          <div class="flex items-center gap-3">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/devagar-slow-productivity-cal-newport.jpg" alt="Devagar (Slow Productivity) - Cal Newport" class="book-3d w-14 h-20 object-cover rounded-xl" />
             </div>
-            <span class="carousel-card-name">Trabalho Focado (Deep Work)</span>
-        </a>
+            <div class="min-w-0 flex-1">
+              <h4 class="font-display font-bold text-xs text-white truncate">Devagar (Slow Productivity) - Cal Newport</h4>
+              <p class="text-[10px] text-white/70 truncate">Cal Newport</p>
+              <a href="#devagar-slow-productivity-cal-newport" class="inline-block text-[10px] font-extrabold text-cyan-300 hover:underline pt-1">Ver detalhes ↓</a>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-1">
+            <a href="https://www.amazon.com.br/s?k=Devagar+%28Slow+Productivity%29+-+Cal+Newport&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-[10px] py-1 px-1.5">🟠 Amazon</a>
+            <a href="https://lista.mercadolivre.com.br/devagar-slow-productivity-cal-newport?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-[10px] py-1 px-1.5">⚡ Meli</a>
+            <a href="https://shopee.com.br/search?keyword=Devagar+%28Slow+Productivity%29+-+Cal+Newport" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-[10px] py-1 px-1.5">🛍️ Shopee</a>
+          </div>
+        </div>
         
-        <a href="#obra-2" class="carousel-card-item">
-            <span class="carousel-card-num">02</span>
-            <div class="carousel-card-thumb-wrap">
-                <img src="midia/capas/minimalismo-digital-cal-newport.jpg" alt="Minimalismo Digital - Cal Newport" class="carousel-card-thumb" loading="lazy">
-            </div>
-            <span class="carousel-card-name">Minimalismo Digital</span>
-        </a>
-        
-        <a href="#obra-3" class="carousel-card-item">
-            <span class="carousel-card-num">03</span>
-            <div class="carousel-card-thumb-wrap">
-                <img src="midia/capas/devagar-slow-productivity-cal-newport.jpg" alt="Devagar (Slow Productivity) - Cal Newport" class="carousel-card-thumb" loading="lazy">
-            </div>
-            <span class="carousel-card-name">Devagar (Slow Productivity)</span>
-        </a>
-        
-        <a href="#obra-4" class="carousel-card-item">
-            <span class="carousel-card-num">04</span>
-            <div class="carousel-card-thumb-wrap">
-                <img src="midia/capas/fone-de-ouvido-com-cancelamento-de-ruido-anc.jpg" alt="Fone de Ouvido com Cancelamento de Ruído ANC" class="carousel-card-thumb" loading="lazy">
-            </div>
-            <span class="carousel-card-name">Fone de Ouvido com Cancelamento de Ruído ANC</span>
-        </a>
-        
-            </div>
-        </section>
 
-        <!-- Seções das Obras com Abas -->
-        <section class="books-flow">
+        <div class="glass-pill p-3 rounded-2xl flex-shrink-0 w-64 snap-center space-y-2 border border-white/20">
+          <div class="flex items-center gap-3">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/fone-de-ouvido-com-cancelamento-de-ruido-anc.jpg" alt="Fone de Ouvido com Cancelamento de Ruído ANC" class="book-3d w-14 h-20 object-cover rounded-xl" />
+            </div>
+            <div class="min-w-0 flex-1">
+              <h4 class="font-display font-bold text-xs text-white truncate">Fone de Ouvido com Cancelamento de Ruído ANC</h4>
+              <p class="text-[10px] text-white/70 truncate">Cal Newport</p>
+              <a href="#fone-de-ouvido-com-cancelamento-de-ruido-anc" class="inline-block text-[10px] font-extrabold text-cyan-300 hover:underline pt-1">Ver detalhes ↓</a>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-1">
+            <a href="https://www.amazon.com.br/s?k=Fone+de+Ouvido+com+Cancelamento+de+Ru%C3%ADdo+ANC&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-[10px] py-1 px-1.5">🟠 Amazon</a>
+            <a href="https://lista.mercadolivre.com.br/fone-de-ouvido-com-cancelamento-de-ruido-anc?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-[10px] py-1 px-1.5">⚡ Meli</a>
+            <a href="https://shopee.com.br/search?keyword=Fone+de+Ouvido+com+Cancelamento+de+Ru%C3%ADdo+ANC" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-[10px] py-1 px-1.5">🛍️ Shopee</a>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Cards Detalhados dos Livros -->
+    <section class="space-y-8">
+
+        <article id="trabalho-focado-deep-work-cal-newport" class="glass-card book-viral-card p-5 sm:p-7 space-y-4 relative flex flex-col justify-between">
+          
+          <!-- Top Card Bar -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-amber-500 to-red-500 text-white shadow-md">
+              <span>Obra 01 / 04</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Ponto de partida</span>
+              <button onclick="toggleFavoriteItem('trabalho-focado-deep-work-cal-newport', 'Trabalho Focado (Deep Work) - Cal Newport', 'Cal Newport', 'midia/capas/trabalho-focado-deep-work-cal-newport.jpg', 'https://www.amazon.com.br/s?k=Trabalho+Focado+%28Deep+Work%29+-+Cal+Newport&tag=acervoref-20', 'https://lista.mercadolivre.com.br/trabalho-focado-deep-work-cal-newport?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=Trabalho+Focado+%28Deep+Work%29+-+Cal+Newport')" 
+                      data-item-key="trabalho-focado-deep-work-cal-newport"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
+            </div>
+          </div>
+
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/trabalho-focado-deep-work-cal-newport.jpg" alt="Trabalho Focado (Deep Work) - Cal Newport" class="book-3d w-32 sm:w-36 h-44 sm:h-52 object-cover rounded-2xl border border-white/20" />
+            </div>
+            <div class="space-y-2.5 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-xl sm:text-2xl font-display font-black text-white leading-snug">Trabalho Focado (Deep Work) - Cal Newport</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Cal Newport</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "Passar o dia inteiro respondendo mensagens e apagando incêndios dá a impressão de muito trabalho, mas quase sempre gera pouco valor duradouro. A capacidade de se concentrar por horas em problemas difíceis tornou-se a habilidade mais rara e valiosa do nosso tempo."
+              </p>
+            </div>
+          </div>
+
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">95%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 95%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">92%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 92%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
+            </div>
             
-        <article class="book-editorial-card" id="obra-1">
-            <div class="book-top-bar">
-                <span class="book-order-badge">01 / 04</span>
-                <span class="book-editorial-tag">Ponto de partida</span>
+            <div class="tab-content-container p-4 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Cal Newport, professor de Ciência da Computação na Universidade de Georgetown, definiu o conceito mais importante para o trabalhador do conhecimento moderno: o Trabalho Focado (Deep Work). Em uma economia dominada pela comunicação constante, quem aprende a desligar o ruído e se dedicar a tarefas complexas desenvolve uma vantagem competitiva nítida.
+
+O livro combina argumentos econômicos lúcidos com quatro regras práticas para estruturar a rotina, combater a pressa rasa e treinar a mente para suportar o esforço sem buscar o celular. Uma obra fundamental para quem produz ideias, códigos, textos ou projetos.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Trabalhar fragmentado entre abas abertas e notificações, chegando ao fim do dia cansado e com sensação de improdutividade.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Organizar blocos protegidos de concentração, produzindo com qualidade superior e terminando o expediente sem estresse.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Recuperar duas horas diárias de foco ininterrupto eleva o nível do seu trabalho e devolve seu descanso no fim do dia.</p>
+              </div>
             </div>
+          </div>
 
-            <!-- Capa 3D Reativa ao Scroll -->
-            <div class="book-cover-stage">
-                <div class="book-cover-3d" data-scroll-book>
-                    <img src="midia/capas/trabalho-focado-deep-work-cal-newport.jpg" alt="Trabalho Focado (Deep Work) - Cal Newport" class="book-cover-img" loading="lazy">
-                    <div class="book-spine-shine"></div>
-                </div>
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
             </div>
-
-            <div class="book-text-header">
-                <h2 class="book-title">Trabalho Focado (Deep Work) - Cal Newport</h2>
-                <p class="book-hook-quote">&ldquo;Passar o dia inteiro respondendo mensagens e apagando incêndios dá a impressão de muito trabalho, mas quase sempre gera pouco valor duradouro. A capacidade de se concentrar por horas em problemas difíceis tornou-se a habilidade mais rara e valiosa do nosso tempo.&rdquo;</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=Trabalho+Focado+%28Deep+Work%29+-+Cal+Newport&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/trabalho-focado-deep-work-cal-newport?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=Trabalho+Focado+%28Deep+Work%29+-+Cal+Newport" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
             </div>
+          </div>
 
-            <!-- Segmented Control de 3 Abas (Apple Books Style) -->
-            <div class="segmented-control" role="tablist">
-                <button class="seg-btn active" data-tab-target="idea-1" onclick="switchTab(this, 'idea-1')">A Ideia Central</button>
-                <button class="seg-btn" data-tab-target="practice-1" onclick="switchTab(this, 'practice-1')">Na Prática</button>
-                <button class="seg-btn" data-tab-target="why-1" onclick="switchTab(this, 'why-1')">Por que vale?</button>
-            </div>
-
-            <div class="tab-panels-wrapper">
-                <!-- Aba 1: A Ideia Central -->
-                <div class="tab-panel active" id="idea-1">
-                    <div class="editorial-prose">
-                        <p>Cal Newport, professor de Ciência da Computação na Universidade de Georgetown, definiu o conceito mais importante para o trabalhador do conhecimento moderno: o Trabalho Focado (Deep Work). Em uma economia dominada pela comunicação constante, quem aprende a desligar o ruído e se dedicar a tarefas complexas desenvolve uma vantagem competitiva nítida.</p><p>O livro combina argumentos econômicos lúcidos com quatro regras práticas para estruturar a rotina, combater a pressa rasa e treinar a mente para suportar o esforço sem buscar o celular. Uma obra fundamental para quem produz ideias, códigos, textos ou projetos.</p>
-                    </div>
-                </div>
-
-                <!-- Aba 2: Na Prática -->
-                <div class="tab-panel" id="practice-1">
-                    <div class="practice-container">
-                        <div class="practice-item">
-                            <span class="practice-label-before">O que se pensa antes de ler:</span>
-                            <p>Trabalhar fragmentado entre abas abertas e notificações, chegando ao fim do dia cansado e com sensação de improdutividade.</p>
-                        </div>
-                        <div class="practice-item">
-                            <span class="practice-label-after">O que muda na prática depois:</span>
-                            <p>Organizar blocos protegidos de concentração, produzindo com qualidade superior e terminando o expediente sem estresse.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Aba 3: Por que vale? -->
-                <div class="tab-panel" id="why-1">
-                    <div class="why-container">
-                        <p class="why-core-text">Recuperar duas horas diárias de foco ininterrupto eleva o nível do seu trabalho e devolve seu descanso no fim do dia.</p>
-                        <blockquote class="why-quote">&ldquo;A profundidade de concentração é o caminho mais direto para criar valor e dominar temas difíceis.&rdquo;</blockquote>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Links de Lojas Elegantes e Anti-Vendedor -->
-            <div class="store-links-wrap">
-                <span class="store-intro">Conferir edição nas lojas oficiais:</span>
-                <div class="store-pills-row">
-                    <a href="https://www.amazon.com.br/s?k=Trabalho+Focado+%28Deep+Work%29+-+Cal+Newport&tag=acervoref-20" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Amazon
-                    </a>
-                    <a href="https://lista.mercadolivre.com.br/Trabalho+Focado+%28Deep+Work%29+-+Cal+Newport?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Mercado Livre
-                    </a>
-                    <a href="https://shopee.com.br/search?keyword=Trabalho+Focado+%28Deep+Work%29+-+Cal+Newport&af_id=shopee_afiliado_id" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Shopee
-                    </a>
-                </div>
-            </div>
         </article>
         
-        <article class="book-editorial-card" id="obra-2">
-            <div class="book-top-bar">
-                <span class="book-order-badge">02 / 04</span>
-                <span class="book-editorial-tag">Visão aprofundada</span>
+
+        <article id="minimalismo-digital-cal-newport" class="glass-card book-viral-card p-5 sm:p-7 space-y-4 relative flex flex-col justify-between">
+          
+          <!-- Top Card Bar -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-amber-500 to-red-500 text-white shadow-md">
+              <span>Obra 02 / 04</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Visão aprofundada</span>
+              <button onclick="toggleFavoriteItem('minimalismo-digital-cal-newport', 'Minimalismo Digital - Cal Newport', 'Cal Newport', 'midia/capas/minimalismo-digital-cal-newport.jpg', 'https://www.amazon.com.br/s?k=Minimalismo+Digital+-+Cal+Newport&tag=acervoref-20', 'https://lista.mercadolivre.com.br/minimalismo-digital-cal-newport?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=Minimalismo+Digital+-+Cal+Newport')" 
+                      data-item-key="minimalismo-digital-cal-newport"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
             </div>
+          </div>
 
-            <!-- Capa 3D Reativa ao Scroll -->
-            <div class="book-cover-stage">
-                <div class="book-cover-3d" data-scroll-book>
-                    <img src="midia/capas/minimalismo-digital-cal-newport.jpg" alt="Minimalismo Digital - Cal Newport" class="book-cover-img" loading="lazy">
-                    <div class="book-spine-shine"></div>
-                </div>
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/minimalismo-digital-cal-newport.jpg" alt="Minimalismo Digital - Cal Newport" class="book-3d w-32 sm:w-36 h-44 sm:h-52 object-cover rounded-2xl border border-white/20" />
             </div>
-
-            <div class="book-text-header">
-                <h2 class="book-title">Minimalismo Digital - Cal Newport</h2>
-                <p class="book-hook-quote">&ldquo;Nenhum de nós comprou um smartphone para virar refém de algoritmos desenhados para capturar nossos olhares. Se você não definir com rigor quando e por que vai usar as redes, elas ocuparão seu tempo livre sem pedir licença.&rdquo;</p>
+            <div class="space-y-2.5 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-xl sm:text-2xl font-display font-black text-white leading-snug">Minimalismo Digital - Cal Newport</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Cal Newport</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "Nenhum de nós comprou um smartphone para virar refém de algoritmos desenhados para capturar nossos olhares. Se você não definir com rigor quando e por que vai usar as redes, elas ocuparão seu tempo livre sem pedir licença."
+              </p>
             </div>
+          </div>
 
-            <!-- Segmented Control de 3 Abas (Apple Books Style) -->
-            <div class="segmented-control" role="tablist">
-                <button class="seg-btn active" data-tab-target="idea-2" onclick="switchTab(this, 'idea-2')">A Ideia Central</button>
-                <button class="seg-btn" data-tab-target="practice-2" onclick="switchTab(this, 'practice-2')">Na Prática</button>
-                <button class="seg-btn" data-tab-target="why-2" onclick="switchTab(this, 'why-2')">Por que vale?</button>
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">97%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 97%"></div>
+              </div>
             </div>
-
-            <div class="tab-panels-wrapper">
-                <!-- Aba 1: A Ideia Central -->
-                <div class="tab-panel active" id="idea-2">
-                    <div class="editorial-prose">
-                        <p>Em 'Minimalismo Digital', Newport estende a filosofia da simplificação para a nossa convivência com telas, aplicativos e notificações. Longe de pregar o isolamento, ele sugere uma postura seletiva: manter apenas as tecnologias que apoiam diretamente valores essenciais e descartar o restante com tranquilidade.</p><p>O livro destaca a importância da solitude — a oportunidade de ficar a sós com os próprios pensamentos — e propõe atividades práticas de lazer ativo para reconstruir a atenção. Uma leitura libertadora para viver em paz na era dos feeds infinitos.</p>
-                    </div>
-                </div>
-
-                <!-- Aba 2: Na Prática -->
-                <div class="tab-panel" id="practice-2">
-                    <div class="practice-container">
-                        <div class="practice-item">
-                            <span class="practice-label-before">O que se pensa antes de ler:</span>
-                            <p>Checar redes sociais no piloto automático em qualquer momento de espera, sentindo cansaço mental constante.</p>
-                        </div>
-                        <div class="practice-item">
-                            <span class="practice-label-after">O que muda na prática depois:</span>
-                            <p>Definir limites claros e saudáveis para as ferramentas digitais, aproveitando o mundo conectado sem dependência.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Aba 3: Por que vale? -->
-                <div class="tab-panel" id="why-2">
-                    <div class="why-container">
-                        <p class="why-core-text">Reduzir o tempo de tela libera centenas de horas ao ano para conversas reais, leitura e projetos pessoais.</p>
-                        <blockquote class="why-quote">&ldquo;A atenção é o material de que é feita a sua vida; escolha com cuidado onde vai aplicá-la.&rdquo;</blockquote>
-                    </div>
-                </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">95%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 95%"></div>
+              </div>
             </div>
+          </div>
 
-            <!-- Links de Lojas Elegantes e Anti-Vendedor -->
-            <div class="store-links-wrap">
-                <span class="store-intro">Conferir edição nas lojas oficiais:</span>
-                <div class="store-pills-row">
-                    <a href="https://www.amazon.com.br/s?k=Minimalismo+Digital+-+Cal+Newport&tag=acervoref-20" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Amazon
-                    </a>
-                    <a href="https://lista.mercadolivre.com.br/Minimalismo+Digital+-+Cal+Newport?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Mercado Livre
-                    </a>
-                    <a href="https://shopee.com.br/search?keyword=Minimalismo+Digital+-+Cal+Newport&af_id=shopee_afiliado_id" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Shopee
-                    </a>
-                </div>
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
             </div>
+            
+            <div class="tab-content-container p-4 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Em &#x27;Minimalismo Digital&#x27;, Newport estende a filosofia da simplificação para a nossa convivência com telas, aplicativos e notificações. Longe de pregar o isolamento, ele sugere uma postura seletiva: manter apenas as tecnologias que apoiam diretamente valores essenciais e descartar o restante com tranquilidade.
+
+O livro destaca a importância da solitude — a oportunidade de ficar a sós com os próprios pensamentos — e propõe atividades práticas de lazer ativo para reconstruir a atenção. Uma leitura libertadora para viver em paz na era dos feeds infinitos.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Checar redes sociais no piloto automático em qualquer momento de espera, sentindo cansaço mental constante.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Definir limites claros e saudáveis para as ferramentas digitais, aproveitando o mundo conectado sem dependência.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Reduzir o tempo de tela libera centenas de horas ao ano para conversas reais, leitura e projetos pessoais.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=Minimalismo+Digital+-+Cal+Newport&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/minimalismo-digital-cal-newport?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=Minimalismo+Digital+-+Cal+Newport" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
         </article>
         
-        <article class="book-editorial-card" id="obra-3">
-            <div class="book-top-bar">
-                <span class="book-order-badge">03 / 04</span>
-                <span class="book-editorial-tag">Leitura rápida</span>
+
+        <article id="devagar-slow-productivity-cal-newport" class="glass-card book-viral-card p-5 sm:p-7 space-y-4 relative flex flex-col justify-between">
+          
+          <!-- Top Card Bar -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-amber-500 to-red-500 text-white shadow-md">
+              <span>Obra 03 / 04</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Leitura rápida</span>
+              <button onclick="toggleFavoriteItem('devagar-slow-productivity-cal-newport', 'Devagar (Slow Productivity) - Cal Newport', 'Cal Newport', 'midia/capas/devagar-slow-productivity-cal-newport.jpg', 'https://www.amazon.com.br/s?k=Devagar+%28Slow+Productivity%29+-+Cal+Newport&tag=acervoref-20', 'https://lista.mercadolivre.com.br/devagar-slow-productivity-cal-newport?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=Devagar+%28Slow+Productivity%29+-+Cal+Newport')" 
+                      data-item-key="devagar-slow-productivity-cal-newport"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
             </div>
+          </div>
 
-            <!-- Capa 3D Reativa ao Scroll -->
-            <div class="book-cover-stage">
-                <div class="book-cover-3d" data-scroll-book>
-                    <img src="midia/capas/devagar-slow-productivity-cal-newport.jpg" alt="Devagar (Slow Productivity) - Cal Newport" class="book-cover-img" loading="lazy">
-                    <div class="book-spine-shine"></div>
-                </div>
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/devagar-slow-productivity-cal-newport.jpg" alt="Devagar (Slow Productivity) - Cal Newport" class="book-3d w-32 sm:w-36 h-44 sm:h-52 object-cover rounded-2xl border border-white/20" />
             </div>
-
-            <div class="book-text-header">
-                <h2 class="book-title">Devagar (Slow Productivity) - Cal Newport</h2>
-                <p class="book-hook-quote">&ldquo;Fazer muitas coisas ao mesmo tempo e a toda velocidade é o modelo herdado das fábricas, mas não funciona para quem trabalha com ideias. As contribuições mais marcantes da história nasceram de poucas prioridades, ritmo sustentável e atenção aos detalhes.&rdquo;</p>
+            <div class="space-y-2.5 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-xl sm:text-2xl font-display font-black text-white leading-snug">Devagar (Slow Productivity) - Cal Newport</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Cal Newport</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "Fazer muitas coisas ao mesmo tempo e a toda velocidade é o modelo herdado das fábricas, mas não funciona para quem trabalha com ideias. As contribuições mais marcantes da história nasceram de poucas prioridades, ritmo sustentável e atenção aos detalhes."
+              </p>
             </div>
+          </div>
 
-            <!-- Segmented Control de 3 Abas (Apple Books Style) -->
-            <div class="segmented-control" role="tablist">
-                <button class="seg-btn active" data-tab-target="idea-3" onclick="switchTab(this, 'idea-3')">A Ideia Central</button>
-                <button class="seg-btn" data-tab-target="practice-3" onclick="switchTab(this, 'practice-3')">Na Prática</button>
-                <button class="seg-btn" data-tab-target="why-3" onclick="switchTab(this, 'why-3')">Por que vale?</button>
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">99%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 99%"></div>
+              </div>
             </div>
-
-            <div class="tab-panels-wrapper">
-                <!-- Aba 1: A Ideia Central -->
-                <div class="tab-panel active" id="idea-3">
-                    <div class="editorial-prose">
-                        <p>Nesta análise oportuna, Cal Newport diagnostica a armadilha do pseudotrabalho moderno — a tendência de usar o volume de e-mails e reuniões como medida de dedicação. Ao examinar a trajetória de pensadores e criadores como Marie Curie, Galileu e Jane Austen, ele mostra que o tempo dilatado é pré-requisito da qualidade.</p><p>'Slow Productivity' resume sua tese em três princípios claros: faça menos coisas, trabalhe no seu ritmo natural e concentre-se na qualidade do que entrega. Uma bússola inteligente para escapar da pressa contínua e construir realizações duradouras.</p>
-                    </div>
-                </div>
-
-                <!-- Aba 2: Na Prática -->
-                <div class="tab-panel" id="practice-3">
-                    <div class="practice-container">
-                        <div class="practice-item">
-                            <span class="practice-label-before">O que se pensa antes de ler:</span>
-                            <p>Acumular compromissos demais para parecer produtivo, operando perto do esgotamento sem avançar nas metas principais.</p>
-                        </div>
-                        <div class="practice-item">
-                            <span class="practice-label-after">O que muda na prática depois:</span>
-                            <p>Selecionar menos projetos e trabalhar com ritmo cadenciado, priorizando a excelência do resultado final.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Aba 3: Por que vale? -->
-                <div class="tab-panel" id="why-3">
-                    <div class="why-container">
-                        <p class="why-core-text">Substituir a correria pelo foco sustentável protege a saúde mental e melhora a consistência das suas entregas.</p>
-                        <blockquote class="why-quote">&ldquo;Fazer poucas coisas com calma e qualidade sempre supera fazer muitas com pressa e superficialidade.&rdquo;</blockquote>
-                    </div>
-                </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">98%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 98%"></div>
+              </div>
             </div>
+          </div>
 
-            <!-- Links de Lojas Elegantes e Anti-Vendedor -->
-            <div class="store-links-wrap">
-                <span class="store-intro">Conferir edição nas lojas oficiais:</span>
-                <div class="store-pills-row">
-                    <a href="https://www.amazon.com.br/s?k=Devagar+%28Slow+Productivity%29+-+Cal+Newport&tag=acervoref-20" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Amazon
-                    </a>
-                    <a href="https://lista.mercadolivre.com.br/Devagar+%28Slow+Productivity%29+-+Cal+Newport?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Mercado Livre
-                    </a>
-                    <a href="https://shopee.com.br/search?keyword=Devagar+%28Slow+Productivity%29+-+Cal+Newport&af_id=shopee_afiliado_id" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Shopee
-                    </a>
-                </div>
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
             </div>
+            
+            <div class="tab-content-container p-4 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Nesta análise oportuna, Cal Newport diagnostica a armadilha do pseudotrabalho moderno — a tendência de usar o volume de e-mails e reuniões como medida de dedicação. Ao examinar a trajetória de pensadores e criadores como Marie Curie, Galileu e Jane Austen, ele mostra que o tempo dilatado é pré-requisito da qualidade.
+
+&#x27;Slow Productivity&#x27; resume sua tese em três princípios claros: faça menos coisas, trabalhe no seu ritmo natural e concentre-se na qualidade do que entrega. Uma bússola inteligente para escapar da pressa contínua e construir realizações duradouras.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Acumular compromissos demais para parecer produtivo, operando perto do esgotamento sem avançar nas metas principais.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Selecionar menos projetos e trabalhar com ritmo cadenciado, priorizando a excelência do resultado final.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Substituir a correria pelo foco sustentável protege a saúde mental e melhora a consistência das suas entregas.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=Devagar+%28Slow+Productivity%29+-+Cal+Newport&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/devagar-slow-productivity-cal-newport?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=Devagar+%28Slow+Productivity%29+-+Cal+Newport" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
         </article>
         
-        <article class="book-editorial-card" id="obra-4">
-            <div class="book-top-bar">
-                <span class="book-order-badge">04 / 04</span>
-                <span class="book-editorial-tag">Complemento prático</span>
+
+        <article id="fone-de-ouvido-com-cancelamento-de-ruido-anc" class="glass-card book-viral-card p-5 sm:p-7 space-y-4 relative flex flex-col justify-between">
+          
+          <!-- Top Card Bar -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-amber-500 to-red-500 text-white shadow-md">
+              <span>Obra 04 / 04</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Complemento prático</span>
+              <button onclick="toggleFavoriteItem('fone-de-ouvido-com-cancelamento-de-ruido-anc', 'Fone de Ouvido com Cancelamento de Ruído ANC', 'Cal Newport', 'midia/capas/fone-de-ouvido-com-cancelamento-de-ruido-anc.jpg', 'https://www.amazon.com.br/s?k=Fone+de+Ouvido+com+Cancelamento+de+Ru%C3%ADdo+ANC&tag=acervoref-20', 'https://lista.mercadolivre.com.br/fone-de-ouvido-com-cancelamento-de-ruido-anc?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=Fone+de+Ouvido+com+Cancelamento+de+Ru%C3%ADdo+ANC')" 
+                      data-item-key="fone-de-ouvido-com-cancelamento-de-ruido-anc"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
             </div>
+          </div>
 
-            <!-- Capa 3D Reativa ao Scroll -->
-            <div class="book-cover-stage">
-                <div class="book-cover-3d" data-scroll-book>
-                    <img src="midia/capas/fone-de-ouvido-com-cancelamento-de-ruido-anc.jpg" alt="Fone de Ouvido com Cancelamento de Ruído ANC" class="book-cover-img" loading="lazy">
-                    <div class="book-spine-shine"></div>
-                </div>
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/fone-de-ouvido-com-cancelamento-de-ruido-anc.jpg" alt="Fone de Ouvido com Cancelamento de Ruído ANC" class="book-3d w-32 sm:w-36 h-44 sm:h-52 object-cover rounded-2xl border border-white/20" />
             </div>
-
-            <div class="book-text-header">
-                <h2 class="book-title">Fone de Ouvido com Cancelamento de Ruído ANC</h2>
-                <p class="book-hook-quote">&ldquo;O cérebro gasta energia contínua tentando filtrar conversas ao redor, buzinas e ruídos de escritório mesmo quando achamos que não estamos prestando atenção. O silêncio sob demanda ajuda a mente a entrar no ritmo de estudo muito mais rápido.&rdquo;</p>
+            <div class="space-y-2.5 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-xl sm:text-2xl font-display font-black text-white leading-snug">Fone de Ouvido com Cancelamento de Ruído ANC</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Cal Newport</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "O cérebro gasta energia contínua tentando filtrar conversas ao redor, buzinas e ruídos de escritório mesmo quando achamos que não estamos prestando atenção. O silêncio sob demanda ajuda a mente a entrar no ritmo de estudo muito mais rápido."
+              </p>
             </div>
+          </div>
 
-            <!-- Segmented Control de 3 Abas (Apple Books Style) -->
-            <div class="segmented-control" role="tablist">
-                <button class="seg-btn active" data-tab-target="idea-4" onclick="switchTab(this, 'idea-4')">A Ideia Central</button>
-                <button class="seg-btn" data-tab-target="practice-4" onclick="switchTab(this, 'practice-4')">Na Prática</button>
-                <button class="seg-btn" data-tab-target="why-4" onclick="switchTab(this, 'why-4')">Por que vale?</button>
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">96%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 96%"></div>
+              </div>
             </div>
-
-            <div class="tab-panels-wrapper">
-                <!-- Aba 1: A Ideia Central -->
-                <div class="tab-panel active" id="idea-4">
-                    <div class="editorial-prose">
-                        <p>Um fone com cancelamento ativo de ruído (ANC) é o parceiro ideal de quem precisa estudar ou trabalhar em cafeterias, viagens ou escritórios compartilhados. Ao neutralizar frequências graves e constantes do ambiente através de microfones antirruído, ele cria uma bolha de serenidade ao redor do leitor.</p><p>Além de permitir ouvir música ambiente ou áudios com clareza em volume baixo, ele pode ser usado apenas para gerar silêncio. Um investimento que protege a energia mental ao longo de jornadas cansativas.</p>
-                    </div>
-                </div>
-
-                <!-- Aba 2: Na Prática -->
-                <div class="tab-panel" id="practice-4">
-                    <div class="practice-container">
-                        <div class="practice-item">
-                            <span class="practice-label-before">O que se pensa antes de ler:</span>
-                            <p>Tentar se concentrar em ambientes movimentados, perdendo o fio da meada a cada barulho externo.</p>
-                        </div>
-                        <div class="practice-item">
-                            <span class="practice-label-after">O que muda na prática depois:</span>
-                            <p>Acionar o cancelamento de ruído e mergulhar em um espaço de tranquilidade imediata para ler e refletir.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Aba 3: Por que vale? -->
-                <div class="tab-panel" id="why-4">
-                    <div class="why-container">
-                        <p class="why-core-text">Diminuir o estresse com barulhos cotidianos devolve o foco necessário para concluir tarefas com serenidade.</p>
-                        <blockquote class="why-quote">&ldquo;O silêncio deliberado é um facilitador poderoso para quem precisa pensar com profundidade.&rdquo;</blockquote>
-                    </div>
-                </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">94%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 94%"></div>
+              </div>
             </div>
+          </div>
 
-            <!-- Links de Lojas Elegantes e Anti-Vendedor -->
-            <div class="store-links-wrap">
-                <span class="store-intro">Conferir edição nas lojas oficiais:</span>
-                <div class="store-pills-row">
-                    <a href="https://www.amazon.com.br/s?k=Fone+de+Ouvido+com+Cancelamento+de+Ru%C3%ADdo+ANC&tag=acervoref-20" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Amazon
-                    </a>
-                    <a href="https://lista.mercadolivre.com.br/Fone+de+Ouvido+com+Cancelamento+de+Ru%C3%ADdo+ANC?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Mercado Livre
-                    </a>
-                    <a href="https://shopee.com.br/search?keyword=Fone+de+Ouvido+com+Cancelamento+de+Ru%C3%ADdo+ANC&af_id=shopee_afiliado_id" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
-                        <span class="store-arrow">↗</span> Shopee
-                    </a>
-                </div>
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
             </div>
+            
+            <div class="tab-content-container p-4 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Um fone com cancelamento ativo de ruído (ANC) é o parceiro ideal de quem precisa estudar ou trabalhar em cafeterias, viagens ou escritórios compartilhados. Ao neutralizar frequências graves e constantes do ambiente através de microfones antirruído, ele cria uma bolha de serenidade ao redor do leitor.
+
+Além de permitir ouvir música ambiente ou áudios com clareza em volume baixo, ele pode ser usado apenas para gerar silêncio. Um investimento que protege a energia mental ao longo de jornadas cansativas.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Tentar se concentrar em ambientes movimentados, perdendo o fio da meada a cada barulho externo.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Acionar o cancelamento de ruído e mergulhar em um espaço de tranquilidade imediata para ler e refletir.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Diminuir o estresse com barulhos cotidianos devolve o foco necessário para concluir tarefas com serenidade.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=Fone+de+Ouvido+com+Cancelamento+de+Ru%C3%ADdo+ANC&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/fone-de-ouvido-com-cancelamento-de-ruido-anc?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=Fone+de+Ouvido+com+Cancelamento+de+Ru%C3%ADdo+ANC" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
         </article>
         
-        </section>
-    </main>
+    </section>
 
-    <!-- Sticky Bottom Pill no Celular -->
-    <a href="#topo-obras" class="sticky-mobile-pill" id="sticky-pill">
-        <span>↑ Ver as 4 obras</span>
-    </a>
+  </main>
 
-    <footer class="footer-minimal">
-        <div class="footer-conar-text">
-            Transparencia Publicitaria (#publicidade): Este guia editorial independente contem links de afiliados. Compras realizadas atraves deles podem gerar comissao sem custo adicional para voce.
+  <!-- Rodapé -->
+  <footer class="relative z-10 max-w-4xl mx-auto px-4 pt-12 pb-8 text-center text-xs text-white/60 space-y-3 border-t border-white/10 mt-12">
+    <div class="flex items-center justify-center gap-4 text-sm font-bold text-white/80">
+      <a href="index.html" class="hover:text-pink-400 transition-colors">← Voltar para a Vitrine Geral</a>
+      <span>•</span>
+      <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="hover:text-cyan-400 transition-colors">↑ Topo</button>
+    </div>
+    <p>Links oficiais de afiliados para Amazon, Mercado Livre e Shopee. Preços e cupons sincronizados com as plataformas parceiras.</p>
+    <p class="text-[11px] text-white/40">© 2026 Descobertas & Livros Virais. Criado para mentes inquietas.</p>
+  </footer>
+
+
+  <!-- Drawer / Modal Lateral de Itens Salvos (Favoritos) -->
+  <div id="savedDrawer" class="fixed inset-0 z-[120] hidden bg-black/70 backdrop-blur-md flex justify-end transition-opacity">
+    <div class="w-full max-w-md h-full glass-card rounded-none sm:rounded-l-3xl p-5 sm:p-6 flex flex-col justify-between overflow-y-auto">
+      <div class="space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-white/10">
+          <div class="flex items-center gap-2">
+            <span class="text-2xl">❤️</span>
+            <h3 class="font-display font-black text-xl">Seus Livros Salvos</h3>
+          </div>
+          <button id="closeSavedBtn" class="glass-pill w-9 h-9 rounded-full flex items-center justify-center text-lg hover:scale-110 transition-transform">✕</button>
         </div>
-        <p>© 2026 Acervo & Referencia • Em conformidade com o STF (ADI 4815) e CONAR.</p>
-        <div class="footer-links-row" style="margin-top: 10px;">
-            <a href="/">Início</a>
-            <a href="https://www.youtube.com/@acervo-referencia" target="_blank">YouTube</a>
-            <a href="https://br.pinterest.com/acervoreferencia/" target="_blank">Pinterest</a>
+        <div id="savedItemsContainer" class="space-y-3 pt-2">
+          <!-- Preenchido dinamicamente via JS -->
         </div>
-    </footer>
+      </div>
+      <div class="pt-6 border-t border-white/10 text-center">
+        <p class="text-xs text-white/60">Todos os links oficiais abrem com cupom e tags oficiais de desconto.</p>
+      </div>
+    </div>
+  </div>
 
-    <script>
-    // 1. Reading Progress Bar integrada na Pill Navbar
-    window.addEventListener('scroll', () => {
-        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-        const bar = document.getElementById('pill-progress');
-        if (bar) bar.style.width = scrolled + '%';
+
+
+  <!-- Engine JS Interativo: Busca, Filtro, Favoritos, Me Surpreenda & Tema -->
+  <script>
+    // 1. Alternador de Tema (Aurora Dark / Cristal Claro)
+    const themeBtn = document.getElementById('themeToggleBtn');
+    function applySavedTheme() {
+      const saved = localStorage.getItem('dopamine_theme');
+      if (saved === 'light') {
+        document.body.classList.add('light-crystal');
+        if (themeBtn) themeBtn.textContent = '🌙';
+      } else {
+        document.body.classList.remove('light-crystal');
+        if (themeBtn) themeBtn.textContent = '☀️';
+      }
+    }
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('light-crystal');
+        const isLight = document.body.classList.contains('light-crystal');
+        localStorage.setItem('dopamine_theme', isLight ? 'light' : 'dark');
+        themeBtn.textContent = isLight ? '🌙' : '☀️';
+      });
+    }
+    applySavedTheme();
+
+    // 2. Filtro Interativo por Pílulas no Topo
+    const filterPills = document.querySelectorAll('.filter-pill');
+    const bookCards = document.querySelectorAll('.book-viral-card');
+
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        filterPills.forEach(p => {
+          p.classList.remove('active-pill', 'bg-gradient-to-r', 'from-pink-500', 'via-purple-500', 'to-indigo-500', 'text-white', 'shadow-lg', 'shadow-purple-500/30');
+          p.classList.add('glass-pill');
+        });
+        pill.classList.remove('glass-pill');
+        pill.classList.add('active-pill', 'bg-gradient-to-r', 'from-pink-500', 'via-purple-500', 'to-indigo-500', 'text-white', 'shadow-lg', 'shadow-purple-500/30');
+
+        const cat = pill.getAttribute('data-filter');
+        bookCards.forEach(card => {
+          if (cat === 'all' || card.getAttribute('data-category') === cat) {
+            card.style.display = 'block';
+            card.classList.remove('hidden');
+          } else {
+            card.style.display = 'none';
+            card.classList.add('hidden');
+          }
+        });
+      });
     });
 
-    // 2. Sistema de Abas Interativas (Segmented Control)
-    function switchTab(btn, targetId) {
-        const card = btn.closest('.book-editorial-card');
-        if (!card) return;
-        card.querySelectorAll('.seg-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        card.querySelectorAll('.tab-panel').forEach(p => {
-            p.classList.remove('active');
+    // 3. Busca em Tempo Real (Título, Autor, Gancho)
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        bookCards.forEach(card => {
+          const searchData = (card.getAttribute('data-search') || '').toLowerCase();
+          if (!query || searchData.includes(query)) {
+            card.style.display = 'block';
+            card.classList.remove('hidden');
+          } else {
+            card.style.display = 'none';
+            card.classList.add('hidden');
+          }
         });
-        const target = card.querySelector('#' + targetId);
-        if (target) {
-            target.classList.add('active');
-        }
+      });
     }
 
-    // 3. Scroll-Driven 3D Book Cover Animation
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('in-viewport');
-            } else {
-                entry.target.classList.remove('in-viewport');
-            }
-        });
-    }, { threshold: [0.15, 0.5, 0.85] });
-    document.querySelectorAll('[data-scroll-book]').forEach(el => observer.observe(el));
-    </script>
+    // 4. Botão "🎲 Me Surpreenda!"
+    const surpriseBtn = document.getElementById('surpriseMeBtn');
+    if (surpriseBtn) {
+      surpriseBtn.addEventListener('click', () => {
+        const visibleCards = Array.from(bookCards).filter(c => c.style.display !== 'none' && !c.classList.contains('hidden'));
+        if (visibleCards.length === 0) return;
+        const randomCard = visibleCards[Math.floor(Math.random() * visibleCards.length)];
+        randomCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        randomCard.classList.remove('surprise-highlight');
+        void randomCard.offsetWidth; // trigger reflow
+        randomCard.classList.add('surprise-highlight');
+      });
+    }
+
+    // 5. Sistema de Abas Rápidas de 1 Toque (Segmented Control)
+    function switchBookTab(btn, tabType) {
+      const card = btn.closest('.book-viral-card');
+      if (!card) return;
+      card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active-tab'));
+      btn.classList.add('active-tab');
+
+      card.querySelectorAll('.tab-content-pane').forEach(pane => {
+        pane.classList.add('hidden');
+      });
+      const targetPane = card.querySelector(`.tab-pane-${tabType}`);
+      if (targetPane) targetPane.classList.remove('hidden');
+    }
+
+    // 6. Sistema de Favoritos com Drawer Lateral / Modal
+    const savedCountBadge = document.getElementById('savedCountBadge');
+    const openSavedBtn = document.getElementById('openSavedBtn');
+    const savedDrawer = document.getElementById('savedDrawer');
+    const closeSavedBtn = document.getElementById('closeSavedBtn');
+    const savedItemsContainer = document.getElementById('savedItemsContainer');
+
+    function getSavedItems() {
+      try {
+        return JSON.parse(localStorage.getItem('dopamine_saved_items')) || [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function updateSavedBadge() {
+      const items = getSavedItems();
+      if (savedCountBadge) savedCountBadge.textContent = items.length;
+      document.querySelectorAll('.favorite-btn').forEach(btn => {
+        const key = btn.getAttribute('data-item-key');
+        if (items.some(it => it.key === key)) {
+          btn.innerHTML = '❤️';
+          btn.classList.add('text-pink-500');
+        } else {
+          btn.innerHTML = '🤍';
+          btn.classList.remove('text-pink-500');
+        }
+      });
+    }
+
+    function toggleFavoriteItem(itemKey, title, author, coverUrl, amazonUrl, meliUrl, shopeeUrl) {
+      let items = getSavedItems();
+      const existingIdx = items.findIndex(it => it.key === itemKey);
+      if (existingIdx >= 0) {
+        items.splice(existingIdx, 1);
+      } else {
+        items.push({ key: itemKey, title, author, coverUrl, amazonUrl, meliUrl, shopeeUrl });
+      }
+      localStorage.setItem('dopamine_saved_items', JSON.stringify(items));
+      updateSavedBadge();
+      renderSavedDrawer();
+    }
+
+    function renderSavedDrawer() {
+      if (!savedItemsContainer) return;
+      const items = getSavedItems();
+      if (items.length === 0) {
+        savedItemsContainer.innerHTML = `
+          <div class="text-center py-12 space-y-3">
+            <div class="text-5xl">✨</div>
+            <p class="font-display font-bold text-lg">Nenhum livro salvo ainda</p>
+            <p class="text-xs text-white/70 max-w-xs mx-auto">Toque no coração (🤍) em qualquer card para guardar seus achadinhos favoritos aqui!</p>
+          </div>
+        `;
+        return;
+      }
+      savedItemsContainer.innerHTML = items.map(it => `
+        <div class="glass-pill p-3.5 rounded-2xl flex items-center gap-3.5">
+          <img src="${it.coverUrl}" alt="${it.title}" class="w-14 h-20 object-cover rounded-xl shadow-md border border-white/20 shrink-0" />
+          <div class="flex-1 min-w-0">
+            <h4 class="font-display font-bold text-sm text-white truncate">${it.title}</h4>
+            <p class="text-xs text-white/70 truncate">${it.author}</p>
+            <div class="flex items-center gap-1.5 pt-2">
+              <a href="${it.amazonUrl}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg text-[10px] font-black btn-amazon">🟠 Amazon</a>
+              <a href="${it.meliUrl}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg text-[10px] font-black btn-meli">⚡ Meli</a>
+              <a href="${it.shopeeUrl}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg text-[10px] font-black btn-shopee">🛍️ Shopee</a>
+            </div>
+          </div>
+          <button onclick="toggleFavoriteItem('${it.key}')" class="text-white/60 hover:text-pink-400 p-1.5 transition-colors" title="Remover dos salvos">✕</button>
+        </div>
+      `).join('');
+    }
+
+    if (openSavedBtn && savedDrawer) {
+      openSavedBtn.addEventListener('click', () => {
+        renderSavedDrawer();
+        savedDrawer.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+    if (closeSavedBtn && savedDrawer) {
+      closeSavedBtn.addEventListener('click', () => {
+        savedDrawer.classList.add('hidden');
+        document.body.style.overflow = '';
+      });
+    }
+    updateSavedBadge();
+  </script>
+
+
 </body>
 </html>
