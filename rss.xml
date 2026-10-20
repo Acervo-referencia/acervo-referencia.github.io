@@ -5,14 +5,14 @@
     <link>https://acervo-referencia.github.io/</link>
     <description>Curadoria essencial e modelos mentais práticos sobre livros e ideias transformadoras.</description>
     <language>pt-BR</language>
-    <lastBuildDate>Tue, 20 Oct 2026 04:36:52 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 06:30:06 +0000</lastBuildDate>
     <atom:link href="https://acervo-referencia.github.io/rss.xml" rel="self" type="application/rss+xml" />
     <atom:link href="https://pubsubhubbub.appspot.com/" rel="hub" />
     <item>
       <title>Daniel Kahneman (Prêmio Nobel): Os Livros e Métodos sobre Tomada de Decisão e Economia Comportamental</title>
       <link>https://acervo-referencia.github.io/daniel-kahneman-tomada-de-decisao-economia-comportamental.html</link>
       <guid isPermaLink="true">https://acervo-referencia.github.io/daniel-kahneman-tomada-de-decisao-economia-comportamental.html</guid>
-      <pubDate>Tue, 20 Oct 2026 04:36:52 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 06:30:06 +0000</pubDate>
       <description> #publicidade</description>
       <enclosure url="https://acervo-referencia.github.io/midia/daniel-kahneman-tomada-de-decisao-economia-comportamental_pinterest.png" type="image/png" length="150000" />
       <media:content url="https://acervo-referencia.github.io/midia/daniel-kahneman-tomada-de-decisao-economia-comportamental_pinterest.png" type="image/png" medium="image" />
@@ -21,7 +21,7 @@
       <title>Carl Sagan: As Leituras Essenciais de Ciência, Cosmologia e Pensamento Crítico</title>
       <link>https://acervo-referencia.github.io/carl-sagan-leituras-essenciais-ciencia-cosmologia.html</link>
       <guid isPermaLink="true">https://acervo-referencia.github.io/carl-sagan-leituras-essenciais-ciencia-cosmologia.html</guid>
-      <pubDate>Tue, 20 Oct 2026 04:36:52 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 06:30:06 +0000</pubDate>
       <description> #publicidade</description>
       <enclosure url="https://acervo-referencia.github.io/midia/carl-sagan-leituras-essenciais-ciencia-cosmologia_pinterest.png" type="image/png" length="150000" />
       <media:content url="https://acervo-referencia.github.io/midia/carl-sagan-leituras-essenciais-ciencia-cosmologia_pinterest.png" type="image/png" medium="image" />
@@ -30,7 +30,7 @@
       <title>Viktor Frankl e a Logoterapia: Obras Fundamentais sobre Propósito, Resiliência e Psicologia</title>
       <link>https://acervo-referencia.github.io/viktor-frankl-logoterapia-proposito-resiliencia.html</link>
       <guid isPermaLink="true">https://acervo-referencia.github.io/viktor-frankl-logoterapia-proposito-resiliencia.html</guid>
-      <pubDate>Tue, 20 Oct 2026 04:36:52 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 06:30:06 +0000</pubDate>
       <description> #publicidade</description>
       <enclosure url="https://acervo-referencia.github.io/midia/viktor-frankl-logoterapia-proposito-resiliencia_pinterest.png" type="image/png" length="150000" />
       <media:content url="https://acervo-referencia.github.io/midia/viktor-frankl-logoterapia-proposito-resiliencia_pinterest.png" type="image/png" medium="image" />
@@ -39,10 +39,19 @@
       <title>Cal Newport: Livros e Ferramentas para Trabalho Focado (Deep Work) e Produtividade Sem Distração</title>
       <link>https://acervo-referencia.github.io/cal-newport-trabalho-focado-deep-work-produtividade.html</link>
       <guid isPermaLink="true">https://acervo-referencia.github.io/cal-newport-trabalho-focado-deep-work-produtividade.html</guid>
-      <pubDate>Tue, 20 Oct 2026 04:36:52 +0000</pubDate>
+      <pubDate>Tue, 20 Oct 2026 06:30:06 +0000</pubDate>
       <description> #publicidade</description>
       <enclosure url="https://acervo-referencia.github.io/midia/cal-newport-trabalho-focado-deep-work-produtividade_pinterest.png" type="image/png" length="150000" />
       <media:content url="https://acervo-referencia.github.io/midia/cal-newport-trabalho-focado-deep-work-produtividade_pinterest.png" type="image/png" medium="image" />
+    </item>
+    <item>
+      <title>Drauzio Varella: Leituras sobre Saúde Preventiva, Longevidade e Hábitos de Vida Ativa</title>
+      <link>https://acervo-referencia.github.io/drauzio-varella-saude-preventiva-longevidade-corrida.html</link>
+      <guid isPermaLink="true">https://acervo-referencia.github.io/drauzio-varella-saude-preventiva-longevidade-corrida.html</guid>
+      <pubDate>Tue, 20 Oct 2026 06:30:06 +0000</pubDate>
+      <description> #publicidade</description>
+      <enclosure url="https://acervo-referencia.github.io/midia/drauzio-varella-saude-preventiva-longevidade-corrida_pinterest.png" type="image/png" length="150000" />
+      <media:content url="https://acervo-referencia.github.io/midia/drauzio-varella-saude-preventiva-longevidade-corrida_pinterest.png" type="image/png" medium="image" />
     </item>
   </channel>
 </rss>
