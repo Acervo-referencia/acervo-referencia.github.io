@@ -7,1025 +7,886 @@
     <meta name="google-site-verification" content="GB_dWgpjlrdUpHIKw5Dl4EX5ZbRJbIKjiQODizXagvw">
     <link rel="alternate" type="application/rss+xml" title="Feed RSS 2.0 - Acervo & Referencia" href="https://acervo-referencia.github.io/rss.xml">
     <title>Viktor Frankl e a Logoterapia: Obras Fundamentais sobre Propósito, Resiliência e Psicologia | Acervo & Referencia</title>
-    <meta name="description" content="Guia editorial completo e curadoria de obras e instrumentos de alta performance de Viktor Frankl.">
+    <meta name="description" content="Notas de leitura e ensaio editorial sobre as obras de Viktor Frankl.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-main: #070b14;
-            --bg-surface: #0f1624;
-            --bg-card: #131c2d;
-            --bg-card-hover: #182338;
-            --border: #233148;
-            --border-highlight: #3b4d6e;
-            --gold: #d4af37;
-            --gold-light: #f59e0b;
-            --gold-glow: rgba(212, 175, 55, 0.25);
-            --cyan: #38bdf8;
-            --emerald: #10b981;
-            --text-white: #ffffff;
-            --text-primary: #f1f5f9;
-            --text-secondary: #94a3b8;
-            --text-muted: #64748b;
-            --font-heading: 'Playfair Display', Georgia, serif;
+            --bg-base: #09090b;
+            --bg-elevated: rgba(24, 24, 28, 0.65);
+            --bg-card: #121216;
+            --border-subtle: rgba(255, 255, 255, 0.07);
+            --border-glass: rgba(255, 255, 255, 0.12);
+            --text-primary: #f4f4f6;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --accent-warm: #e2b86b;
+            --font-heading: 'Instrument Serif', 'Playfair Display', Georgia, serif;
             --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
-            background-color: var(--bg-main);
+            background-color: var(--bg-base);
             color: var(--text-primary);
             font-family: var(--font-body);
             line-height: 1.65;
             -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            padding-bottom: 90px;
         }
-        #reading-progress-bar {
+
+        /* Ambient Glow Cinematográfico */
+        .ambient-glow {
             position: fixed;
-            top: 0;
-            left: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #d4af37, #f59e0b, #fbbf24);
-            z-index: 9999;
-            width: 0%;
-            transition: width 0.1s ease;
+            top: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(226, 184, 107, 0.08) 0%, transparent 70%);
+            filter: blur(80px);
+            pointer-events: none;
+            z-index: 0;
         }
-        .site-header {
-            background: rgba(15, 22, 36, 0.85);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .header-inner {
-            max-width: 1080px;
-            margin: 0 auto;
-            padding: 16px 20px;
+
+        /* Floating Liquid Glass Pill Navbar */
+        .floating-pill-nav {
+            position: fixed;
+            top: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            width: calc(100% - 32px);
+            max-width: 520px;
+            border-radius: 999px;
+            padding: 10px 18px;
+            background: rgba(18, 18, 22, 0.72);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.09);
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+            overflow: hidden;
         }
-        .brand-logo {
-            text-decoration: none;
+        .nav-brand {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--text-primary);
         }
-        .brand-crest {
-            color: var(--gold);
-            font-size: 1.4rem;
+        .nav-brand-symbol {
+            color: var(--accent-warm);
+            font-size: 0.95rem;
         }
-        .brand-name {
+        .nav-brand-text {
             font-family: var(--font-heading);
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: #ffffff;
-            letter-spacing: 0.04em;
+            font-size: 1.15rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
         }
-        .brand-tag {
-            font-size: 0.72rem;
-            color: var(--gold-light);
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            display: block;
-        }
-        .nav-actions {
-            display: flex;
-            gap: 16px;
-            align-items: center;
-        }
-        .nav-link {
-            color: var(--text-secondary);
+        .nav-link-pill {
             text-decoration: none;
-            font-size: 0.88rem;
-            font-weight: 600;
-            transition: color 0.2s;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            font-weight: 500;
+            background: rgba(255,255,255,0.05);
+            padding: 5px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.06);
+            transition: color 0.2s, background 0.2s;
         }
-        .nav-link:hover { color: var(--gold); }
-        .article-container {
-            max-width: 1080px;
+        .nav-link-pill:hover, .nav-link-pill:active {
+            color: var(--text-primary);
+            background: rgba(255,255,255,0.1);
+        }
+        .pill-progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 0%;
+            background: var(--accent-warm);
+            transition: width 0.1s ease;
+        }
+
+        /* Main Container */
+        .content-container {
+            max-width: 680px;
             margin: 0 auto;
-            padding: 40px 20px 80px;
+            padding: 85px 20px 40px;
+            position: relative;
+            z-index: 1;
         }
-        .article-breadcrumb {
+
+        /* Article Header */
+        .article-intro-header {
+            margin-bottom: 30px;
+        }
+        .article-topic-tag {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent-warm);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+        h1.article-headline {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            line-height: 1.18;
+            font-weight: 500;
+            color: #ffffff;
+            margin-bottom: 14px;
+            letter-spacing: -0.01em;
+        }
+        .article-read-meta {
             font-size: 0.82rem;
             color: var(--text-muted);
             margin-bottom: 20px;
+        }
+        .article-lead-text {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.68;
+            border-left: 2px solid var(--accent-warm);
+            padding-left: 16px;
+            margin-bottom: 35px;
+        }
+
+        /* Carrossel Horizontal Swipe no Topo */
+        .carousel-section {
+            margin-bottom: 45px;
+        }
+        .carousel-label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 12px;
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
-        .article-breadcrumb a { color: var(--text-secondary); text-decoration: none; }
-        .article-breadcrumb a:hover { color: var(--gold); }
-        .article-hero {
-            margin-bottom: 40px;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 35px;
-        }
-        .article-cat-tag {
-            display: inline-block;
-            background: rgba(212, 175, 55, 0.12);
-            color: var(--gold-light);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            font-size: 0.75rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            padding: 5px 14px;
-            border-radius: 20px;
-            margin-bottom: 18px;
-        }
-        h1.article-title {
-            font-family: var(--font-heading);
-            font-size: 2.7rem;
-            line-height: 1.22;
-            color: #ffffff;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-        .article-meta-row {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
+        .swipe-carousel {
             display: flex;
-            gap: 16px;
-            align-items: center;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 12px;
+            padding: 4px 2px 14px;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
         }
-        .editorial-lead {
-            background: linear-gradient(135deg, rgba(19, 28, 45, 0.7), rgba(15, 22, 36, 0.9));
-            border-left: 4px solid var(--gold);
-            padding: 24px 28px;
-            border-radius: 0 14px 14px 0;
-            margin-bottom: 50px;
-            font-size: 1.05rem;
-            color: #cbd5e1;
-            line-height: 1.7;
-        }
-
-        /* VITRINE RÁPIDA ACIMA DA DOBRA */
-        .quick-showcase {
-            background: var(--bg-surface);
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            padding: 30px;
-            margin-bottom: 60px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-        }
-        .quick-header {
-            margin-bottom: 24px;
-            text-align: center;
-        }
-        .quick-badge-tag {
-            display: inline-block;
-            background: rgba(245, 158, 11, 0.15);
-            color: var(--gold-light);
-            border: 1px solid rgba(245, 158, 11, 0.4);
-            font-size: 0.72rem;
-            font-weight: 800;
-            letter-spacing: 0.08em;
-            padding: 4px 12px;
-            border-radius: 12px;
-            margin-bottom: 8px;
-        }
-        .quick-main-title {
-            font-family: var(--font-heading);
-            font-size: 1.7rem;
-            color: #ffffff;
-            margin-bottom: 6px;
-        }
-        .quick-desc {
-            color: var(--text-secondary);
-            font-size: 0.92rem;
-        }
-        .quick-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
-        }
-        .quick-card {
+        .swipe-carousel::-webkit-scrollbar { display: none; }
+        .carousel-card-item {
+            flex: 0 0 130px;
+            scroll-snap-align: start;
             background: var(--bg-card);
-            border: 1px solid var(--border);
+            border: 1px solid var(--border-subtle);
             border-radius: 14px;
-            padding: 16px;
+            padding: 10px;
+            text-decoration: none;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            align-items: center;
             transition: transform 0.2s, border-color 0.2s;
         }
-        .quick-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--gold);
+        .carousel-card-item:hover, .carousel-card-item:active {
+            border-color: var(--border-glass);
+            transform: translateY(-2px);
         }
-        .quick-img-wrap {
-            position: relative;
+        .carousel-card-num {
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: var(--accent-warm);
+            align-self: flex-start;
+            margin-bottom: 6px;
+        }
+        .carousel-card-thumb-wrap {
+            height: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+        .carousel-card-thumb {
+            max-height: 100%;
+            max-width: 100%;
+            border-radius: 4px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.6);
+            object-fit: contain;
+        }
+        .carousel-card-name {
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--text-primary);
             text-align: center;
-            margin-bottom: 12px;
+            line-height: 1.25;
+            height: 28px;
+            overflow: hidden;
         }
-        .quick-img {
-            height: 160px;
+
+        /* Book Editorial Card */
+        .book-editorial-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 22px;
+            padding: 28px 20px;
+            margin-bottom: 45px;
+            position: relative;
+        }
+        .book-top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 22px;
+        }
+        .book-order-badge {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+        }
+        .book-editorial-tag {
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--accent-warm);
+            background: rgba(226, 184, 107, 0.08);
+            border: 1px solid rgba(226, 184, 107, 0.18);
+            padding: 4px 10px;
+            border-radius: 999px;
+        }
+
+        /* 3D Scroll Stage */
+        .book-cover-stage {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0 26px;
+            perspective: 900px;
+        }
+        .book-cover-3d {
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
+            transform: perspective(900px) rotateY(-4deg) rotateX(2deg) scale(0.98);
+        }
+        .book-cover-3d.in-viewport {
+            transform: perspective(900px) rotateY(-8deg) rotateX(3deg) scale(1.03);
+        }
+        .book-cover-img {
+            height: 270px;
             width: auto;
             max-width: 100%;
             border-radius: 6px;
-            box-shadow: 0 8px 18px rgba(0,0,0,0.6);
+            box-shadow: -10px 18px 36px rgba(0,0,0,0.85), 0 0 0 1px rgba(255,255,255,0.08);
             object-fit: contain;
+            display: block;
         }
-        .quick-num {
+        .book-spine-shine {
             position: absolute;
-            top: 4px;
-            left: 4px;
-            background: var(--gold);
-            color: #000;
-            font-size: 0.68rem;
-            font-weight: 800;
-            padding: 2px 6px;
-            border-radius: 4px;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255,255,255,0.18), transparent);
+            border-radius: 6px 0 0 6px;
+            pointer-events: none;
         }
-        .quick-badge {
-            font-size: 0.7rem;
-            color: var(--gold-light);
+
+        .book-text-header {
+            margin-bottom: 22px;
+        }
+        .book-title {
+            font-family: var(--font-heading);
+            font-size: 1.85rem;
+            line-height: 1.22;
+            color: #ffffff;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+        .book-hook-quote {
+            font-size: 1rem;
+            color: #e4e4e7;
+            line-height: 1.6;
+            font-style: italic;
+            border-left: 2px solid rgba(226, 184, 107, 0.4);
+            padding-left: 12px;
+            margin-bottom: 20px;
+        }
+
+        /* Segmented Control (iOS Style) */
+        .segmented-control {
+            background: rgba(0, 0, 0, 0.45);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 4px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4px;
+            margin-bottom: 20px;
+        }
+        .seg-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 8px 4px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+            text-align: center;
+        }
+        .seg-btn.active {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+
+        .tab-panels-wrapper {
+            margin-bottom: 24px;
+            min-height: 120px;
+        }
+        .tab-panel {
+            display: none;
+            opacity: 0;
+            transform: translateY(4px);
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+        .tab-panel.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .editorial-prose p {
+            font-size: 0.95rem;
+            color: #d4d4d8;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        /* Na Prática */
+        .practice-container {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .practice-item {
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 2px solid var(--border-glass);
+            padding: 10px 14px;
+            border-radius: 0 8px 8px 0;
+        }
+        .practice-label-before {
+            font-size: 0.72rem;
+            color: #f87171;
             font-weight: 700;
             text-transform: uppercase;
+            letter-spacing: 0.05em;
             display: block;
             margin-bottom: 4px;
         }
-        .quick-title {
-            font-size: 0.92rem;
+        .practice-label-after {
+            font-size: 0.72rem;
+            color: #34d399;
             font-weight: 700;
-            color: #ffffff;
-            line-height: 1.3;
-            margin-bottom: 8px;
-            height: 38px;
-            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: block;
+            margin-bottom: 4px;
         }
-        .quick-stars {
-            font-size: 0.75rem;
-            color: var(--gold-light);
+        .practice-item p {
+            font-size: 0.9rem;
+            color: #d4d4d8;
+            line-height: 1.55;
+        }
+
+        /* Por que vale? */
+        .why-container {
+            background: rgba(226, 184, 107, 0.03);
+            border: 1px solid rgba(226, 184, 107, 0.12);
+            padding: 16px;
+            border-radius: 12px;
+        }
+        .why-core-text {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #f4f4f6;
+            line-height: 1.6;
             margin-bottom: 12px;
         }
-        .quick-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-        .qbtn {
-            text-align: center;
-            padding: 7px 10px;
-            border-radius: 6px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .qbtn-amz { background: #f59e0b; color: #000; }
-        .qbtn-ml { background: #ffe600; color: #1e293b; }
-        .qbtn:hover { opacity: 0.9; }
-
-        /* CARDS DETALHADOS DE ALTA CONVERSÃO */
-        .item-card-v2 {
-            background: var(--bg-surface);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 40px;
-            margin-bottom: 50px;
-            box-shadow: 0 12px 36px rgba(0,0,0,0.4);
-            transition: border-color 0.2s;
-        }
-        .item-card-v2:hover {
-            border-color: rgba(212, 175, 55, 0.4);
-        }
-        .item-grid-layout {
-            display: grid;
-            grid-template-columns: 280px 1fr;
-            gap: 40px;
-        }
-        .item-visual-col {
-            text-align: center;
-        }
-        .cover-wrapper-3d {
-            margin-bottom: 20px;
-            position: relative;
-        }
-        .book-cover-real {
-            max-width: 100%;
-            height: 390px;
-            width: auto;
-            border-radius: 8px;
-            box-shadow: -8px 16px 36px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,255,255,0.08);
-            object-fit: contain;
-            transition: transform 0.3s;
-        }
-        .book-cover-real:hover {
-            transform: scale(1.02);
-        }
-        .visual-badges-box {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            align-items: center;
-        }
-        .selo-badge-gold {
-            background: linear-gradient(135deg, #d4af37, #f59e0b);
-            color: #000;
-            font-size: 0.75rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            padding: 6px 14px;
-            border-radius: 20px;
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
-        }
-        .rating-stars-badge {
-            font-size: 0.8rem;
-            color: var(--gold-light);
-            font-weight: 700;
-        }
-        .stock-verified-badge {
-            font-size: 0.75rem;
-            color: var(--emerald);
-            font-weight: 700;
-            background: rgba(16, 185, 129, 0.1);
-            border: 1px solid rgba(16, 185, 129, 0.2);
-            padding: 4px 10px;
-            border-radius: 6px;
-        }
-        .item-order-tag {
-            font-size: 0.75rem;
-            font-weight: 800;
-            color: var(--gold);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            display: block;
-            margin-bottom: 6px;
-        }
-        .item-main-title {
-            font-family: var(--font-heading);
-            font-size: 1.85rem;
-            color: #ffffff;
-            line-height: 1.3;
-            margin-bottom: 20px;
-        }
-        .light-copy-box {
-            background: rgba(20, 29, 46, 0.6);
-            border-left: 3px solid var(--gold);
-            padding: 18px 22px;
-            border-radius: 0 10px 10px 0;
-            margin-bottom: 24px;
-            position: relative;
-        }
-        .light-quote-icon {
-            font-family: var(--font-heading);
-            color: var(--gold);
-            font-size: 2.2rem;
-            line-height: 1;
-            position: absolute;
-            top: 6px;
-            left: 8px;
-            opacity: 0.3;
-        }
-        .light-copy-p {
-            font-size: 1.02rem;
-            color: #e2e8f0;
-            font-weight: 500;
-            line-height: 1.6;
-        }
-        .transformation-box {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            overflow: hidden;
-            margin-bottom: 24px;
-        }
-        .trans-header {
-            background: rgba(255, 255, 255, 0.03);
-            border-bottom: 1px solid var(--border);
-            padding: 10px 16px;
-            font-size: 0.78rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: var(--text-secondary);
-        }
-        .trans-columns {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            padding: 18px;
-            gap: 20px;
-        }
-        .trans-tag {
-            font-size: 0.75rem;
-            font-weight: 800;
-            display: inline-block;
-            margin-bottom: 6px;
-            text-transform: uppercase;
-        }
-        .tag-a { color: #f87171; }
-        .tag-b { color: #34d399; }
-        .trans-col p { font-size: 0.9rem; color: #cbd5e1; line-height: 1.5; }
-        .editorial-body {
-            font-size: 1rem;
-            color: #cbd5e1;
-            line-height: 1.7;
-            margin-bottom: 24px;
-        }
-        .editorial-body p { margin-bottom: 14px; }
-        .roi-box {
-            background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(212, 175, 55, 0.08));
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            border-radius: 12px;
-            padding: 18px 22px;
-            margin-bottom: 24px;
-        }
-        .roi-label {
-            font-size: 0.75rem;
-            font-weight: 800;
-            color: var(--gold-light);
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            margin-bottom: 6px;
-        }
-        .roi-text {
-            font-size: 0.98rem;
-            font-weight: 600;
-            color: #f1f5f9;
-            line-height: 1.5;
-        }
-        .impact-quote {
+        .why-quote {
             font-family: var(--font-heading);
             font-style: italic;
-            color: #94a3b8;
             font-size: 1.05rem;
-            border-left: 2px solid var(--border-highlight);
-            padding-left: 18px;
-            margin-bottom: 28px;
+            color: var(--accent-warm);
+            line-height: 1.45;
         }
-        .affiliate-cta-stack {
-            background: rgba(10, 15, 26, 0.6);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 22px;
+
+        /* Store Links Anti-Vendedor */
+        .store-links-wrap {
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 18px;
         }
-        .cta-heading-label {
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--text-secondary);
+        .store-intro {
+            font-size: 0.72rem;
+            color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.05em;
             display: block;
-            margin-bottom: 14px;
+            margin-bottom: 10px;
         }
-        .cta-btns-container {
+        .store-pills-row {
             display: flex;
-            flex-direction: column;
-            gap: 12px;
+            gap: 8px;
+            flex-wrap: wrap;
         }
-        .cta-btn {
-            display: flex;
-            align-items: center;
-            padding: 14px 20px;
-            border-radius: 10px;
+        .store-pill {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-primary);
             text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s;
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 8px 14px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: background 0.2s, border-color 0.2s, color 0.2s;
         }
-        .cta-btn:hover {
-            transform: translateY(-2px);
-        }
-        .cta-icon {
-            font-size: 1.5rem;
-            margin-right: 14px;
-        }
-        .cta-texts {
-            display: flex;
-            flex-direction: column;
-        }
-        .cta-action {
-            font-size: 1.05rem;
-            font-weight: 800;
-            line-height: 1.25;
-        }
-        .cta-sub {
-            font-size: 0.75rem;
-            opacity: 0.85;
-            margin-top: 2px;
-        }
-        .cta-amazon {
-            background: linear-gradient(135deg, #f59e0b, #d97706);
-            color: #000;
-            box-shadow: 0 4px 16px rgba(245, 158, 11, 0.35);
-        }
-        .cta-ml {
-            background: #ffe600;
-            color: #1e293b;
-            box-shadow: 0 4px 16px rgba(255, 230, 0, 0.25);
-        }
-        .cta-shopee {
-            background: #ee4d2d;
+        .store-pill:hover, .store-pill:active {
+            background: rgba(255, 255, 255, 0.09);
+            border-color: rgba(255, 255, 255, 0.18);
             color: #ffffff;
-            box-shadow: 0 4px 16px rgba(238, 77, 45, 0.25);
         }
-        .site-footer {
-            border-top: 1px solid var(--border);
-            padding: 40px 20px;
-            text-align: center;
-            color: var(--text-muted);
+        .store-arrow {
+            color: var(--accent-warm);
             font-size: 0.85rem;
         }
-        .footer-conar {
-            max-width: 800px;
-            margin: 0 auto 16px;
+
+        /* Sticky Bottom Pill on Mobile */
+        .sticky-mobile-pill {
+            position: fixed;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 990;
+            background: rgba(24, 24, 28, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-glass);
+            border-radius: 999px;
+            padding: 8px 18px;
+            color: var(--text-secondary);
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            transition: color 0.2s, background 0.2s;
+        }
+        .sticky-mobile-pill:hover, .sticky-mobile-pill:active {
+            color: var(--text-primary);
+            background: rgba(30, 30, 36, 0.95);
+        }
+
+        /* Footer */
+        .footer-minimal {
+            border-top: 1px solid var(--border-subtle);
+            padding: 30px 20px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
             line-height: 1.6;
         }
-        .footer-links {
+        .footer-conar-text {
+            max-width: 580px;
+            margin: 0 auto 12px;
+        }
+        .footer-links-row {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-top: 12px;
+            gap: 16px;
         }
-        .footer-links a { color: var(--gold); text-decoration: none; }
+        .footer-links-row a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        .footer-links-row a:hover { color: var(--accent-warm); }
 
-        @media (max-width: 900px) {
-            .quick-grid { grid-template-columns: repeat(2, 1fr); }
-            .item-grid-layout { grid-template-columns: 1fr; }
-            .trans-columns { grid-template-columns: 1fr; }
-            h1.article-title { font-size: 2.1rem; }
-            .book-cover-real { height: 320px; }
-        }
-        @media (max-width: 540px) {
-            .quick-grid { grid-template-columns: 1fr; }
-            .item-card-v2 { padding: 24px 16px; }
+        @media (min-width: 600px) {
+            h1.article-headline { font-size: 3rem; }
+            .book-editorial-card { padding: 34px 28px; }
+            .book-cover-img { height: 310px; }
         }
     </style>
 </head>
 <body>
-    <div id="reading-progress-bar"></div>
+    <div class="ambient-glow" aria-hidden="true"></div>
 
-    <header class="site-header">
-        <div class="header-inner">
-            <a href="/" class="brand-logo">
-                <span class="brand-crest">★</span>
-                <div>
-                    <span class="brand-name">Acervo & Referencia</span>
-                    <span class="brand-tag">Curadoria de Alta Performance</span>
-                </div>
-            </a>
-            <nav class="nav-actions">
-                <a href="/" class="nav-link">← Todos os Guias</a>
-                <a href="https://www.youtube.com/@acervo-referencia" target="_blank" rel="noopener" class="nav-link">YouTube</a>
-                <a href="https://br.pinterest.com/acervoreferencia/" target="_blank" rel="noopener" class="nav-link">Pinterest</a>
-            </nav>
+    <!-- Floating Pill Navbar -->
+    <nav class="floating-pill-nav">
+        <a href="/" class="nav-brand">
+            <span class="nav-brand-symbol">✦</span>
+            <span class="nav-brand-text">Acervo & Referencia</span>
+        </a>
+        <div class="nav-right">
+            <a href="/" class="nav-link-pill">← Início</a>
         </div>
-    </header>
+        <div class="pill-progress-bar" id="pill-progress"></div>
+    </nav>
 
-    <main class="article-container">
-        <div class="article-breadcrumb">
-            <a href="/">Início</a> › <span>Guias Editoriais</span> › <span>Viktor Frankl</span>
-        </div>
-
-        <section class="article-hero">
-            <span class="article-cat-tag">Psicologia Existencial & Filosofia</span>
-            <h1 class="article-title">Viktor Frankl e a Logoterapia: Obras Fundamentais sobre Propósito, Resiliência e Psicologia</h1>
-            <div class="article-meta-row">
-                <span>Publicado em 19 de October de 2026</span>
-                <span>•</span>
-                <span>Tempo estimado de leitura: 8 minutos</span>
-                <span>•</span>
-                <span>Curadoria Verificada</span>
+    <main class="content-container">
+        <header class="article-intro-header">
+            <span class="article-topic-tag">Psicologia Existencial & Filosofia</span>
+            <h1 class="article-headline">Viktor Frankl e a Logoterapia: Obras Fundamentais sobre Propósito, Resiliência e Psicologia</h1>
+            <div class="article-read-meta">⏱ 6 min de leitura • Notas de edição</div>
+            <div class="article-lead-text">
+                Neste ensaio dedicado às ideias e ao legado de <strong>Viktor Frankl</strong>, reunimos as leituras fundamentais e instrumentos práticos para quem deseja compreender este tema com calma e profundidade.
             </div>
-        </section>
+        </header>
 
-        <div class="editorial-lead">
-            A busca por referências sólidas e modelos comprovados exige discernimento. Nesta edição especial dedicada ao legado e método de <strong>Viktor Frankl</strong>, nossa curadoria reuniu as obras basilares e ferramentas práticas essenciais para quem deseja aprofundar-se com consistência, rigor e clareza analítica.
-        </div>
-
-        <!-- VITRINE RÁPIDA G4 ZERO-FRICTION -->
-        <section class="quick-showcase">
-            <div class="quick-header">
-                <span class="quick-badge-tag">⚡ ACESSO IMEDIATO</span>
-                <h2 class="quick-main-title">As 4 Escolhas Desta Curadoria (Vitrine Rápida)</h2>
-                <p class="quick-desc">Para quem busca decisão imediata: selecione a obra e consulte o melhor preço com estoque verificado.</p>
-            </div>
-            <div class="quick-grid">
+        <!-- Carrossel Swipe no Topo -->
+        <section class="carousel-section" id="topo-obras">
+            <div class="carousel-label">Obras desta edição (toque para navegar):</div>
+            <div class="swipe-carousel">
                 
-        <div class="quick-card">
-            <div class="quick-img-wrap">
-                <img src="midia/capas/em-busca-de-sentido-viktor-frankl.jpg" alt="Em Busca de Sentido - Viktor Frankl" class="quick-img" loading="lazy">
-                <span class="quick-num">#01</span>
+        <a href="#obra-1" class="carousel-card-item">
+            <span class="carousel-card-num">01</span>
+            <div class="carousel-card-thumb-wrap">
+                <img src="midia/capas/em-busca-de-sentido-viktor-frankl.jpg" alt="Em Busca de Sentido - Viktor Frankl" class="carousel-card-thumb" loading="lazy">
             </div>
-            <div class="quick-info">
-                <span class="quick-badge">Escolha #1 para Começar</span>
-                <h3 class="quick-title">Em Busca de Sentido - Viktor Frankl</h3>
-                <div class="quick-stars">★★★★★ <span>4.9/5</span></div>
-                <div class="quick-actions">
-                    <a href="https://www.amazon.com.br/s?k=Em+Busca+de+Sentido+-+Viktor+Frankl&tag=acervoref-20" target="_blank" rel="nofollow noopener sponsored" class="qbtn qbtn-amz">Amazon →</a>
-                    <a href="https://lista.mercadolivre.com.br/Em+Busca+de+Sentido+-+Viktor+Frankl?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="nofollow noopener sponsored" class="qbtn qbtn-ml">Mercado Livre →</a>
-                </div>
-            </div>
-        </div>
+            <span class="carousel-card-name">Em Busca de Sentido</span>
+        </a>
         
-        <div class="quick-card">
-            <div class="quick-img-wrap">
-                <img src="midia/capas/a-presenca-ignorada-de-deus-viktor-frankl.jpg" alt="A Presença Ignorada de Deus - Viktor Frankl" class="quick-img" loading="lazy">
-                <span class="quick-num">#02</span>
+        <a href="#obra-2" class="carousel-card-item">
+            <span class="carousel-card-num">02</span>
+            <div class="carousel-card-thumb-wrap">
+                <img src="midia/capas/a-presenca-ignorada-de-deus-viktor-frankl.jpg" alt="A Presença Ignorada de Deus - Viktor Frankl" class="carousel-card-thumb" loading="lazy">
             </div>
-            <div class="quick-info">
-                <span class="quick-badge">Clássico Indispensável</span>
-                <h3 class="quick-title">A Presença Ignorada de Deus - Viktor Frankl</h3>
-                <div class="quick-stars">★★★★★ <span>4.9/5</span></div>
-                <div class="quick-actions">
-                    <a href="https://www.amazon.com.br/s?k=A+Presen%C3%A7a+Ignorada+de+Deus+-+Viktor+Frankl&tag=acervoref-20" target="_blank" rel="nofollow noopener sponsored" class="qbtn qbtn-amz">Amazon →</a>
-                    <a href="https://lista.mercadolivre.com.br/A+Presen%C3%A7a+Ignorada+de+Deus+-+Viktor+Frankl?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="nofollow noopener sponsored" class="qbtn qbtn-ml">Mercado Livre →</a>
-                </div>
-            </div>
-        </div>
+            <span class="carousel-card-name">A Presença Ignorada de Deus</span>
+        </a>
         
-        <div class="quick-card">
-            <div class="quick-img-wrap">
-                <img src="midia/capas/o-homem-em-busca-de-um-sentido-ultimo-viktor-frankl.jpg" alt="O Homem em Busca de um Sentido Último - Viktor Frankl" class="quick-img" loading="lazy">
-                <span class="quick-num">#03</span>
+        <a href="#obra-3" class="carousel-card-item">
+            <span class="carousel-card-num">03</span>
+            <div class="carousel-card-thumb-wrap">
+                <img src="midia/capas/o-homem-em-busca-de-um-sentido-ultimo-viktor-frankl.jpg" alt="O Homem em Busca de um Sentido Último - Viktor Frankl" class="carousel-card-thumb" loading="lazy">
             </div>
-            <div class="quick-info">
-                <span class="quick-badge">Leitura mais Prática</span>
-                <h3 class="quick-title">O Homem em Busca de um Sentido Último - Viktor Frankl</h3>
-                <div class="quick-stars">★★★★★ <span>4.9/5</span></div>
-                <div class="quick-actions">
-                    <a href="https://www.amazon.com.br/s?k=O+Homem+em+Busca+de+um+Sentido+%C3%9Altimo+-+Viktor+Frankl&tag=acervoref-20" target="_blank" rel="nofollow noopener sponsored" class="qbtn qbtn-amz">Amazon →</a>
-                    <a href="https://lista.mercadolivre.com.br/O+Homem+em+Busca+de+um+Sentido+%C3%9Altimo+-+Viktor+Frankl?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="nofollow noopener sponsored" class="qbtn qbtn-ml">Mercado Livre →</a>
-                </div>
-            </div>
-        </div>
+            <span class="carousel-card-name">O Homem em Busca de um Sentido Último</span>
+        </a>
         
-        <div class="quick-card">
-            <div class="quick-img-wrap">
-                <img src="midia/capas/caderno-inteligente-para-diario-e-anotacoes.jpg" alt="Caderno Inteligente para Diário e Anotações" class="quick-img" loading="lazy">
-                <span class="quick-num">#04</span>
+        <a href="#obra-4" class="carousel-card-item">
+            <span class="carousel-card-num">04</span>
+            <div class="carousel-card-thumb-wrap">
+                <img src="midia/capas/caderno-inteligente-para-diario-e-anotacoes.jpg" alt="Caderno Inteligente para Diário e Anotações" class="carousel-card-thumb" loading="lazy">
             </div>
-            <div class="quick-info">
-                <span class="quick-badge">Ferramenta de Alta Performance</span>
-                <h3 class="quick-title">Caderno Inteligente para Diário e Anotações</h3>
-                <div class="quick-stars">★★★★★ <span>4.9/5</span></div>
-                <div class="quick-actions">
-                    <a href="https://www.amazon.com.br/s?k=Caderno+Inteligente+para+Di%C3%A1rio+e+Anota%C3%A7%C3%B5es&tag=acervoref-20" target="_blank" rel="nofollow noopener sponsored" class="qbtn qbtn-amz">Amazon →</a>
-                    <a href="https://lista.mercadolivre.com.br/Caderno+Inteligente+para+Di%C3%A1rio+e+Anota%C3%A7%C3%B5es?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="nofollow noopener sponsored" class="qbtn qbtn-ml">Mercado Livre →</a>
-                </div>
-            </div>
-        </div>
+            <span class="carousel-card-name">Caderno Inteligente para Diário e Anotações</span>
+        </a>
         
             </div>
         </section>
 
-        <!-- CARDS DETALHADOS DE ALTA CONVERSÃO -->
-        <section class="detailed-cards-section">
+        <!-- Seções das Obras com Abas -->
+        <section class="books-flow">
             
-        <article class="item-card-v2" id="item-1">
-            <div class="item-grid-layout">
-                <!-- Coluna Esquerda: Visual do Produto 3D -->
-                <div class="item-visual-col">
-                    <div class="cover-wrapper-3d">
-                        <img src="midia/capas/em-busca-de-sentido-viktor-frankl.jpg" alt="Em Busca de Sentido - Viktor Frankl" class="book-cover-real" loading="lazy">
-                    </div>
-                    <div class="visual-badges-box">
-                        <div class="selo-badge-gold">Escolha #1 para Começar</div>
-                        <div class="rating-stars-badge">★★★★★ <span>4.9/5 (Consagrado)</span></div>
-                        <div class="stock-verified-badge">✓ Verificado em Estoque</div>
+        <article class="book-editorial-card" id="obra-1">
+            <div class="book-top-bar">
+                <span class="book-order-badge">01 / 04</span>
+                <span class="book-editorial-tag">Ponto de partida</span>
+            </div>
+
+            <!-- Capa 3D Reativa ao Scroll -->
+            <div class="book-cover-stage">
+                <div class="book-cover-3d" data-scroll-book>
+                    <img src="midia/capas/em-busca-de-sentido-viktor-frankl.jpg" alt="Em Busca de Sentido - Viktor Frankl" class="book-cover-img" loading="lazy">
+                    <div class="book-spine-shine"></div>
+                </div>
+            </div>
+
+            <div class="book-text-header">
+                <h2 class="book-title">Em Busca de Sentido - Viktor Frankl</h2>
+                <p class="book-hook-quote">&ldquo;Quem tem uma razão clara para viver consegue atravessar quase qualquer desafio. O sofrimento deixa de ser apenas dor quando encontramos um propósito que justifica a perseverança.&rdquo;</p>
+            </div>
+
+            <!-- Segmented Control de 3 Abas (Apple Books Style) -->
+            <div class="segmented-control" role="tablist">
+                <button class="seg-btn active" data-tab-target="idea-1" onclick="switchTab(this, 'idea-1')">A Ideia Central</button>
+                <button class="seg-btn" data-tab-target="practice-1" onclick="switchTab(this, 'practice-1')">Na Prática</button>
+                <button class="seg-btn" data-tab-target="why-1" onclick="switchTab(this, 'why-1')">Por que vale?</button>
+            </div>
+
+            <div class="tab-panels-wrapper">
+                <!-- Aba 1: A Ideia Central -->
+                <div class="tab-panel active" id="idea-1">
+                    <div class="editorial-prose">
+                        <p>Nascido da experiência extrema do psiquiatra austríaco Viktor Frankl nos campos de concentração da Segunda Guerra, 'Em Busca de Sentido' é uma das obras mais comoventes e lúcidas da psicologia do século XX. Frankl observou que os prisioneiros que preservavam a integridade espiritual eram aqueles ancorados em um objetivo futuro concreto.</p><p>A partir desse testemunho, ele formalizou a Logoterapia, mostrando que a motivação primária do ser humano não é o prazer nem o poder, mas a busca por sentido. Uma leitura transformadora sobre resiliência, dignidade e liberdade interior.</p>
                     </div>
                 </div>
 
-                <!-- Coluna Direita: Copywriting de Alta Conversão -->
-                <div class="item-content-col">
-                    <div class="item-header-meta">
-                        <span class="item-order-tag">#01 Curadoria Editorial</span>
-                        <h2 class="item-main-title">Em Busca de Sentido - Viktor Frankl</h2>
-                    </div>
-
-                    <!-- Gancho Light Copy (Leandro Ladeira) -->
-                    <div class="light-copy-box">
-                        <span class="light-quote-icon">“</span>
-                        <p class="light-copy-p">Quem tem um 'porquê' suporta quase qualquer 'como', mas a maioria das pessoas passa a vida tentando acumular conforto sem saber pelo que vale a pena sofrer. O sucesso, como a felicidade, não pode ser perseguido: ele deve ser uma consequência não intencional de um propósito maior.</p>
-                    </div>
-
-                    <!-- Box A Transformação: Estado A vs Estado B (Érico Rocha) -->
-                    <div class="transformation-box">
-                        <div class="trans-header">A Transformação Mental & Prática</div>
-                        <div class="trans-columns">
-                            <div class="trans-col state-a">
-                                <span class="trans-tag tag-a">❌ Antes (Estado A)</span>
-                                <p>Sente-se à deriva no chamado 'vazio existencial', culpando circunstâncias externas por frustrações e buscando alívio em distrações superficiais.</p>
-                            </div>
-                            <div class="trans-col state-b">
-                                <span class="trans-tag tag-b">✅ Depois (Estado B / Roma)</span>
-                                <p>Assume a responsabilidade incondicional pela própria atitude, encontrando significado no trabalho, no amor e na superação digna de adversidades.</p>
-                            </div>
+                <!-- Aba 2: Na Prática -->
+                <div class="tab-panel" id="practice-1">
+                    <div class="practice-container">
+                        <div class="practice-item">
+                            <span class="practice-label-before">O que se pensa antes de ler:</span>
+                            <p>Sentir-se desorientado diante de adversidades, esperando que as circunstâncias externas mudem para encontrar paz.</p>
+                        </div>
+                        <div class="practice-item">
+                            <span class="practice-label-after">O que muda na prática depois:</span>
+                            <p>Assumir a liberdade de escolher a própria atitude interior, encontrando significado no trabalho, nos laços e na superação.</p>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Análise Editorial (Thiago Nigro / Bruno Perini) -->
-                    <div class="editorial-body">
-                        <p>Nascido no inferno de Auschwitz e Dachau, o relato do psiquiatra austríaco Viktor Frankl transcende o testemunho histórico para fundar a Logoterapia — a terceira escola vienense de psicoterapia. Frankl demonstrou empiricamente que os prisioneiros que mantinham a saúde mental eram aqueles ancorados em um significado futuro concreto.</p><p>A segunda parte do livro sistematiza os pilares da busca humana por sentido, mostrando como a vontade de sentido é a força motivacional primária do ser humano. Uma obra monumental que recalibra o senso de resiliência e maturidade emocional de qualquer profissional.</p>
+                <!-- Aba 3: Por que vale? -->
+                <div class="tab-panel" id="why-1">
+                    <div class="why-container">
+                        <p class="why-core-text">Oferece uma estrutura de pensamento serena para lidar com períodos de incerteza e crise pessoal.</p>
+                        <blockquote class="why-quote">&ldquo;Quando não somos mais capazes de mudar uma situação, somos desafiados a mudar a nós mesmos.&rdquo;</blockquote>
                     </div>
+                </div>
+            </div>
 
-                    <!-- Box ROI da Leitura -->
-                    <div class="roi-box">
-                        <div class="roi-label">💎 Por que vale o investimento?</div>
-                        <p class="roi-text">Instala uma blindagem psicológica contra crises e frustrações que nenhuma sessão isolada de mentoria consegue replicar.</p>
-                    </div>
-
-                    <!-- Citação de Impacto -->
-                    <blockquote class="impact-quote">
-                        &ldquo;Quando não somos mais capazes de mudar uma situação, somos desafiados a mudar a nós mesmos.&rdquo;
-                    </blockquote>
-
-                    <!-- Botões de Compra Largos com Micro-Copy -->
-                    <div class="affiliate-cta-stack">
-                        <span class="cta-heading-label">Consulte Preço Oficial e Disponibilidade de Entrega:</span>
-                        <div class="cta-btns-container">
-                            <a href="https://www.amazon.com.br/s?k=Em+Busca+de+Sentido+-+Viktor+Frankl&tag=acervoref-20" target="_blank" rel="nofollow noopener sponsored" class="cta-btn cta-amazon">
-                                <span class="cta-icon">🛒</span>
-                                <div class="cta-texts">
-                                    <span class="cta-action">Ver Preço Hoje na Amazon Brasil →</span>
-                                    <span class="cta-sub">Entrega Rápida Prime & Versão Kindle Disponível</span>
-                                </div>
-                            </a>
-                            <a href="https://lista.mercadolivre.com.br/Em+Busca+de+Sentido+-+Viktor+Frankl?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="nofollow noopener sponsored" class="cta-btn cta-ml">
-                                <span class="cta-icon">⚡</span>
-                                <div class="cta-texts">
-                                    <span class="cta-action">Ver Oferta no Mercado Livre →</span>
-                                    <span class="cta-sub">Envio Full & Compra 100% Garantida</span>
-                                </div>
-                            </a>
-                            <a href="https://shopee.com.br/search?keyword=Em+Busca+de+Sentido+-+Viktor+Frankl&af_id=shopee_afiliado_id" target="_blank" rel="nofollow noopener sponsored" class="cta-btn cta-shopee">
-                                <span class="cta-icon">🔥</span>
-                                <div class="cta-texts">
-                                    <span class="cta-action">Conferir Oferta na Shopee →</span>
-                                    <span class="cta-sub">Cupons de Frete e Desconto no App</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+            <!-- Links de Lojas Elegantes e Anti-Vendedor -->
+            <div class="store-links-wrap">
+                <span class="store-intro">Conferir edição nas lojas oficiais:</span>
+                <div class="store-pills-row">
+                    <a href="https://www.amazon.com.br/s?k=Em+Busca+de+Sentido+-+Viktor+Frankl&tag=acervoref-20" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
+                        <span class="store-arrow">↗</span> Amazon
+                    </a>
+                    <a href="https://lista.mercadolivre.com.br/Em+Busca+de+Sentido+-+Viktor+Frankl?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
+                        <span class="store-arrow">↗</span> Mercado Livre
+                    </a>
+                    <a href="https://shopee.com.br/search?keyword=Em+Busca+de+Sentido+-+Viktor+Frankl&af_id=shopee_afiliado_id" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
+                        <span class="store-arrow">↗</span> Shopee
+                    </a>
                 </div>
             </div>
         </article>
         
-        <article class="item-card-v2" id="item-2">
-            <div class="item-grid-layout">
-                <!-- Coluna Esquerda: Visual do Produto 3D -->
-                <div class="item-visual-col">
-                    <div class="cover-wrapper-3d">
-                        <img src="midia/capas/a-presenca-ignorada-de-deus-viktor-frankl.jpg" alt="A Presença Ignorada de Deus - Viktor Frankl" class="book-cover-real" loading="lazy">
-                    </div>
-                    <div class="visual-badges-box">
-                        <div class="selo-badge-gold">Clássico Indispensável</div>
-                        <div class="rating-stars-badge">★★★★★ <span>4.9/5 (Consagrado)</span></div>
-                        <div class="stock-verified-badge">✓ Verificado em Estoque</div>
+        <article class="book-editorial-card" id="obra-2">
+            <div class="book-top-bar">
+                <span class="book-order-badge">02 / 04</span>
+                <span class="book-editorial-tag">Visão aprofundada</span>
+            </div>
+
+            <!-- Capa 3D Reativa ao Scroll -->
+            <div class="book-cover-stage">
+                <div class="book-cover-3d" data-scroll-book>
+                    <img src="midia/capas/a-presenca-ignorada-de-deus-viktor-frankl.jpg" alt="A Presença Ignorada de Deus - Viktor Frankl" class="book-cover-img" loading="lazy">
+                    <div class="book-spine-shine"></div>
+                </div>
+            </div>
+
+            <div class="book-text-header">
+                <h2 class="book-title">A Presença Ignorada de Deus - Viktor Frankl</h2>
+                <p class="book-hook-quote">&ldquo;A psicologia passou anos investigando os impulsos instintivos do ser humano, esquecendo que há também uma necessidade genuína de transcendência e responsabilidade ética na consciência moral de cada indivíduo.&rdquo;</p>
+            </div>
+
+            <!-- Segmented Control de 3 Abas (Apple Books Style) -->
+            <div class="segmented-control" role="tablist">
+                <button class="seg-btn active" data-tab-target="idea-2" onclick="switchTab(this, 'idea-2')">A Ideia Central</button>
+                <button class="seg-btn" data-tab-target="practice-2" onclick="switchTab(this, 'practice-2')">Na Prática</button>
+                <button class="seg-btn" data-tab-target="why-2" onclick="switchTab(this, 'why-2')">Por que vale?</button>
+            </div>
+
+            <div class="tab-panels-wrapper">
+                <!-- Aba 1: A Ideia Central -->
+                <div class="tab-panel active" id="idea-2">
+                    <div class="editorial-prose">
+                        <p>Neste ensaio pioneiro, Frankl amplia a compreensão clássica do inconsciente para examinar o que chama de 'inconsciente espiritual' ou noético. Com base em observações clínicas, ele defende que a busca por significado e o senso de dever moral são traços fundamentais da condição humana.</p><p>A obra preenche um vazio importante na literatura de saúde mental, dialogando com a filosofia e a espiritualidade de modo rigoroso e sem dogmas. Uma leitura enriquecedora para quem busca profundidade além das fórmulas prontas de autoajuda.</p>
                     </div>
                 </div>
 
-                <!-- Coluna Direita: Copywriting de Alta Conversão -->
-                <div class="item-content-col">
-                    <div class="item-header-meta">
-                        <span class="item-order-tag">#02 Curadoria Editorial</span>
-                        <h2 class="item-main-title">A Presença Ignorada de Deus - Viktor Frankl</h2>
-                    </div>
-
-                    <!-- Gancho Light Copy (Leandro Ladeira) -->
-                    <div class="light-copy-box">
-                        <span class="light-quote-icon">“</span>
-                        <p class="light-copy-p">A psicologia moderna passou décadas dissecando os impulsos inconscientes primitivos do ser humano, esquecendo que no mesmo inconsciente reside uma sede profunda de transcendência ética e espiritual. O homem não é movido apenas por instintos; é movido por responsabilidade.</p>
-                    </div>
-
-                    <!-- Box A Transformação: Estado A vs Estado B (Érico Rocha) -->
-                    <div class="transformation-box">
-                        <div class="trans-header">A Transformação Mental & Prática</div>
-                        <div class="trans-columns">
-                            <div class="trans-col state-a">
-                                <span class="trans-tag tag-a">❌ Antes (Estado A)</span>
-                                <p>Enxerga a espiritualidade e a consciência moral apenas como construções sociais ou repressões, sem entender sua raiz ontológica profunda.</p>
-                            </div>
-                            <div class="trans-col state-b">
-                                <span class="trans-tag tag-b">✅ Depois (Estado B / Roma)</span>
-                                <p>Integra a dimensão noética (espiritual e moral) ao autocuidado psicológico, vivendo com integridade moral e discernimento ético superior.</p>
-                            </div>
+                <!-- Aba 2: Na Prática -->
+                <div class="tab-panel" id="practice-2">
+                    <div class="practice-container">
+                        <div class="practice-item">
+                            <span class="practice-label-before">O que se pensa antes de ler:</span>
+                            <p>Tratar questionamentos existenciais e morais apenas como sintomas de ansiedade ou fraqueza psicológica.</p>
+                        </div>
+                        <div class="practice-item">
+                            <span class="practice-label-after">O que muda na prática depois:</span>
+                            <p>Integrar a dimensão ética e os valores profundos ao autocuidado, vivendo com mais inteireza e coerência interior.</p>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Análise Editorial (Thiago Nigro / Bruno Perini) -->
-                    <div class="editorial-body">
-                        <p>Em 'A Presença Ignorada de Deus', Frankl expande o conceito freudiano de inconsciente para demonstrar a existência de um 'inconsciente espiritual'. Através de análises clínicas e rigor fenomenológico, ele demonstra que a consciência moral não é um mero produto da cultura, mas a própria essência da humanidade em diálogo com o transcendente.</p><p>A obra preenche a lacuna deixada pelo materialismo reducionista na saúde mental, oferecendo a médicos, psicólogos e leitores atentos uma compreensão rica da dignidade humana. Uma leitura desafiadora e profundamente libertadora.</p>
+                <!-- Aba 3: Por que vale? -->
+                <div class="tab-panel" id="why-2">
+                    <div class="why-container">
+                        <p class="why-core-text">Ajuda a alinhar decisões cotidianas com convicções éticas duradouras, trazendo paz de espírito.</p>
+                        <blockquote class="why-quote">&ldquo;A consciência moral é a voz da nossa responsabilidade diante da vida.&rdquo;</blockquote>
                     </div>
+                </div>
+            </div>
 
-                    <!-- Box ROI da Leitura -->
-                    <div class="roi-box">
-                        <div class="roi-label">💎 Por que vale o investimento?</div>
-                        <p class="roi-text">Reconecta o leitor com a dimensão ética e espiritual que dá sustentação moral a decisões de longo prazo.</p>
-                    </div>
-
-                    <!-- Citação de Impacto -->
-                    <blockquote class="impact-quote">
-                        &ldquo;A consciência é a voz da transcendência e da responsabilidade humana.&rdquo;
-                    </blockquote>
-
-                    <!-- Botões de Compra Largos com Micro-Copy -->
-                    <div class="affiliate-cta-stack">
-                        <span class="cta-heading-label">Consulte Preço Oficial e Disponibilidade de Entrega:</span>
-                        <div class="cta-btns-container">
-                            <a href="https://www.amazon.com.br/s?k=A+Presen%C3%A7a+Ignorada+de+Deus+-+Viktor+Frankl&tag=acervoref-20" target="_blank" rel="nofollow noopener sponsored" class="cta-btn cta-amazon">
-                                <span class="cta-icon">🛒</span>
-                                <div class="cta-texts">
-                                    <span class="cta-action">Ver Preço Hoje na Amazon Brasil →</span>
-                                    <span class="cta-sub">Entrega Rápida Prime & Versão Kindle Disponível</span>
-                                </div>
-                            </a>
-                            <a href="https://lista.mercadolivre.com.br/A+Presen%C3%A7a+Ignorada+de+Deus+-+Viktor+Frankl?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="nofollow noopener sponsored" class="cta-btn cta-ml">
-                                <span class="cta-icon">⚡</span>
-                                <div class="cta-texts">
-                                    <span class="cta-action">Ver Oferta no Mercado Livre →</span>
-                                    <span class="cta-sub">Envio Full & Compra 100% Garantida</span>
-                                </div>
-                            </a>
-                            <a href="https://shopee.com.br/search?keyword=A+Presen%C3%A7a+Ignorada+de+Deus+-+Viktor+Frankl&af_id=shopee_afiliado_id" target="_blank" rel="nofollow noopener sponsored" class="cta-btn cta-shopee">
-                                <span class="cta-icon">🔥</span>
-                                <div class="cta-texts">
-                                    <span class="cta-action">Conferir Oferta na Shopee →</span>
-                                    <span class="cta-sub">Cupons de Frete e Desconto no App</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+            <!-- Links de Lojas Elegantes e Anti-Vendedor -->
+            <div class="store-links-wrap">
+                <span class="store-intro">Conferir edição nas lojas oficiais:</span>
+                <div class="store-pills-row">
+                    <a href="https://www.amazon.com.br/s?k=A+Presen%C3%A7a+Ignorada+de+Deus+-+Viktor+Frankl&tag=acervoref-20" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
+                        <span class="store-arrow">↗</span> Amazon
+                    </a>
+                    <a href="https://lista.mercadolivre.com.br/A+Presen%C3%A7a+Ignorada+de+Deus+-+Viktor+Frankl?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
+                        <span class="store-arrow">↗</span> Mercado Livre
+                    </a>
+                    <a href="https://shopee.com.br/search?keyword=A+Presen%C3%A7a+Ignorada+de+Deus+-+Viktor+Frankl&af_id=shopee_afiliado_id" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
+                        <span class="store-arrow">↗</span> Shopee
+                    </a>
                 </div>
             </div>
         </article>
         
-        <article class="item-card-v2" id="item-3">
-            <div class="item-grid-layout">
-                <!-- Coluna Esquerda: Visual do Produto 3D -->
-                <div class="item-visual-col">
-                    <div class="cover-wrapper-3d">
-                        <img src="midia/capas/o-homem-em-busca-de-um-sentido-ultimo-viktor-frankl.jpg" alt="O Homem em Busca de um Sentido Último - Viktor Frankl" class="book-cover-real" loading="lazy">
-                    </div>
-                    <div class="visual-badges-box">
-                        <div class="selo-badge-gold">Leitura mais Prática</div>
-                        <div class="rating-stars-badge">★★★★★ <span>4.9/5 (Consagrado)</span></div>
-                        <div class="stock-verified-badge">✓ Verificado em Estoque</div>
+        <article class="book-editorial-card" id="obra-3">
+            <div class="book-top-bar">
+                <span class="book-order-badge">03 / 04</span>
+                <span class="book-editorial-tag">Leitura rápida</span>
+            </div>
+
+            <!-- Capa 3D Reativa ao Scroll -->
+            <div class="book-cover-stage">
+                <div class="book-cover-3d" data-scroll-book>
+                    <img src="midia/capas/o-homem-em-busca-de-um-sentido-ultimo-viktor-frankl.jpg" alt="O Homem em Busca de um Sentido Último - Viktor Frankl" class="book-cover-img" loading="lazy">
+                    <div class="book-spine-shine"></div>
+                </div>
+            </div>
+
+            <div class="book-text-header">
+                <h2 class="book-title">O Homem em Busca de um Sentido Último - Viktor Frankl</h2>
+                <p class="book-hook-quote">&ldquo;Muitas vezes o cansaço do dia a dia não vem de trabalhar demais, mas de trabalhar sem saber o porquê. O ser humano não precisa de uma rotina sem desafios, mas de metas dignas pelas quais valha a pena se dedicar.&rdquo;</p>
+            </div>
+
+            <!-- Segmented Control de 3 Abas (Apple Books Style) -->
+            <div class="segmented-control" role="tablist">
+                <button class="seg-btn active" data-tab-target="idea-3" onclick="switchTab(this, 'idea-3')">A Ideia Central</button>
+                <button class="seg-btn" data-tab-target="practice-3" onclick="switchTab(this, 'practice-3')">Na Prática</button>
+                <button class="seg-btn" data-tab-target="why-3" onclick="switchTab(this, 'why-3')">Por que vale?</button>
+            </div>
+
+            <div class="tab-panels-wrapper">
+                <!-- Aba 1: A Ideia Central -->
+                <div class="tab-panel active" id="idea-3">
+                    <div class="editorial-prose">
+                        <p>Esta coletânea de conferências e ensaios de maturidade de Frankl aprofunda as bases teóricas da Logoterapia e responde aos dilemas da sociedade contemporânea. O autor aborda o 'vazio existencial' em meio à abundância material e explica por que a busca por bem-estar não substitui o compromisso com valores reais.</p><p>Com clareza e empatia, Frankl mostra que a saúde mental se apoia em uma tensão produtiva entre quem somos e aquilo que podemos realizar no mundo. Uma leitura reconfortante para quem lida com responsabilidades e decisões importantes.</p>
                     </div>
                 </div>
 
-                <!-- Coluna Direita: Copywriting de Alta Conversão -->
-                <div class="item-content-col">
-                    <div class="item-header-meta">
-                        <span class="item-order-tag">#03 Curadoria Editorial</span>
-                        <h2 class="item-main-title">O Homem em Busca de um Sentido Último - Viktor Frankl</h2>
-                    </div>
-
-                    <!-- Gancho Light Copy (Leandro Ladeira) -->
-                    <div class="light-copy-box">
-                        <span class="light-quote-icon">“</span>
-                        <p class="light-copy-p">O maior problema da sociedade moderna não é a falta de recursos materiais, mas a proliferação epidêmica do vazio existencial disfarçado de estresse ou tédio. Não fomos feitos para viver sem tensão: a saúde mental exige a tensão salutar entre o que você é e o que você deve realizar.</p>
-                    </div>
-
-                    <!-- Box A Transformação: Estado A vs Estado B (Érico Rocha) -->
-                    <div class="transformation-box">
-                        <div class="trans-header">A Transformação Mental & Prática</div>
-                        <div class="trans-columns">
-                            <div class="trans-col state-a">
-                                <span class="trans-tag tag-a">❌ Antes (Estado A)</span>
-                                <p>Tenta eliminar qualquer desconforto ou desafio da rotina, gerando um estado de tédio existencial e dependência crônica de estímulos rápidos.</p>
-                            </div>
-                            <div class="trans-col state-b">
-                                <span class="trans-tag tag-b">✅ Depois (Estado B / Roma)</span>
-                                <p>Aprende a cultivar a 'noodinâmica' — a tensão produtiva orientada para objetivos dignos que gera saúde mental e realizações duradouras.</p>
-                            </div>
+                <!-- Aba 2: Na Prática -->
+                <div class="tab-panel" id="practice-3">
+                    <div class="practice-container">
+                        <div class="practice-item">
+                            <span class="practice-label-before">O que se pensa antes de ler:</span>
+                            <p>Tentar fugir de qualquer desconforto, caindo na armadilha do tédio existencial e da desmotivação.</p>
+                        </div>
+                        <div class="practice-item">
+                            <span class="practice-label-after">O que muda na prática depois:</span>
+                            <p>Aprender a direcionar o esforço para projetos com sentido, experimentando a satisfação do crescimento real.</p>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Análise Editorial (Thiago Nigro / Bruno Perini) -->
-                    <div class="editorial-body">
-                        <p>Esta coletânea de ensaios amadurecidos de Frankl aprofunda os fundamentos teóricos da Logoterapia e responde diretamente aos críticos do existencialismo. O autor examina temas como a neurose dominical, o desemprego psicológico e a busca de sentido em sociedades hiperconsumistas com clareza cristalina.</p><p>Com exemplos clínicos tocantes e rigor conceitual, Frankl mostra como a liberdade da vontade, a vontade de sentido e o sentido da vida formam um tripé inabalável para navegar qualquer crise contemporânea. Um guia imprescindível para quem lidera pessoas ou lida com decisões de alta pressão.</p>
+                <!-- Aba 3: Por que vale? -->
+                <div class="tab-panel" id="why-3">
+                    <div class="why-container">
+                        <p class="why-core-text">Ajuda a selecionar prioridades autênticas, evitando o desperdício de energia com expectativas vazias.</p>
+                        <blockquote class="why-quote">&ldquo;O ser humano não precisa de um estado sem tensão, mas da dedicação a uma tarefa que valha a pena.&rdquo;</blockquote>
                     </div>
+                </div>
+            </div>
 
-                    <!-- Box ROI da Leitura -->
-                    <div class="roi-box">
-                        <div class="roi-label">💎 Por que vale o investimento?</div>
-                        <p class="roi-text">Fornece clareza existencial para escolher projetos com propósito autêntico, eliminando anos de desperdício em metas que não importam.</p>
-                    </div>
-
-                    <!-- Citação de Impacto -->
-                    <blockquote class="impact-quote">
-                        &ldquo;O ser humano não precisa de um estado de homeostase sem tensão, mas da luta por uma meta que valha a pena.&rdquo;
-                    </blockquote>
-
-                    <!-- Botões de Compra Largos com Micro-Copy -->
-                    <div class="affiliate-cta-stack">
-                        <span class="cta-heading-label">Consulte Preço Oficial e Disponibilidade de Entrega:</span>
-                        <div class="cta-btns-container">
-                            <a href="https://www.amazon.com.br/s?k=O+Homem+em+Busca+de+um+Sentido+%C3%9Altimo+-+Viktor+Frankl&tag=acervoref-20" target="_blank" rel="nofollow noopener sponsored" class="cta-btn cta-amazon">
-                                <span class="cta-icon">🛒</span>
-                                <div class="cta-texts">
-                                    <span class="cta-action">Ver Preço Hoje na Amazon Brasil →</span>
-                                    <span class="cta-sub">Entrega Rápida Prime & Versão Kindle Disponível</span>
-                                </div>
-                            </a>
-                            <a href="https://lista.mercadolivre.com.br/O+Homem+em+Busca+de+um+Sentido+%C3%9Altimo+-+Viktor+Frankl?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="nofollow noopener sponsored" class="cta-btn cta-ml">
-                                <span class="cta-icon">⚡</span>
-                                <div class="cta-texts">
-                                    <span class="cta-action">Ver Oferta no Mercado Livre →</span>
-                                    <span class="cta-sub">Envio Full & Compra 100% Garantida</span>
-                                </div>
-                            </a>
-                            <a href="https://shopee.com.br/search?keyword=O+Homem+em+Busca+de+um+Sentido+%C3%9Altimo+-+Viktor+Frankl&af_id=shopee_afiliado_id" target="_blank" rel="nofollow noopener sponsored" class="cta-btn cta-shopee">
-                                <span class="cta-icon">🔥</span>
-                                <div class="cta-texts">
-                                    <span class="cta-action">Conferir Oferta na Shopee →</span>
-                                    <span class="cta-sub">Cupons de Frete e Desconto no App</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+            <!-- Links de Lojas Elegantes e Anti-Vendedor -->
+            <div class="store-links-wrap">
+                <span class="store-intro">Conferir edição nas lojas oficiais:</span>
+                <div class="store-pills-row">
+                    <a href="https://www.amazon.com.br/s?k=O+Homem+em+Busca+de+um+Sentido+%C3%9Altimo+-+Viktor+Frankl&tag=acervoref-20" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
+                        <span class="store-arrow">↗</span> Amazon
+                    </a>
+                    <a href="https://lista.mercadolivre.com.br/O+Homem+em+Busca+de+um+Sentido+%C3%9Altimo+-+Viktor+Frankl?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
+                        <span class="store-arrow">↗</span> Mercado Livre
+                    </a>
+                    <a href="https://shopee.com.br/search?keyword=O+Homem+em+Busca+de+um+Sentido+%C3%9Altimo+-+Viktor+Frankl&af_id=shopee_afiliado_id" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
+                        <span class="store-arrow">↗</span> Shopee
+                    </a>
                 </div>
             </div>
         </article>
         
-        <article class="item-card-v2" id="item-4">
-            <div class="item-grid-layout">
-                <!-- Coluna Esquerda: Visual do Produto 3D -->
-                <div class="item-visual-col">
-                    <div class="cover-wrapper-3d">
-                        <img src="midia/capas/caderno-inteligente-para-diario-e-anotacoes.jpg" alt="Caderno Inteligente para Diário e Anotações" class="book-cover-real" loading="lazy">
-                    </div>
-                    <div class="visual-badges-box">
-                        <div class="selo-badge-gold">Ferramenta de Alta Performance</div>
-                        <div class="rating-stars-badge">★★★★★ <span>4.9/5 (Consagrado)</span></div>
-                        <div class="stock-verified-badge">✓ Verificado em Estoque</div>
+        <article class="book-editorial-card" id="obra-4">
+            <div class="book-top-bar">
+                <span class="book-order-badge">04 / 04</span>
+                <span class="book-editorial-tag">Complemento prático</span>
+            </div>
+
+            <!-- Capa 3D Reativa ao Scroll -->
+            <div class="book-cover-stage">
+                <div class="book-cover-3d" data-scroll-book>
+                    <img src="midia/capas/caderno-inteligente-para-diario-e-anotacoes.jpg" alt="Caderno Inteligente para Diário e Anotações" class="book-cover-img" loading="lazy">
+                    <div class="book-spine-shine"></div>
+                </div>
+            </div>
+
+            <div class="book-text-header">
+                <h2 class="book-title">Caderno Inteligente para Diário e Anotações</h2>
+                <p class="book-hook-quote">&ldquo;Ideias soltas na cabeça se misturam e geram ansiedade; organizadas no papel com calma, tornam-se planos claros. A escrita à mão desacelera o ritmo e ajuda a enxergar prioridades com nitidez.&rdquo;</p>
+            </div>
+
+            <!-- Segmented Control de 3 Abas (Apple Books Style) -->
+            <div class="segmented-control" role="tablist">
+                <button class="seg-btn active" data-tab-target="idea-4" onclick="switchTab(this, 'idea-4')">A Ideia Central</button>
+                <button class="seg-btn" data-tab-target="practice-4" onclick="switchTab(this, 'practice-4')">Na Prática</button>
+                <button class="seg-btn" data-tab-target="why-4" onclick="switchTab(this, 'why-4')">Por que vale?</button>
+            </div>
+
+            <div class="tab-panels-wrapper">
+                <!-- Aba 1: A Ideia Central -->
+                <div class="tab-panel active" id="idea-4">
+                    <div class="editorial-prose">
+                        <p>Escrever à mão estimula áreas cerebrais ligadas à síntese e à memória que a digitação rápida no teclado costuma ignorar. O caderno de folhas reposicionáveis une a liberdade de mover tópicos à elegância do registro durável.</p><p>Para quem pratica a reflexão diária ou quer resumir os pontos centrais dos livros que lê, ter um espaço físico bem cuidado faz toda a diferença no hábito. Um instrumento prático para clarear os pensamentos.</p>
                     </div>
                 </div>
 
-                <!-- Coluna Direita: Copywriting de Alta Conversão -->
-                <div class="item-content-col">
-                    <div class="item-header-meta">
-                        <span class="item-order-tag">#04 Curadoria Editorial</span>
-                        <h2 class="item-main-title">Caderno Inteligente para Diário e Anotações</h2>
-                    </div>
-
-                    <!-- Gancho Light Copy (Leandro Ladeira) -->
-                    <div class="light-copy-box">
-                        <span class="light-quote-icon">“</span>
-                        <p class="light-copy-p">Quem não coloca os pensamentos no papel é refém da velocidade desordenada das próprias ideias. A clareza mental não surge magicamente na cabeça: ela é conquistada na ponta da caneta através da reflexão deliberada e do registro diário.</p>
-                    </div>
-
-                    <!-- Box A Transformação: Estado A vs Estado B (Érico Rocha) -->
-                    <div class="transformation-box">
-                        <div class="trans-header">A Transformação Mental & Prática</div>
-                        <div class="trans-columns">
-                            <div class="trans-col state-a">
-                                <span class="trans-tag tag-a">❌ Antes (Estado A)</span>
-                                <p>Deixa insights e ideias dispersos em notas digitais que nunca relê, sem processar emoções nem registrar o aprendizado com profundidade.</p>
-                            </div>
-                            <div class="trans-col state-b">
-                                <span class="trans-tag tag-b">✅ Depois (Estado B / Roma)</span>
-                                <p>Constrói o hábito poderoso do 'journaling' e reflexão diária, organizando prioridades com páginas reposicionáveis e retenção de longo prazo.</p>
-                            </div>
+                <!-- Aba 2: Na Prática -->
+                <div class="tab-panel" id="practice-4">
+                    <div class="practice-container">
+                        <div class="practice-item">
+                            <span class="practice-label-before">O que se pensa antes de ler:</span>
+                            <p>Deixar anotações e reflexões dispersas em aplicativos que nunca são relidos, sem reter os insights das leituras.</p>
+                        </div>
+                        <div class="practice-item">
+                            <span class="practice-label-after">O que muda na prática depois:</span>
+                            <p>Manter um diário de aprendizado organizado, revisando páginas e consolidando conclusões com regularidade.</p>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Análise Editorial (Thiago Nigro / Bruno Perini) -->
-                    <div class="editorial-body">
-                        <p>Para colocar em prática os exercícios de reflexão da Logoterapia ou organizar metas de trabalho focado, dispor de um caderno com sistema de discos e reposicionamento modular é uma vantagem operacional expressiva. O Caderno Inteligente une o prazer da escrita manual à versatilidade do arquivamento digital.</p><p>Estudos cognitivos comprovam que a escrita à mão ativa circuitos neurais de retenção e síntese que a digitação não alcança. Ter um espaço físico nobre para sintetizar leituras, alinhar propósitos e registrar o avanço diário é um divisor de águas na maturidade pessoal.</p>
+                <!-- Aba 3: Por que vale? -->
+                <div class="tab-panel" id="why-4">
+                    <div class="why-container">
+                        <p class="why-core-text">Colocar as ideias no papel é o caminho mais rápido para transformar inquietação em foco e ação tranquila.</p>
+                        <blockquote class="why-quote">&ldquo;Pensar na folha de papel é dar forma e ordem ao que antes era apenas pressentimento.&rdquo;</blockquote>
                     </div>
+                </div>
+            </div>
 
-                    <!-- Box ROI da Leitura -->
-                    <div class="roi-box">
-                        <div class="roi-label">💎 Por que vale o investimento?</div>
-                        <p class="roi-text">Transforma reflexões diárias em clareza estratégica, poupando meses de desvio de foco e ansiedade desnecessária.</p>
-                    </div>
-
-                    <!-- Citação de Impacto -->
-                    <blockquote class="impact-quote">
-                        &ldquo;Pensar no papel é a forma mais eficaz de transformar caos mental em estratégia límpida de execução.&rdquo;
-                    </blockquote>
-
-                    <!-- Botões de Compra Largos com Micro-Copy -->
-                    <div class="affiliate-cta-stack">
-                        <span class="cta-heading-label">Consulte Preço Oficial e Disponibilidade de Entrega:</span>
-                        <div class="cta-btns-container">
-                            <a href="https://www.amazon.com.br/s?k=Caderno+Inteligente+para+Di%C3%A1rio+e+Anota%C3%A7%C3%B5es&tag=acervoref-20" target="_blank" rel="nofollow noopener sponsored" class="cta-btn cta-amazon">
-                                <span class="cta-icon">🛒</span>
-                                <div class="cta-texts">
-                                    <span class="cta-action">Ver Preço Hoje na Amazon Brasil →</span>
-                                    <span class="cta-sub">Entrega Rápida Prime & Versão Kindle Disponível</span>
-                                </div>
-                            </a>
-                            <a href="https://lista.mercadolivre.com.br/Caderno+Inteligente+para+Di%C3%A1rio+e+Anota%C3%A7%C3%B5es?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="nofollow noopener sponsored" class="cta-btn cta-ml">
-                                <span class="cta-icon">⚡</span>
-                                <div class="cta-texts">
-                                    <span class="cta-action">Ver Oferta no Mercado Livre →</span>
-                                    <span class="cta-sub">Envio Full & Compra 100% Garantida</span>
-                                </div>
-                            </a>
-                            <a href="https://shopee.com.br/search?keyword=Caderno+Inteligente+para+Di%C3%A1rio+e+Anota%C3%A7%C3%B5es&af_id=shopee_afiliado_id" target="_blank" rel="nofollow noopener sponsored" class="cta-btn cta-shopee">
-                                <span class="cta-icon">🔥</span>
-                                <div class="cta-texts">
-                                    <span class="cta-action">Conferir Oferta na Shopee →</span>
-                                    <span class="cta-sub">Cupons de Frete e Desconto no App</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+            <!-- Links de Lojas Elegantes e Anti-Vendedor -->
+            <div class="store-links-wrap">
+                <span class="store-intro">Conferir edição nas lojas oficiais:</span>
+                <div class="store-pills-row">
+                    <a href="https://www.amazon.com.br/s?k=Caderno+Inteligente+para+Di%C3%A1rio+e+Anota%C3%A7%C3%B5es&tag=acervoref-20" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
+                        <span class="store-arrow">↗</span> Amazon
+                    </a>
+                    <a href="https://lista.mercadolivre.com.br/Caderno+Inteligente+para+Di%C3%A1rio+e+Anota%C3%A7%C3%B5es?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
+                        <span class="store-arrow">↗</span> Mercado Livre
+                    </a>
+                    <a href="https://shopee.com.br/search?keyword=Caderno+Inteligente+para+Di%C3%A1rio+e+Anota%C3%A7%C3%B5es&af_id=shopee_afiliado_id" target="_blank" rel="nofollow noopener sponsored" class="store-pill">
+                        <span class="store-arrow">↗</span> Shopee
+                    </a>
                 </div>
             </div>
         </article>
@@ -1033,25 +894,59 @@
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-conar">
+    <!-- Sticky Bottom Pill no Celular -->
+    <a href="#topo-obras" class="sticky-mobile-pill" id="sticky-pill">
+        <span>↑ Ver as 4 obras</span>
+    </a>
+
+    <footer class="footer-minimal">
+        <div class="footer-conar-text">
             Transparencia Publicitaria (#publicidade): Este guia editorial independente contem links de afiliados. Compras realizadas atraves deles podem gerar comissao sem custo adicional para voce.
         </div>
-        <p>© 2026 Acervo & Referencia • Todos os direitos reservados. Em conformidade com o STF (ADI 4815) e CONAR.</p>
-        <div class="footer-links">
-            <a href="/">Portal Principal</a>
-            <a href="https://www.youtube.com/@acervo-referencia" target="_blank">Canal YouTube Oficial</a>
-            <a href="https://br.pinterest.com/acervoreferencia/" target="_blank">Pinterest Oficial</a>
+        <p>© 2026 Acervo & Referencia • Em conformidade com o STF (ADI 4815) e CONAR.</p>
+        <div class="footer-links-row" style="margin-top: 10px;">
+            <a href="/">Início</a>
+            <a href="https://www.youtube.com/@acervo-referencia" target="_blank">YouTube</a>
+            <a href="https://br.pinterest.com/acervoreferencia/" target="_blank">Pinterest</a>
         </div>
     </footer>
 
     <script>
+    // 1. Reading Progress Bar integrada na Pill Navbar
     window.addEventListener('scroll', () => {
         const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const scrolled = (winScroll / height) * 100;
-        document.getElementById('reading-progress-bar').style.width = scrolled + '%';
+        const bar = document.getElementById('pill-progress');
+        if (bar) bar.style.width = scrolled + '%';
     });
+
+    // 2. Sistema de Abas Interativas (Segmented Control)
+    function switchTab(btn, targetId) {
+        const card = btn.closest('.book-editorial-card');
+        if (!card) return;
+        card.querySelectorAll('.seg-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        card.querySelectorAll('.tab-panel').forEach(p => {
+            p.classList.remove('active');
+        });
+        const target = card.querySelector('#' + targetId);
+        if (target) {
+            target.classList.add('active');
+        }
+    }
+
+    // 3. Scroll-Driven 3D Book Cover Animation
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-viewport');
+            } else {
+                entry.target.classList.remove('in-viewport');
+            }
+        });
+    }, { threshold: [0.15, 0.5, 0.85] });
+    document.querySelectorAll('[data-scroll-book]').forEach(el => observer.observe(el));
     </script>
 </body>
 </html>

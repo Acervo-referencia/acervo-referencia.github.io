@@ -8,12 +8,12 @@
   xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
   xmlns:media="http://search.yahoo.com/mrss/">
 <channel>
-  <title>Acervo &amp; Referencia | Guias de Leitura e Curadoria de Referência</title>
+  <title>Acervo &amp; Referencia | Notas de Leitura e Biblioteca Essencial</title>
   <atom:link href="https://acervo-referencia.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <atom:link href="https://pubsubhubbub.appspot.com/" rel="hub" />
   <link>https://acervo-referencia.github.io/</link>
-  <description>Portal editorial independente dedicado à curadoria de obras perenes, pensadores clássicos e ferramentas de alta performance.</description>
-  <lastBuildDate>Tue, 20 Oct 2026 02:52:36 +0000</lastBuildDate>
+  <description>Ensaios literários curtos e notas sobre livros fundamentais de ciência, psicologia e foco.</description>
+  <lastBuildDate>Tue, 20 Oct 2026 03:39:08 +0000</lastBuildDate>
   <language>pt-BR</language>
   <sy:updatePeriod>hourly</sy:updatePeriod>
   <sy:updateFrequency>1</sy:updateFrequency>
@@ -24,7 +24,7 @@
     <dc:creator><![CDATA[Acervo & Referencia]]></dc:creator>
     <category><![CDATA[Economia Comportamental & Psicologia]]></category>
     <guid isPermaLink="true">https://acervo-referencia.github.io/daniel-kahneman-tomada-de-decisao-economia-comportamental.html</guid>
-    <description><![CDATA[Curadoria editorial com as obras e ferramentas essenciais de Daniel Kahneman: Rápido e Devagar: Duas Formas de Pensar - Daniel Kahneman, Ruído: Uma Falha no Julgamento Humano - Daniel Kahneman, Previsivelmente Irracional - Dan Ariely, Kindle Paperwhite Amazon. Acesse para consultar análise aprofundada e preços verificados. #publicidade]]></description>
+    <description><![CDATA[Notas de leitura e ensaio sobre as obras de Daniel Kahneman: Rápido e Devagar: Duas Formas de Pensar - Daniel Kahneman, Ruído: Uma Falha no Julgamento Humano - Daniel Kahneman, Previsivelmente Irracional - Dan Ariely, Kindle Paperwhite Amazon. Acesse para ler o ensaio completo. #publicidade]]></description>
     <enclosure url="https://acervo-referencia.github.io/midia/daniel-kahneman-tomada-de-decisao-economia-comportamental_pinterest.png" length="150000" type="image/png" />
     <media:content url="https://acervo-referencia.github.io/midia/daniel-kahneman-tomada-de-decisao-economia-comportamental_pinterest.png" medium="image" type="image/png" />
   </item>
@@ -35,7 +35,7 @@
     <dc:creator><![CDATA[Acervo & Referencia]]></dc:creator>
     <category><![CDATA[Divulgação Científica & Astronomia]]></category>
     <guid isPermaLink="true">https://acervo-referencia.github.io/carl-sagan-leituras-essenciais-ciencia-cosmologia.html</guid>
-    <description><![CDATA[Curadoria editorial com as obras e ferramentas essenciais de Carl Sagan: O Mundo Assombrado pelos Demônios - Carl Sagan, Cosmos - Carl Sagan, Pálido Ponto Azul - Carl Sagan, Telescópio Refrator Iniciante Astronomia. Acesse para consultar análise aprofundada e preços verificados. #publicidade]]></description>
+    <description><![CDATA[Notas de leitura e ensaio sobre as obras de Carl Sagan: O Mundo Assombrado pelos Demônios - Carl Sagan, Cosmos - Carl Sagan, Pálido Ponto Azul - Carl Sagan, Telescópio Refrator Iniciante Astronomia. Acesse para ler o ensaio completo. #publicidade]]></description>
     <enclosure url="https://acervo-referencia.github.io/midia/carl-sagan-leituras-essenciais-ciencia-cosmologia_pinterest.png" length="150000" type="image/png" />
     <media:content url="https://acervo-referencia.github.io/midia/carl-sagan-leituras-essenciais-ciencia-cosmologia_pinterest.png" medium="image" type="image/png" />
   </item>
@@ -46,7 +46,7 @@
     <dc:creator><![CDATA[Acervo & Referencia]]></dc:creator>
     <category><![CDATA[Psicologia Existencial & Filosofia]]></category>
     <guid isPermaLink="true">https://acervo-referencia.github.io/viktor-frankl-logoterapia-proposito-resiliencia.html</guid>
-    <description><![CDATA[Curadoria editorial com as obras e ferramentas essenciais de Viktor Frankl: Em Busca de Sentido - Viktor Frankl, A Presença Ignorada de Deus - Viktor Frankl, O Homem em Busca de um Sentido Último - Viktor Frankl, Caderno Inteligente para Diário e Anotações. Acesse para consultar análise aprofundada e preços verificados. #publicidade]]></description>
+    <description><![CDATA[Notas de leitura e ensaio sobre as obras de Viktor Frankl: Em Busca de Sentido - Viktor Frankl, A Presença Ignorada de Deus - Viktor Frankl, O Homem em Busca de um Sentido Último - Viktor Frankl, Caderno Inteligente para Diário e Anotações. Acesse para ler o ensaio completo. #publicidade]]></description>
     <enclosure url="https://acervo-referencia.github.io/midia/viktor-frankl-logoterapia-proposito-resiliencia_pinterest.png" length="150000" type="image/png" />
     <media:content url="https://acervo-referencia.github.io/midia/viktor-frankl-logoterapia-proposito-resiliencia_pinterest.png" medium="image" type="image/png" />
   </item>
@@ -57,7 +57,7 @@
     <dc:creator><![CDATA[Acervo & Referencia]]></dc:creator>
     <category><![CDATA[Produtividade & Gestão de Carreira]]></category>
     <guid isPermaLink="true">https://acervo-referencia.github.io/cal-newport-trabalho-focado-deep-work-produtividade.html</guid>
-    <description><![CDATA[Curadoria editorial com as obras e ferramentas essenciais de Cal Newport: Trabalho Focado (Deep Work) - Cal Newport, Minimalismo Digital - Cal Newport, Devagar (Slow Productivity) - Cal Newport, Fone de Ouvido com Cancelamento de Ruído ANC. Acesse para consultar análise aprofundada e preços verificados. #publicidade]]></description>
+    <description><![CDATA[Notas de leitura e ensaio sobre as obras de Cal Newport: Trabalho Focado (Deep Work) - Cal Newport, Minimalismo Digital - Cal Newport, Devagar (Slow Productivity) - Cal Newport, Fone de Ouvido com Cancelamento de Ruído ANC. Acesse para ler o ensaio completo. #publicidade]]></description>
     <enclosure url="https://acervo-referencia.github.io/midia/cal-newport-trabalho-focado-deep-work-produtividade_pinterest.png" length="150000" type="image/png" />
     <media:content url="https://acervo-referencia.github.io/midia/cal-newport-trabalho-focado-deep-work-produtividade_pinterest.png" medium="image" type="image/png" />
   </item>
