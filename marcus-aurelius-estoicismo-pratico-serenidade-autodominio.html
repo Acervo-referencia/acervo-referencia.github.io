@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Marcus Aurelius e o Estoicismo Prático: Filosofia Clássica para Serenidade Mental e Autodomínio — Descobertas & Livros Virais</title>
+  <meta name="description" content="" />
+  <link rel="canonical" href="https://acervo-referencia.github.io/marcus-aurelius-estoicismo-pratico-serenidade-autodominio.html" />
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+
+:root {
+  --bg-deep: #0b071e;
+  --glass-surface: rgba(255, 255, 255, 0.09);
+  --glass-surface-hover: rgba(255, 255, 255, 0.14);
+  --glass-border: rgba(255, 255, 255, 0.22);
+  --glass-highlight: rgba(255, 255, 255, 0.45);
+  --text-main: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.78);
+}
+
+body.light-crystal {
+  --bg-deep: #eef2ff;
+  --glass-surface: rgba(255, 255, 255, 0.68);
+  --glass-surface-hover: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.85);
+  --glass-highlight: rgba(255, 255, 255, 0.95);
+  --text-main: #0f172a;
+  --text-muted: #334155;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+h1, h2, h3, .font-display {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.025em;
+}
+
+/* Animated Aurora Mesh Orbs Behind Glass */
+.aurora-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(85px);
+  opacity: 0.72;
+  animation: floatOrb 14s infinite alternate ease-in-out;
+}
+
+body.light-crystal .orb {
+  opacity: 0.55;
+  filter: blur(95px);
+}
+
+.orb-1 {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, #ec4899 0%, #8b5cf6 70%);
+  top: -8%;
+  left: -10%;
+}
+
+.orb-2 {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, #06b6d4 0%, #3b82f6 70%);
+  top: 28%;
+  right: -12%;
+  animation-delay: -4s;
+}
+
+.orb-3 {
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, #f59e0b 0%, #ef4444 70%);
+  bottom: -5%;
+  left: 15%;
+  animation-delay: -8s;
+}
+
+.orb-4 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #10b981 0%, #06b6d4 70%);
+  top: 65%;
+  left: -8%;
+  animation-delay: -2s;
+}
+
+@keyframes floatOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(28px, -34px) scale(1.12); }
+  100% { transform: translate(-22px, 26px) scale(0.94); }
+}
+
+/* True 3D Frosted Glassmorphism Cards */
+.glass-card {
+  background: var(--glass-surface);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1.5px solid var(--glass-border);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.28),
+    inset 0 1.5px 2px var(--glass-highlight),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, background 0.3s ease;
+}
+
+body.light-crystal .glass-card {
+  box-shadow:
+    0 18px 40px rgba(99, 102, 241, 0.14),
+    inset 0 2px 3px rgba(255, 255, 255, 0.95);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: inset 0 1px 1px var(--glass-highlight);
+}
+
+body.light-crystal .glass-pill {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+/* 3D Floating Book Cover with Specular Spine */
+.book-3d-wrap {
+  perspective: 1000px;
+}
+
+.book-3d {
+  position: relative;
+  border-radius: 16px;
+  transform-style: preserve-3d;
+  transform: rotateY(-10deg) rotateX(4deg);
+  box-shadow:
+    -12px 16px 28px rgba(0, 0, 0, 0.45),
+    inset 3px 0 6px rgba(255, 255, 255, 0.45);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+}
+
+.book-3d:hover, .book-3d.active-tilt {
+  transform: rotateY(0deg) rotateX(0deg) scale(1.06);
+  box-shadow:
+    0 22px 40px rgba(139, 92, 246, 0.45),
+    inset 2px 0 8px rgba(255, 255, 255, 0.65);
+}
+
+/* Branded High-Converting Store Buttons with Light Sweep */
+.store-btn {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 16px;
+  transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.22s ease, filter 0.22s ease;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+}
+
+.store-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-25deg);
+  transition: left 0.55s ease;
+}
+
+.store-btn:hover::before, .store-btn:active::before {
+  left: 130%;
+}
+
+.store-btn:active {
+  transform: scale(0.96);
+}
+
+.btn-amazon {
+  background: linear-gradient(135deg, #FF9900 0%, #FF5E00 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 10px 24px -6px rgba(255, 153, 0, 0.65), inset 0 1.5px 1px rgba(255, 255, 255, 0.5);
+}
+
+.btn-meli {
+  background: linear-gradient(135deg, #FFE600 0%, #F59E0B 100%);
+  color: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 10px 24px -6px rgba(250, 204, 21, 0.6), inset 0 1.5px 1px rgba(255, 255, 255, 0.75);
+}
+
+.btn-shopee {
+  background: linear-gradient(135deg, #FF5722 0%, #EE2A7B 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 10px 24px -6px rgba(238, 77, 45, 0.65), inset 0 1.5px 1px rgba(255, 255, 255, 0.5);
+}
+
+.store-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.06);
+}
+
+/* Hide Scrollbars on Swipe Carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Pulse Badge */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.55); }
+  50% { box-shadow: 0 0 0 8px rgba(236, 72, 153, 0); }
+}
+.pulse-badge {
+  animation: pulseGlow 2.2s infinite;
+}
+
+/* Gamified power bars */
+.power-bar-fill-mind {
+  background: linear-gradient(90deg, #ec4899, #8b5cf6);
+}
+.power-bar-fill-flow {
+  background: linear-gradient(90deg, #06b6d4, #3b82f6);
+}
+
+/* Active Segmented Tab Style */
+.tab-btn.active-tab {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.35) 0%, rgba(139, 92, 246, 0.35) 100%);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(236, 72, 153, 0.3);
+}
+body.light-crystal .tab-btn.active-tab {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.25) 0%, rgba(236, 72, 153, 0.25) 100%);
+  border-color: rgba(99, 102, 241, 0.6);
+  color: #0f172a;
+}
+
+/* Highlight Animation for Surprise Me */
+@keyframes highlightSurprise {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.8); }
+  50% { transform: scale(1.03); box-shadow: 0 0 50px 15px rgba(6, 182, 212, 0.7); border-color: #06b6d4; }
+  100% { transform: scale(1); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28); }
+}
+.surprise-highlight {
+  animation: highlightSurprise 1.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+  </style>
+</head>
+<body class="min-h-screen relative pb-28">
+
+
+  <!-- Animated Colorful Mesh Background -->
+  <div class="aurora-bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+  </div>
+
+
+  <!-- Floating Liquid Glass Top Bar -->
+  <header class="sticky top-3 z-50 px-3 sm:px-6 max-w-4xl mx-auto">
+    <div class="glass-card px-4 py-2.5 rounded-full flex items-center justify-between gap-2">
+      <a href="index.html" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold glass-pill hover:scale-105 transition-transform text-white">
+        <span>← Ver todos os livros (16)</span>
+      </a>
+
+      <!-- Right Controls: Saved Drawer + Theme Toggle -->
+      <div class="flex items-center gap-2 shrink-0">
+        <button id="openSavedBtn" class="glass-pill px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold flex items-center gap-1.5 hover:scale-105 transition-transform" title="Ver itens salvos">
+          <span>❤️</span>
+          <span id="savedCountBadge">0</span>
+        </button>
+        <button id="themeToggleBtn" class="glass-pill w-9 h-9 rounded-full flex items-center justify-center text-base hover:scale-110 transition-transform" title="Alternar modo Aurora / Cristal">
+          ☀️
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="relative z-10 max-w-4xl mx-auto px-3.5 sm:px-6 pt-5 space-y-8">
+
+    <!-- Hero do Artigo / Coleção -->
+    <section class="glass-card p-6 sm:p-8 space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md">
+        <span>✨ Vida & Coragem</span>
+      </div>
+      <h1 class="text-2xl sm:text-4xl font-display font-black text-white leading-tight">
+        Marcus Aurelius e o Estoicismo Prático: Filosofia Clássica para Serenidade Mental e Autodomínio
+      </h1>
+      <p class="text-sm sm:text-base text-white/80 leading-relaxed max-w-2xl">
+        
+      </p>
+    </section>
+
+    <!-- Carrossel Swipe das Obras Desta Edição -->
+    <section class="space-y-3">
+      <div class="flex items-center justify-between px-1">
+        <h2 class="font-display font-bold text-sm sm:text-base text-white/80">Obras selecionadas nesta edição:</h2>
+        <span class="text-xs text-white/60">Deslize ➔</span>
+      </div>
+      <div class="flex items-center gap-3 overflow-x-auto no-scrollbar py-1 snap-x snap-mandatory">
+
+        <div class="glass-pill p-3 rounded-2xl flex-shrink-0 w-64 snap-center space-y-2 border border-white/20">
+          <div class="flex items-center gap-3">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/meditacoes-marcus-aurelius.jpg" alt="Meditações - Marcus Aurelius" class="book-3d w-14 h-20 object-cover rounded-xl" />
+            </div>
+            <div class="min-w-0 flex-1">
+              <h4 class="font-display font-bold text-xs text-white truncate">Meditações - Marcus Aurelius</h4>
+              <p class="text-[10px] text-white/70 truncate">Marcus Aurelius</p>
+              <a href="#meditacoes-marcus-aurelius" class="inline-block text-[10px] font-extrabold text-cyan-300 hover:underline pt-1">Ver detalhes ↓</a>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-1">
+            <a href="https://www.amazon.com.br/s?k=Medita%C3%A7%C3%B5es+-+Marcus+Aurelius&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-[10px] py-1 px-1.5">🟠 Amazon</a>
+            <a href="https://lista.mercadolivre.com.br/meditacoes-marcus-aurelius?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-[10px] py-1 px-1.5">⚡ Meli</a>
+            <a href="https://shopee.com.br/search?keyword=Medita%C3%A7%C3%B5es+-+Marcus+Aurelius" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-[10px] py-1 px-1.5">🛍️ Shopee</a>
+          </div>
+        </div>
+        
+
+        <div class="glass-pill p-3 rounded-2xl flex-shrink-0 w-64 snap-center space-y-2 border border-white/20">
+          <div class="flex items-center gap-3">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/manual-de-epicteto-epicteto.jpg" alt="Manual de Epicteto - Epicteto" class="book-3d w-14 h-20 object-cover rounded-xl" />
+            </div>
+            <div class="min-w-0 flex-1">
+              <h4 class="font-display font-bold text-xs text-white truncate">Manual de Epicteto - Epicteto</h4>
+              <p class="text-[10px] text-white/70 truncate">Marcus Aurelius</p>
+              <a href="#manual-de-epicteto-epicteto" class="inline-block text-[10px] font-extrabold text-cyan-300 hover:underline pt-1">Ver detalhes ↓</a>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-1">
+            <a href="https://www.amazon.com.br/s?k=Manual+de+Epicteto+-+Epicteto&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-[10px] py-1 px-1.5">🟠 Amazon</a>
+            <a href="https://lista.mercadolivre.com.br/manual-de-epicteto-epicteto?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-[10px] py-1 px-1.5">⚡ Meli</a>
+            <a href="https://shopee.com.br/search?keyword=Manual+de+Epicteto+-+Epicteto" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-[10px] py-1 px-1.5">🛍️ Shopee</a>
+          </div>
+        </div>
+        
+
+        <div class="glass-pill p-3 rounded-2xl flex-shrink-0 w-64 snap-center space-y-2 border border-white/20">
+          <div class="flex items-center gap-3">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/sobre-a-brevidade-da-vida-seneca.jpg" alt="Sobre a Brevidade da Vida - Sêneca" class="book-3d w-14 h-20 object-cover rounded-xl" />
+            </div>
+            <div class="min-w-0 flex-1">
+              <h4 class="font-display font-bold text-xs text-white truncate">Sobre a Brevidade da Vida - Sêneca</h4>
+              <p class="text-[10px] text-white/70 truncate">Marcus Aurelius</p>
+              <a href="#sobre-a-brevidade-da-vida-seneca" class="inline-block text-[10px] font-extrabold text-cyan-300 hover:underline pt-1">Ver detalhes ↓</a>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-1">
+            <a href="https://www.amazon.com.br/s?k=Sobre+a+Brevidade+da+Vida+-+S%C3%AAneca&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-[10px] py-1 px-1.5">🟠 Amazon</a>
+            <a href="https://lista.mercadolivre.com.br/sobre-a-brevidade-da-vida-seneca?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-[10px] py-1 px-1.5">⚡ Meli</a>
+            <a href="https://shopee.com.br/search?keyword=Sobre+a+Brevidade+da+Vida+-+S%C3%AAneca" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-[10px] py-1 px-1.5">🛍️ Shopee</a>
+          </div>
+        </div>
+        
+
+        <div class="glass-pill p-3 rounded-2xl flex-shrink-0 w-64 snap-center space-y-2 border border-white/20">
+          <div class="flex items-center gap-3">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/kindle-paperwhite-amazon.jpg" alt="Kindle Paperwhite Amazon" class="book-3d w-14 h-20 object-cover rounded-xl" />
+            </div>
+            <div class="min-w-0 flex-1">
+              <h4 class="font-display font-bold text-xs text-white truncate">Kindle Paperwhite Amazon</h4>
+              <p class="text-[10px] text-white/70 truncate">Marcus Aurelius</p>
+              <a href="#kindle-paperwhite-amazon" class="inline-block text-[10px] font-extrabold text-cyan-300 hover:underline pt-1">Ver detalhes ↓</a>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-1">
+            <a href="https://www.amazon.com.br/s?k=Kindle+Paperwhite+Amazon&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-[10px] py-1 px-1.5">🟠 Amazon</a>
+            <a href="https://lista.mercadolivre.com.br/kindle-paperwhite-amazon?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-[10px] py-1 px-1.5">⚡ Meli</a>
+            <a href="https://shopee.com.br/search?keyword=Kindle+Paperwhite+Amazon" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-[10px] py-1 px-1.5">🛍️ Shopee</a>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Cards Detalhados dos Livros -->
+    <section class="space-y-8">
+
+        <article id="meditacoes-marcus-aurelius" class="glass-card book-viral-card p-5 sm:p-7 space-y-4 relative flex flex-col justify-between">
+          
+          <!-- Top Card Bar -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md">
+              <span>Obra 01 / 04</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Ponto de partida</span>
+              <button onclick="toggleFavoriteItem('meditacoes-marcus-aurelius', 'Meditações - Marcus Aurelius', 'Marcus Aurelius', 'midia/capas/meditacoes-marcus-aurelius.jpg', 'https://www.amazon.com.br/s?k=Medita%C3%A7%C3%B5es+-+Marcus+Aurelius&tag=acervoref-20', 'https://lista.mercadolivre.com.br/meditacoes-marcus-aurelius?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=Medita%C3%A7%C3%B5es+-+Marcus+Aurelius')" 
+                      data-item-key="meditacoes-marcus-aurelius"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
+            </div>
+          </div>
+
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/meditacoes-marcus-aurelius.jpg" alt="Meditações - Marcus Aurelius" class="book-3d w-32 sm:w-36 h-44 sm:h-52 object-cover rounded-2xl border border-white/20" />
+            </div>
+            <div class="space-y-2.5 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-xl sm:text-2xl font-display font-black text-white leading-snug">Meditações - Marcus Aurelius</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Marcus Aurelius</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "Uma exploração instigante sobre os princípios essenciais de Marcus Aurelius."
+              </p>
+            </div>
+          </div>
+
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">95%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 95%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">92%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 92%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
+            </div>
+            
+            <div class="tab-content-container p-4 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Esta obra sintetiza de maneira primorosa os principais conceitos desenvolvidos por Marcus Aurelius, oferecendo um guia indispensável para quem deseja aprofundar seu entendimento prático.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> A rotina segue no piloto automático, reagindo aos estímulos sem clareza estratégica.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Decisões conscientes com foco deliberado nas ideias fundamentais que resistem ao tempo.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Poupa anos de tentativas cegas ao entregar modelos mentais testados e comprovados.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=Medita%C3%A7%C3%B5es+-+Marcus+Aurelius&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/meditacoes-marcus-aurelius?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=Medita%C3%A7%C3%B5es+-+Marcus+Aurelius" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
+        </article>
+        
+
+        <article id="manual-de-epicteto-epicteto" class="glass-card book-viral-card p-5 sm:p-7 space-y-4 relative flex flex-col justify-between">
+          
+          <!-- Top Card Bar -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md">
+              <span>Obra 02 / 04</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Ponto de partida</span>
+              <button onclick="toggleFavoriteItem('manual-de-epicteto-epicteto', 'Manual de Epicteto - Epicteto', 'Marcus Aurelius', 'midia/capas/manual-de-epicteto-epicteto.jpg', 'https://www.amazon.com.br/s?k=Manual+de+Epicteto+-+Epicteto&tag=acervoref-20', 'https://lista.mercadolivre.com.br/manual-de-epicteto-epicteto?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=Manual+de+Epicteto+-+Epicteto')" 
+                      data-item-key="manual-de-epicteto-epicteto"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
+            </div>
+          </div>
+
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/manual-de-epicteto-epicteto.jpg" alt="Manual de Epicteto - Epicteto" class="book-3d w-32 sm:w-36 h-44 sm:h-52 object-cover rounded-2xl border border-white/20" />
+            </div>
+            <div class="space-y-2.5 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-xl sm:text-2xl font-display font-black text-white leading-snug">Manual de Epicteto - Epicteto</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Marcus Aurelius</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "Uma exploração instigante sobre os princípios essenciais de Marcus Aurelius."
+              </p>
+            </div>
+          </div>
+
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">97%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 97%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">95%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 95%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
+            </div>
+            
+            <div class="tab-content-container p-4 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Esta obra sintetiza de maneira primorosa os principais conceitos desenvolvidos por Marcus Aurelius, oferecendo um guia indispensável para quem deseja aprofundar seu entendimento prático.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> A rotina segue no piloto automático, reagindo aos estímulos sem clareza estratégica.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Decisões conscientes com foco deliberado nas ideias fundamentais que resistem ao tempo.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Poupa anos de tentativas cegas ao entregar modelos mentais testados e comprovados.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=Manual+de+Epicteto+-+Epicteto&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/manual-de-epicteto-epicteto?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=Manual+de+Epicteto+-+Epicteto" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
+        </article>
+        
+
+        <article id="sobre-a-brevidade-da-vida-seneca" class="glass-card book-viral-card p-5 sm:p-7 space-y-4 relative flex flex-col justify-between">
+          
+          <!-- Top Card Bar -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md">
+              <span>Obra 03 / 04</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Ponto de partida</span>
+              <button onclick="toggleFavoriteItem('sobre-a-brevidade-da-vida-seneca', 'Sobre a Brevidade da Vida - Sêneca', 'Marcus Aurelius', 'midia/capas/sobre-a-brevidade-da-vida-seneca.jpg', 'https://www.amazon.com.br/s?k=Sobre+a+Brevidade+da+Vida+-+S%C3%AAneca&tag=acervoref-20', 'https://lista.mercadolivre.com.br/sobre-a-brevidade-da-vida-seneca?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=Sobre+a+Brevidade+da+Vida+-+S%C3%AAneca')" 
+                      data-item-key="sobre-a-brevidade-da-vida-seneca"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
+            </div>
+          </div>
+
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/sobre-a-brevidade-da-vida-seneca.jpg" alt="Sobre a Brevidade da Vida - Sêneca" class="book-3d w-32 sm:w-36 h-44 sm:h-52 object-cover rounded-2xl border border-white/20" />
+            </div>
+            <div class="space-y-2.5 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-xl sm:text-2xl font-display font-black text-white leading-snug">Sobre a Brevidade da Vida - Sêneca</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Marcus Aurelius</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "Uma exploração instigante sobre os princípios essenciais de Marcus Aurelius."
+              </p>
+            </div>
+          </div>
+
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">99%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 99%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">98%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 98%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
+            </div>
+            
+            <div class="tab-content-container p-4 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>Esta obra sintetiza de maneira primorosa os principais conceitos desenvolvidos por Marcus Aurelius, oferecendo um guia indispensável para quem deseja aprofundar seu entendimento prático.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> A rotina segue no piloto automático, reagindo aos estímulos sem clareza estratégica.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Decisões conscientes com foco deliberado nas ideias fundamentais que resistem ao tempo.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Poupa anos de tentativas cegas ao entregar modelos mentais testados e comprovados.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=Sobre+a+Brevidade+da+Vida+-+S%C3%AAneca&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/sobre-a-brevidade-da-vida-seneca?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=Sobre+a+Brevidade+da+Vida+-+S%C3%AAneca" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
+        </article>
+        
+
+        <article id="kindle-paperwhite-amazon" class="glass-card book-viral-card p-5 sm:p-7 space-y-4 relative flex flex-col justify-between">
+          
+          <!-- Top Card Bar -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wide bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md">
+              <span>Obra 04 / 04</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold glass-pill text-amber-300 border border-amber-300/30">✨ Complemento prático</span>
+              <button onclick="toggleFavoriteItem('kindle-paperwhite-amazon', 'Kindle Paperwhite Amazon', 'Marcus Aurelius', 'midia/capas/kindle-paperwhite-amazon.jpg', 'https://www.amazon.com.br/s?k=Kindle+Paperwhite+Amazon&tag=acervoref-20', 'https://lista.mercadolivre.com.br/kindle-paperwhite-amazon?matt_word=de20250103162855&matt_tool=42123367', 'https://shopee.com.br/search?keyword=Kindle+Paperwhite+Amazon')" 
+                      data-item-key="kindle-paperwhite-amazon"
+                      class="favorite-btn glass-pill w-8 h-8 rounded-full flex items-center justify-center text-sm hover:scale-110 active:scale-95 transition-transform"
+                      title="Salvar nos Favoritos">
+                🤍
+              </button>
+            </div>
+          </div>
+
+          <!-- Capa 3D Flutuante + Título + Gancho -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5 pt-1">
+            <div class="book-3d-wrap shrink-0">
+              <img src="midia/capas/kindle-paperwhite-amazon.jpg" alt="Kindle Paperwhite Amazon" class="book-3d w-32 sm:w-36 h-44 sm:h-52 object-cover rounded-2xl border border-white/20" />
+            </div>
+            <div class="space-y-2.5 text-center sm:text-left flex-1 min-w-0">
+              <h3 class="text-xl sm:text-2xl font-display font-black text-white leading-snug">Kindle Paperwhite Amazon</h3>
+              <p class="text-xs sm:text-sm font-semibold text-cyan-300">Marcus Aurelius</p>
+              <p class="text-xs sm:text-sm text-white/80 leading-relaxed italic border-l-2 border-pink-500/50 pl-2.5 sm:text-left text-center">
+                "Tentar ler obras densas na tela do celular é disputar atenção com dezenas de notificações a cada cinco minutos. Ter um leitor dedicado não é capricho tecnológico, mas uma escolha consciente para resgatar o prazer da leitura contínua."
+              </p>
+            </div>
+          </div>
+
+          <!-- Barras Gamificadas de Poder -->
+          <div class="glass-pill p-3 rounded-2xl space-y-2">
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>🤯 Explode a Mente</span>
+                <span class="text-pink-400">96%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-mind" style="width: 96%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] font-black pb-1">
+                <span>⚡ Leitura Fluida & Prática</span>
+                <span class="text-cyan-400">94%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                <div class="h-full rounded-full power-bar-fill-flow" style="width: 94%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abas de 1 Toque (Segmented Control) -->
+          <div class="space-y-2.5">
+            <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl glass-pill">
+              <button onclick="switchBookTab(this, 'segredo')" class="tab-btn active-tab py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">💡 O Segredo</button>
+              <button onclick="switchBookTab(this, 'muda')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🚀 O que muda</button>
+              <button onclick="switchBookTab(this, 'quem')" class="tab-btn py-1.5 px-2 rounded-xl text-xs font-extrabold transition-all">🎯 Pra quem é</button>
+            </div>
+            
+            <div class="tab-content-container p-4 rounded-2xl glass-pill min-h-[90px] text-xs sm:text-sm leading-relaxed text-white/90">
+              <div class="tab-content-pane tab-pane-segredo">
+                <p>O Kindle Paperwhite é um aparelho desenhado para fazer exatamente uma coisa com excelência: permitir que você leia sem distrações. Com tela de tinta eletrônica de 300 ppi que imita papel fosco e iluminação ajustável, ele elimina o reflexo solar e o cansaço ocular típico de telas convencionais.
+
+A possibilidade de carregar centenas de livros com anotações e dicionário integrado transforma qualquer intervalo da rotina em oportunidade de estudo. É uma ferramenta discreta que apoia diretamente a consistência intelectual.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-muda hidden space-y-1.5">
+                <p><strong class="text-pink-400">Antes:</strong> Tentar ler no celular ou computador, interrompendo o raciocínio a cada aviso de mensagem e sentindo cansaço na vista.</p>
+                <p><strong class="text-cyan-400">Depois:</strong> Criar um espaço reservado para leitura diária, avançando capítulos com facilidade e bateria que dura semanas.</p>
+              </div>
+              <div class="tab-content-pane tab-pane-quem hidden">
+                <p><strong class="text-amber-400">Valor real:</strong> Eliminar o atrito da leitura faz você terminar no ano o dobro dos livros que costumava deixar pela metade.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Botões de Loja Grandes, Brilhantes e Coloridos -->
+          <div class="pt-2 space-y-2">
+            <div class="text-[11px] font-black uppercase tracking-wider text-white/60 text-center">
+              Comprar na sua loja favorita:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <a href="https://www.amazon.com.br/s?k=Kindle+Paperwhite+Amazon&tag=acervoref-20" target="_blank" rel="noopener noreferrer" class="store-btn btn-amazon text-xs sm:text-sm">
+                <span>🟠 Amazon</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://lista.mercadolivre.com.br/kindle-paperwhite-amazon?matt_word=de20250103162855&matt_tool=42123367" target="_blank" rel="noopener noreferrer" class="store-btn btn-meli text-xs sm:text-sm">
+                <span>⚡ Meli</span>
+                <span class="text-xs">↗</span>
+              </a>
+              <a href="https://shopee.com.br/search?keyword=Kindle+Paperwhite+Amazon" target="_blank" rel="noopener noreferrer" class="store-btn btn-shopee text-xs sm:text-sm">
+                <span>🛍️ Shopee</span>
+                <span class="text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
+        </article>
+        
+    </section>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="relative z-10 max-w-4xl mx-auto px-4 pt-12 pb-8 text-center text-xs text-white/60 space-y-3 border-t border-white/10 mt-12">
+    <div class="flex items-center justify-center gap-4 text-sm font-bold text-white/80">
+      <a href="index.html" class="hover:text-pink-400 transition-colors">← Voltar para a Vitrine Geral</a>
+      <span>•</span>
+      <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="hover:text-cyan-400 transition-colors">↑ Topo</button>
+    </div>
+    <p>Links oficiais de afiliados para Amazon, Mercado Livre e Shopee. Preços e cupons sincronizados com as plataformas parceiras.</p>
+    <p class="text-[11px] text-white/40">© 2026 Descobertas & Livros Virais. Criado para mentes inquietas.</p>
+  </footer>
+
+
+  <!-- Drawer / Modal Lateral de Itens Salvos (Favoritos) -->
+  <div id="savedDrawer" class="fixed inset-0 z-[120] hidden bg-black/70 backdrop-blur-md flex justify-end transition-opacity">
+    <div class="w-full max-w-md h-full glass-card rounded-none sm:rounded-l-3xl p-5 sm:p-6 flex flex-col justify-between overflow-y-auto">
+      <div class="space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-white/10">
+          <div class="flex items-center gap-2">
+            <span class="text-2xl">❤️</span>
+            <h3 class="font-display font-black text-xl">Seus Livros Salvos</h3>
+          </div>
+          <button id="closeSavedBtn" class="glass-pill w-9 h-9 rounded-full flex items-center justify-center text-lg hover:scale-110 transition-transform">✕</button>
+        </div>
+        <div id="savedItemsContainer" class="space-y-3 pt-2">
+          <!-- Preenchido dinamicamente via JS -->
+        </div>
+      </div>
+      <div class="pt-6 border-t border-white/10 text-center">
+        <p class="text-xs text-white/60">Todos os links oficiais abrem com cupom e tags oficiais de desconto.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Engine JS Interativo: Busca, Filtro, Favoritos, Me Surpreenda & Tema -->
+  <script>
+    // 1. Alternador de Tema (Aurora Dark / Cristal Claro)
+    const themeBtn = document.getElementById('themeToggleBtn');
+    function applySavedTheme() {
+      const saved = localStorage.getItem('dopamine_theme');
+      if (saved === 'light') {
+        document.body.classList.add('light-crystal');
+        if (themeBtn) themeBtn.textContent = '🌙';
+      } else {
+        document.body.classList.remove('light-crystal');
+        if (themeBtn) themeBtn.textContent = '☀️';
+      }
+    }
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('light-crystal');
+        const isLight = document.body.classList.contains('light-crystal');
+        localStorage.setItem('dopamine_theme', isLight ? 'light' : 'dark');
+        themeBtn.textContent = isLight ? '🌙' : '☀️';
+      });
+    }
+    applySavedTheme();
+
+    // 2. Filtro Interativo por Pílulas no Topo
+    const filterPills = document.querySelectorAll('.filter-pill');
+    const bookCards = document.querySelectorAll('.book-viral-card');
+
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        filterPills.forEach(p => {
+          p.classList.remove('active-pill', 'bg-gradient-to-r', 'from-pink-500', 'via-purple-500', 'to-indigo-500', 'text-white', 'shadow-lg', 'shadow-purple-500/30');
+          p.classList.add('glass-pill');
+        });
+        pill.classList.remove('glass-pill');
+        pill.classList.add('active-pill', 'bg-gradient-to-r', 'from-pink-500', 'via-purple-500', 'to-indigo-500', 'text-white', 'shadow-lg', 'shadow-purple-500/30');
+
+        const cat = pill.getAttribute('data-filter');
+        bookCards.forEach(card => {
+          if (cat === 'all' || card.getAttribute('data-category') === cat) {
+            card.style.display = 'block';
+            card.classList.remove('hidden');
+          } else {
+            card.style.display = 'none';
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // 3. Busca em Tempo Real (Título, Autor, Gancho)
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        bookCards.forEach(card => {
+          const searchData = (card.getAttribute('data-search') || '').toLowerCase();
+          if (!query || searchData.includes(query)) {
+            card.style.display = 'block';
+            card.classList.remove('hidden');
+          } else {
+            card.style.display = 'none';
+            card.classList.add('hidden');
+          }
+        });
+      });
+    }
+
+    // 4. Botão "🎲 Me Surpreenda!"
+    const surpriseBtn = document.getElementById('surpriseMeBtn');
+    if (surpriseBtn) {
+      surpriseBtn.addEventListener('click', () => {
+        const visibleCards = Array.from(bookCards).filter(c => c.style.display !== 'none' && !c.classList.contains('hidden'));
+        if (visibleCards.length === 0) return;
+        const randomCard = visibleCards[Math.floor(Math.random() * visibleCards.length)];
+        randomCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        randomCard.classList.remove('surprise-highlight');
+        void randomCard.offsetWidth; // trigger reflow
+        randomCard.classList.add('surprise-highlight');
+      });
+    }
+
+    // 5. Sistema de Abas Rápidas de 1 Toque (Segmented Control)
+    function switchBookTab(btn, tabType) {
+      const card = btn.closest('.book-viral-card');
+      if (!card) return;
+      card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active-tab'));
+      btn.classList.add('active-tab');
+
+      card.querySelectorAll('.tab-content-pane').forEach(pane => {
+        pane.classList.add('hidden');
+      });
+      const targetPane = card.querySelector(`.tab-pane-${tabType}`);
+      if (targetPane) targetPane.classList.remove('hidden');
+    }
+
+    // 6. Sistema de Favoritos com Drawer Lateral / Modal
+    const savedCountBadge = document.getElementById('savedCountBadge');
+    const openSavedBtn = document.getElementById('openSavedBtn');
+    const savedDrawer = document.getElementById('savedDrawer');
+    const closeSavedBtn = document.getElementById('closeSavedBtn');
+    const savedItemsContainer = document.getElementById('savedItemsContainer');
+
+    function getSavedItems() {
+      try {
+        return JSON.parse(localStorage.getItem('dopamine_saved_items')) || [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function updateSavedBadge() {
+      const items = getSavedItems();
+      if (savedCountBadge) savedCountBadge.textContent = items.length;
+      document.querySelectorAll('.favorite-btn').forEach(btn => {
+        const key = btn.getAttribute('data-item-key');
+        if (items.some(it => it.key === key)) {
+          btn.innerHTML = '❤️';
+          btn.classList.add('text-pink-500');
+        } else {
+          btn.innerHTML = '🤍';
+          btn.classList.remove('text-pink-500');
+        }
+      });
+    }
+
+    function toggleFavoriteItem(itemKey, title, author, coverUrl, amazonUrl, meliUrl, shopeeUrl) {
+      let items = getSavedItems();
+      const existingIdx = items.findIndex(it => it.key === itemKey);
+      if (existingIdx >= 0) {
+        items.splice(existingIdx, 1);
+      } else {
+        items.push({ key: itemKey, title, author, coverUrl, amazonUrl, meliUrl, shopeeUrl });
+      }
+      localStorage.setItem('dopamine_saved_items', JSON.stringify(items));
+      updateSavedBadge();
+      renderSavedDrawer();
+    }
+
+    function renderSavedDrawer() {
+      if (!savedItemsContainer) return;
+      const items = getSavedItems();
+      if (items.length === 0) {
+        savedItemsContainer.innerHTML = `
+          <div class="text-center py-12 space-y-3">
+            <div class="text-5xl">✨</div>
+            <p class="font-display font-bold text-lg">Nenhum livro salvo ainda</p>
+            <p class="text-xs text-white/70 max-w-xs mx-auto">Toque no coração (🤍) em qualquer card para guardar seus achadinhos favoritos aqui!</p>
+          </div>
+        `;
+        return;
+      }
+      savedItemsContainer.innerHTML = items.map(it => `
+        <div class="glass-pill p-3.5 rounded-2xl flex items-center gap-3.5">
+          <img src="${it.coverUrl}" alt="${it.title}" class="w-14 h-20 object-cover rounded-xl shadow-md border border-white/20 shrink-0" />
+          <div class="flex-1 min-w-0">
+            <h4 class="font-display font-bold text-sm text-white truncate">${it.title}</h4>
+            <p class="text-xs text-white/70 truncate">${it.author}</p>
+            <div class="flex items-center gap-1.5 pt-2">
+              <a href="${it.amazonUrl}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg text-[10px] font-black btn-amazon">🟠 Amazon</a>
+              <a href="${it.meliUrl}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg text-[10px] font-black btn-meli">⚡ Meli</a>
+              <a href="${it.shopeeUrl}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg text-[10px] font-black btn-shopee">🛍️ Shopee</a>
+            </div>
+          </div>
+          <button onclick="toggleFavoriteItem('${it.key}')" class="text-white/60 hover:text-pink-400 p-1.5 transition-colors" title="Remover dos salvos">✕</button>
+        </div>
+      `).join('');
+    }
+
+    if (openSavedBtn && savedDrawer) {
+      openSavedBtn.addEventListener('click', () => {
+        renderSavedDrawer();
+        savedDrawer.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+    if (closeSavedBtn && savedDrawer) {
+      closeSavedBtn.addEventListener('click', () => {
+        savedDrawer.classList.add('hidden');
+        document.body.style.overflow = '';
+      });
+    }
+    updateSavedBadge();
+  </script>
+
+
+</body>
+</html>
